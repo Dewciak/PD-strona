@@ -1,28 +1,44 @@
 import React from "react";
 import Navbar from "./Navbar";
+import Slideshow from "./Slideshow";
+import Img1 from "../images/Hero/s1-1.png";
+import Img2 from "../images/Hero/s1-2.png";
 
 function Hero() {
+  const slides = [Img1, Img2];
+  console.log(slides);
   return (
     <div className="max-w-[1050px] md:mt-[60px] mt-[20px] w-full h-auto mx-auto flex md:flex-row flex-col-reverse justify-center  ">
-      <div className="w-full md:w-[500px] px-6">
-        <h1 className="text-5xl md:py-6">Cześć</h1>
-        <p className="mt-2">
+      <div className="w-full md:w-[500px] px-6  flex flex-col">
+        <h1 className="text-5xl md:py-6 mx-auto  md:mx-0 tracking-[5px]">
+          Cześć
+        </h1>
+        <p className="mt-2 py-4 md:py-0 tracking-[3px]">
           Zajmuję się fotografią psów i koni. Pokazanie ich atutów oraz
           charakteru to coś co definiuje moje zdjęcia. Zapewnij sobie świetną
           pamiątke ze swoim pupilem!
         </p>
-        <button className="px-6 py-[10px] mt-6 text-white rounded-md text-center bg-gradient-to-r from-blue-500 to-purple-500">
+        <button className="px-6 tracking-[3px] w-fit mx-auto md:mx-0 py-[10px] md:mt-6 mt-2 text-white rounded-md text-center bg-gradient-to-r from-blue-500 to-purple-500">
           Portfolio
         </button>
       </div>
       <div className="  w-[100%] max-w-[480px] px-4 md:w-[50%] md:max-w-[480px] h-[400px]  md:ml-auto mx-auto">
         <div className="w-[100%] h-[180px] flex flex-row items-end">
-          <div className="w-[70%] h-[150px] bg-purple-500"></div>
-          <div className="w-[30%] h-[100%] bg-yellow-500"></div>
+          <div className="w-[70%] h-[150px]">
+            <Slideshow slides={slides} delay="2000" />
+            {/* <img src={Img1} /> */}
+          </div>
+          <div className="w-[30%] h-[100%] bg-yellow-500">
+            <Slideshow slides={slides} delay="6000" />
+          </div>
         </div>
         <div className="w-[100%] h-[180px]  flex flex-row">
-          <div className="w-[30%] h-[150px] bg-green-500"></div>
-          <div className="w-[70%] h-[100%] bg-amber-600"></div>
+          <div className="w-[135px] h-[180px] bg-green-500">
+            <Slideshow slides={slides} delay="80000" />
+          </div>
+          <div className="w-[70%] h-[150px] bg-amber-600">
+            <Slideshow slides={slides} delay="4000" />
+          </div>
         </div>
       </div>
     </div>

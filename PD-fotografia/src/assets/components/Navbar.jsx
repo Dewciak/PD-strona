@@ -15,8 +15,8 @@ function Navbar() {
           onClick={handleNav}
           className={
             nav
-              ? "transition-transform duration-500 transform rotate-180 block md:hidden z-10 px-10 "
-              : "transition-transform duration-500 transform rotate-0 block md:hidden z-10 px-10 "
+              ? "transition-transform duration-500 transform rotate-180 block md:hidden z-20 px-10 "
+              : "transition-transform duration-500 transform rotate-0 block md:hidden z-20 px-10 "
           }
         >
           {nav ? <AiOutlineClose size={30} /> : <IoMenu size={30} />}
@@ -24,13 +24,13 @@ function Navbar() {
         <div
           className={
             nav
-              ? "w-[100%] fixed left-0 top-0 h-full bg-blue-100 flex justify-center items-center ease-in-out duration-500"
-              : "fixed left-[-100%] w-[60%] top-0 h-full bg-blue-200 flex justify-center items-center ease-in-out duration-500"
+              ? "w-[100%] fixed left-0 top-0 h-full bg-blue-100 flex justify-center items-center ease-in-out duration-500 z-10"
+              : "fixed left-[-100%] w-[60%] top-0 h-full bg-blue-200 flex justify-center items-center ease-in-out duration-500 z-50"
           }
         >
           <ul className="z-10 text-black  m-4 md:flex flex-row gap-x-16 items-center absolut">
             <a href="#">
-              <li className="text-2xl p-4">O mnie</li>
+              <li className="text-2xl p-4 ">O mnie</li>
             </a>
             <a href="#">
               <li className="text-2xl p-4">Oferta</li>
@@ -45,16 +45,22 @@ function Navbar() {
         </div>
         <ul className="hidden md:flex flex-row gap-x-16 items-center absolute">
           <a href="#">
-            <li className="font-medium hover:text-[#0009] text-lg">O mnie</li>
+            <li className="font-medium hover:text-[#0009] text-lg tracking-[4px]">
+              O mnie
+            </li>
           </a>
           <a href="#">
-            <li className="font-medium hover:text-[#0009] text-lg">Oferta</li>
+            <li className="font-medium hover:text-[#0009] text-lg tracking-[4px]">
+              Oferta
+            </li>
           </a>
           <a href="#">
-            <li className="font-medium hover:text-[#0009] text-lg">Kontakt</li>
+            <li className="font-medium hover:text-[#0009] text-lg tracking-[4px]">
+              Kontakt
+            </li>
           </a>
           <a href="#">
-            <li className="font-medium hover:text-[#0009] text-lg">
+            <li className="font-medium hover:text-[#0009] text-lg tracking-[4px]">
               Portfolio
             </li>
           </a>

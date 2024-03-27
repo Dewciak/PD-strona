@@ -7,16 +7,13 @@ import AccordionCustomIcon from "./AccordionCustomIcon";
 
 function Contact() {
   return (
-    <div className="max-w-[1050px] flex justify-center flex-col items-center mx-auto mb-20">
-      <div className="w-[70%] py-6 mb-16">
-        <AccordionCustomIcon />
-      </div>
+    <div className="max-w-[850px] flex justify-center flex-col items-center mx-auto  mb-6 md:mb-20">
       <h1 className="text-6xl text-center">Skontaktuj</h1>
       <h2 className="text-center text-2xl font-semibold bg-gradient-to-r from-blue-500 to-purple-500 inline-block text-transparent md:mt-0 bg-clip-text">
         się ze mną!
       </h2>
-      <div className="w-full  h-full flex flex-col md:flex-row mt-12 justify-between items-center py-4 ">
-        <div className="w-[50%] flex flex-col ">
+      <div className="w-full  h-full flex flex-col md:flex-row mt-2 justify-between items-center py-4 ">
+        <div className="md:w-[50%] w-[70%] flex flex-col ">
           <h1 className="text-center text-2xl font-medium py-3">
             Zapytaj o termin!
           </h1>
@@ -25,7 +22,7 @@ function Contact() {
             method="POST"
             className="flex flex-col justify-center items-center "
           >
-            <div className="min-w-[385px] flex flex-col space-y-6 ">
+            <div className="md:min-w-[385px] min-w-[325px] flex flex-col space-y-6">
               <input
                 type="hidden"
                 name="access_key"
@@ -53,7 +50,7 @@ function Contact() {
             </div>
           </form>
         </div>
-        <div className="w-[50%] h-full mb-6 flex justify-center ">
+        <div className="md:w-[50%] h-full md:mb-6 flex justify-center mx-auto pt-14">
           <ul>
             <li className="flex flex-row py-2 items-center space-x-2 text-xl">
               <img src={Fb} width={40}></img>

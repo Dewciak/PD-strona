@@ -9,25 +9,25 @@ export function CarouselDefault() {
       autoplay={true}
       autoplayDelay={4000}
       loop={true}
-      className="rounded-md, bg-red-500, "
+      className="rounded-md mx-auto mb-14 max-w-[1050px]"
       prevArrow={false}
       nextArrow={false}
     >
       <img
         src={item1}
         alt="image 1"
-        className="h-auto w-[70%] object-cover mx-auto rounded-XL"
+        className="h-auto md:w-[70%] w-[90%] object-cover mx-auto rounded-xl"
       />
 
       <img
         src={item2}
         alt="image 2"
-        className="h-auto w-[70%] object-cover mx-auto rounded-XL"
+        className="h-auto md:w-[70%] w-[90%] object-cover mx-auto rounded-xl"
       />
       <img
         src={item3}
         alt="image 3"
-        className="h-auto w-[70%] object-cover mx-auto rounded-XL"
+        className="h-auto md:w-[70%] w-[90%] object-cover mx-auto rounded-xl"
       />
     </Carousel>
   );

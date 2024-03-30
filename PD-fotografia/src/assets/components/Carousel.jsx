@@ -1,7 +1,7 @@
 import { Carousel } from "@material-tailwind/react";
-import item1 from "../images/carousel-1.png";
-import item2 from "../images/carousel-2.png";
-import item3 from "../images/carousel-3.png";
+import item1 from "../images/carousel-1.jpg";
+import item2 from "../images/carousel-2.jpg";
+import item3 from "../images/carousel-3.jpg";
 
 export function CarouselDefault() {
   return (

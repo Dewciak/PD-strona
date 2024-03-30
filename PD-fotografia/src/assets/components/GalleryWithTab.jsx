@@ -1,3 +1,5 @@
+import React, { useState } from "react";
+import { Modal, Button } from "react-bootstrap";
 import {
   Tabs,
   TabsHeader,
@@ -5,131 +7,152 @@ import {
   Tab,
   TabPanel,
 } from "@material-tailwind/react";
-import item1 from "../images/carousel-1.png";
+import FeaturedImageGallery from "./FeaturedImageGallery";
+import dog1 from "../images/Gallery/Dogs/1.jpg";
+import dog2 from "../images/Gallery/Dogs/2.jpg";
+import dog3 from "../images/Gallery/Dogs/3.jpg";
+import dog4 from "../images/Gallery/Dogs/4.jpg";
+import dog5 from "../images/Gallery/Dogs/5.jpg";
+import dog6 from "../images/Gallery/Dogs/6.jpg";
+
+import horse1 from "../images/Gallery/Horses/1.jpg";
+import horse2 from "../images/Gallery/Horses/2.jpg";
+import horse3 from "../images/Gallery/Horses/3.jpg";
+import horse4 from "../images/Gallery/Horses/4.jpg";
+import horse5 from "../images/Gallery/Horses/5.jpg";
+import horse6 from "../images/Gallery/Horses/6.jpg";
+
+import event1 from "../images/Gallery/Events/1.jpg";
+import event2 from "../images/Gallery/Events/2.jpg";
+import event3 from "../images/Gallery/Events/3.jpg";
+import event4 from "../images/Gallery/Events/4.jpg";
+import event5 from "../images/Gallery/Events/5.jpg";
+import event6 from "../images/Gallery/Events/6.jpg";
 
 export function GalleryWithTab() {
+  const [showModal, setShowModal] = useState(false);
+  const [selectedImages, setSelectedImages] = useState([]);
+
   const data = [
     {
       label: "Psy",
       value: "html",
       images: [
-        {
-          imageLink:
-            "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80",
-        },
-        {
-          imageLink:
-            "https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80",
-        },
-        {
-          imageLink:
-            "https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80",
-        },
-        {
-          imageLink:
-            "https://demos.creative-tim.com/material-kit-pro/assets/img/examples/blog5.jpg",
-        },
-        {
-          imageLink:
-            "https://material-taillwind-pro-ct-tailwind-team.vercel.app/img/content2.jpg",
-        },
-        {
-          imageLink:
-            "https://images.unsplash.com/photo-1620064916958-605375619af8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1493&q=80",
-        },
+        { imageLink: dog1 },
+        { imageLink: dog2 },
+        { imageLink: dog3 },
+        { imageLink: dog4 },
+        { imageLink: dog5 },
+        { imageLink: dog6 },
       ],
     },
     {
       label: "Konie",
       value: "react",
       images: [
-        {
-          imageLink:
-            "https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-        },
-        {
-          imageLink:
-            "https://images.unsplash.com/photo-1432462770865-65b70566d673?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-        },
-        {
-          imageLink:
-            "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80",
-        },
-        {
-          imageLink:
-            "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80",
-        },
-        {
-          imageLink:
-            "https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80",
-        },
-        {
-          imageLink:
-            "https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80",
-        },
+        { imageLink: horse1 },
+        { imageLink: horse2 },
+        { imageLink: horse3 },
+        { imageLink: horse4 },
+        { imageLink: horse5 },
+        { imageLink: horse6 },
       ],
     },
     {
       label: "Wydarzenia",
       value: "vue",
       images: [
-        {
-          imageLink:
-            "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80",
-        },
-        {
-          imageLink:
-            "https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80",
-        },
-        {
-          imageLink:
-            "https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80",
-        },
-        {
-          imageLink:
-            "https://demos.creative-tim.com/material-kit-pro/assets/img/examples/blog5.jpg",
-        },
-        {
-          imageLink:
-            "https://material-taillwind-pro-ct-tailwind-team.vercel.app/img/content2.jpg",
-        },
-        {
-          imageLink:
-            "https://images.unsplash.com/photo-1620064916958-605375619af8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1493&q=80",
-        },
+        { imageLink: event1 },
+        { imageLink: event2 },
+        { imageLink: event3 },
+        { imageLink: event4 },
+        { imageLink: event5 },
+        { imageLink: event6 },
       ],
     },
   ];
+  const handleClose = () => setShowModal(false);
+  const [activeImage, setActiveImage] = useState(null); // New state for the active image
+
+  const handleShow = (value, clickedImageLink) => {
+    const images = data.find((item) => item.value === value).images;
+    // Filter out the clicked image
+    const filteredImages = images.filter(
+      ({ imageLink }) => imageLink !== clickedImageLink
+    );
+    setSelectedImages(filteredImages);
+    setActiveImage(clickedImageLink); // Set the clicked image as the active image
+    setShowModal(true);
+  };
+
+  const handleImageClick = (imageLink) => {
+    const updatedSelectedImages = [
+      ...selectedImages.filter((image) => image.imageLink !== imageLink),
+      { imageLink: activeImage },
+    ];
+    setSelectedImages(updatedSelectedImages);
+    setActiveImage(imageLink);
+  };
 
   return (
-    <Tabs value="html">
-      <TabsHeader className="max-w-[95%] mx-auto">
-        {data.map(({ label, value }) => (
-          <Tab key={value} value={value}>
-            {label}
-          </Tab>
-        ))}
-      </TabsHeader>
-      <TabsBody className="grid grid-cols-1 gap-4">
-        {data.map(({ value, images }) => (
-          <TabPanel
-            className="grid grid-cols-1 gap-4 md:grid-cols-3"
-            key={value}
-            value={value}
+    <>
+      <Tabs value="html">
+        <TabsHeader className="max-w-[95%] mx-auto flex justify-center items-center">
+          {data.map(({ label, value }) => (
+            <Tab key={value} value={value}>
+              {label}
+            </Tab>
+          ))}
+        </TabsHeader>
+        <TabsBody className="grid grid-cols-1 gap-4">
+          {data.map(({ value, images }) => (
+            <TabPanel
+              className="grid grid-cols-1 gap-4 md:grid-cols-3"
+              key={value}
+              value={value}
+            >
+              {images?.map(({ imageLink }, index) => (
+                <div key={index} onClick={() => handleShow(value, imageLink)}>
+                  <img
+                    className="h-60 w-full max-w-full rounded-lg object-cover object-center hover:scale-100 duration-300 cursor-pointer"
+                    src={imageLink}
+                    alt="image-photo"
+                  />
+                </div>
+              ))}
+            </TabPanel>
+          ))}
+        </TabsBody>
+      </Tabs>
+
+      <Modal
+        fullscreen={true}
+        show={showModal}
+        onHide={handleClose}
+        dialogClassName="custom-modal"
+        className="mx-auto w-screen h-screen bg-[#000000e0] fixed top-[50%] left-[50%] z-[1000] translate-x-[-50%] translate-y-[-50%]"
+      >
+        <Modal.Header closeButton>
+          <Button
+            variant="secondary"
+            onClick={handleClose}
+            className="mx-[90%] mt-2 bg-blue-500 font-bold text-white px-6 rounded-xl text-2xl"
           >
-            {images?.map(({ imageLink }, index) => (
-              <div key={index}>
-                <img
-                  className="h-60 w-full max-w-full rounded-lg object-cover object-center hover:scale-100 duration-300"
-                  src={imageLink}
-                  alt="image-photo"
-                />
-              </div>
-            ))}
-          </TabPanel>
-        ))}
-      </TabsBody>
-    </Tabs>
+            X
+          </Button>
+        </Modal.Header>
+        <Modal.Body className="w-[60%] mx-auto relative top-[-25px]">
+          {selectedImages.length > 0 && (
+            <FeaturedImageGallery
+              key={activeImage}
+              images={selectedImages}
+              activeImage={activeImage}
+              onImageClick={handleImageClick} // Pass the click handler to the gallery component
+            />
+          )}
+        </Modal.Body>
+      </Modal>
+    </>
   );
 }
 

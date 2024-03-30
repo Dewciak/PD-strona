@@ -1,21 +1,23 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 
-const Slideshow = ({ slides, delay = 5000, initialDelay = 0 }) => {
+const Slideshow = ({ slides, delay = 0, initialDelay = 0 }) => {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
-  const delayRef = useRef(delay); // Store the initial delay value
 
   useEffect(() => {
-    // Use the ref to access the initial delay value
+    // Set the initial delay for the first slide change
     const initialTimeout = setTimeout(() => {
+      // After the initial delay, start changing slides at the specified interval
       const interval = setInterval(() => {
         setCurrentSlideIndex((prevIndex) => (prevIndex + 1) % slides.length);
-      }, delayRef.current); // Use the ref here
+      }, delay);
 
+      // Cleanup function to clear the interval
       return () => clearInterval(interval);
     }, initialDelay);
 
+    // Cleanup function to clear the initial timeout
     return () => clearTimeout(initialTimeout);
-  }, [slides, initialDelay]); // Removed delay from the dependency array
+  }, [slides, delay]);
 
   return (
     <div className="relative w-full h-full flex justify-center items-center">

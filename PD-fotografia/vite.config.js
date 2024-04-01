@@ -3,10 +3,10 @@ import react from "@vitejs/plugin-react";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: "/PD-fotografia/",
   plugins: [react()],
-  base: "/PD-strona/"
   },
-});
+})
 
 // export default {
 //   build: {

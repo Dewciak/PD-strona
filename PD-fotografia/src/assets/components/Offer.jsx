@@ -2,17 +2,17 @@ import React, { useEffect } from "react";
 import Horse from "../images/offer-horse.png";
 import Dog from "../images/offer-dog.png";
 import Event from "../images/offer-event.png";
-import Carousel, { CarouselDefault } from "./Carousel";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import { Link } from "react-scroll";
 
 function Offer() {
-  useEffect(() => {
-    AOS.init({ duration: 1500 });
-  });
   return (
-    <div className="max-w-[1050px] justify-center mx-auto flex flex-col md:mt-[-30px] mt-[-50px]">
-      <h1 className="text-center md:text-5xl text-6xl">Oferta</h1>
+    <div
+      id="Offer"
+      className="max-w-[1050px] justify-center mx-auto flex flex-col md:mt-[-20px] mt-[-50px]"
+    >
+      <h1 className="text-center md:text-6xl text-6xl tracking-[3px] bg-gradient-to-r from-blue-600 to-purple-500 inline-block text-transparent bg-clip-text w-[180px] mx-auto">
+        Oferta
+      </h1>
       <div className="flex flex-col md:flex-row gap-y-8 gap-x-8 mt-14 mx-auto">
         <div className="relative w-[300px] h-auto hover:scale-105 transition duration-300">
           <img src={Horse} alt="Horse" className="w-full h-auto " />
@@ -33,13 +33,6 @@ function Offer() {
           </h1>
         </div>
       </div>
-      <p
-        className="mx-auto max-w-[300px] text-center md:text-left py-12 tracking-[3px]"
-        data-aos="slide-up"
-      >
-        Jeśli sesja jaka Cię interesuje nie znajduję się w tej zakładce, napisz
-        do mnie, a na pewno razem coś wymyślimy :)
-      </p>
     </div>
   );
 }

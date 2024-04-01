@@ -4,10 +4,14 @@ import Ig from "../images/ig.png";
 import Mail from "../images/mail.png";
 import Mess from "../images/messenger.png";
 import AccordionCustomIcon from "./AccordionCustomIcon";
+import { Link } from "react-scroll";
 
 function Contact() {
   return (
-    <div className="max-w-[850px] flex justify-center flex-col items-center mx-auto  mb-6 md:mb-20">
+    <div
+      id="Contact"
+      className="max-w-[850px] flex justify-center flex-col items-center mx-auto  mb-6 md:mb-20"
+    >
       <h1 className="text-6xl text-center">Skontaktuj</h1>
       <h2 className="text-center text-2xl font-semibold bg-gradient-to-r from-blue-500 to-purple-500 inline-block text-transparent md:mt-0 bg-clip-text">
         się ze mną!

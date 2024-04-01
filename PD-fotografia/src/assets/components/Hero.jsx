@@ -20,7 +20,7 @@ function Hero() {
   const slides4 = [s41, s42];
 
   return (
-    <div className="max-w-[1050px] md:mt-[60px] mt-[20px] w-full h-auto mx-auto flex md:flex-row flex-col-reverse justify-center  ">
+    <div className="max-w-[1050px] md:mt-[60px] w-full h-auto mx-auto flex md:flex-row flex-col-reverse justify-center pt-14  ">
       <div className="w-full md:w-[500px] px-6  flex flex-col">
         <h1 className="text-5xl md:py-6 mx-auto  md:mx-0 tracking-[5px]">
           Cześć

@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Logo from "../images/nav-logo.png";
 import { IoMenu } from "react-icons/io5";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import { Link } from "react-scroll"; // Import Link from react-scroll
 
 function Navbar() {
   const [nav, setNav] = useState(false);
@@ -9,8 +10,8 @@ function Navbar() {
     setNav(!nav);
   };
   return (
-    <div>
-      <div className="w-[90%] mx-auto h-8 flex flex-row py-10 justify-center items-center">
+    <div className="w-full h-auto">
+      <div className="md:hidden w-[100%] mx-auto h-8 flex flex-row py-10 justify-center items-center fixed z-[10] top-0 left-[50%] bg-white px-4 translate-x-[-50%]">
         <div
           onClick={handleNav}
           className={
@@ -24,48 +25,113 @@ function Navbar() {
         <div
           className={
             nav
-              ? "w-[100%] fixed left-0 top-0 h-full bg-blue-100 flex justify-center items-center ease-in-out duration-500 z-10"
-              : "fixed left-[-100%] w-[60%] top-0 h-full bg-blue-200 flex justify-center items-center ease-in-out duration-500 z-50"
+              ? "w-[60%] fixed left-0 top-0 h-screen bg-blue-100 flex justify-center items-center ease-in-out duration-500 z-[5]"
+              : "fixed left-[-60%] w-[60%] top-0 h-screen bg-blue-200 flex justify-center items-center ease-in-out duration-500 z-[5]"
           }
         >
-          <ul className="z-10 text-black  m-4 md:flex flex-row gap-x-16 items-center absolut">
-            <a href="#">
+          <ul className="z-10 text-black m-4 md:flex flex-row gap-x-16 items-center cursor-pointer">
+            <Link
+              activeClass="active"
+              to="About"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              onClick={handleNav}
+            >
               <li className="text-2xl p-4 ">O mnie</li>
-            </a>
-            <a href="#">
+            </Link>
+            <Link
+              activeClass="active"
+              to="Offer"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              onClick={handleNav}
+            >
               <li className="text-2xl p-4">Oferta</li>
-            </a>
-            <a href="#">
+            </Link>
+            <Link
+              activeClass="active"
+              to="Contact"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              onClick={handleNav}
+              duration={500}
+            >
               <li className="text-2xl p-4">Kontakt</li>
-            </a>
-            <a href="#">
+            </Link>
+            <Link
+              activeClass="active"
+              to="Portfolio"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              onClick={handleNav}
+              duration={500}
+            >
               <li className="text-2xl p-4">Portfolio</li>
-            </a>
+            </Link>
           </ul>
         </div>
-        <ul className="hidden md:flex flex-row gap-x-16 items-center absolute">
-          <a href="#">
+        <div className="md:hidden w-20 mx-4 h-auto object-scale-dow ml-auto">
+          <img src={Logo} className="" />
+        </div>
+      </div>
+      <div className="w-[90%] hidden mx-auto h-8 md:flex flex-row py-10 justify-center items-center absolute top-0 left-[50%] translate-x-[-50%] z-[10]">
+        <ul className="hidden md:flex flex-row gap-x-16 items-center cursor-pointer absolute">
+          <Link
+            activeClass="active"
+            to="About"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >
             <li className="font-medium hover:text-[#0009] text-lg tracking-[4px]">
               O mnie
             </li>
-          </a>
-          <a href="#">
-            <li className="font-medium hover:text-[#0009] text-lg tracking-[4px]">
-              Oferta
-            </li>
-          </a>
-          <a href="#">
-            <li className="font-medium hover:text-[#0009] text-lg tracking-[4px]">
-              Kontakt
-            </li>
-          </a>
-          <a href="#">
+          </Link>
+          <Link
+            activeClass="active"
+            to="Portfolio"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >
             <li className="font-medium hover:text-[#0009] text-lg tracking-[4px]">
               Portfolio
             </li>
-          </a>
+          </Link>
+          <Link
+            activeClass="active"
+            to="Offer"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >
+            <li className="font-medium hover:text-[#0009] text-lg tracking-[4px]">
+              Oferta
+            </li>
+          </Link>
+          <Link
+            activeClass="active"
+            to="Contact"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >
+            <li className="font-medium hover:text-[#0009] text-lg tracking-[4px]">
+              Kontakt
+            </li>
+          </Link>
         </ul>
-        <div className="w-20 mx-4  h-auto object-scale-dow ml-auto">
+        <div className="w-20 mx-4 h-auto object-scale-dow ml-auto">
           <img src={Logo} className="" />
         </div>
       </div>

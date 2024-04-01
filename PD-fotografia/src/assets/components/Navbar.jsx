@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Logo from "../images/nav-logo.png";
+import { IoMenu } from "react-icons/io5";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { Link } from "react-scroll"; // Import Link from react-scroll
 

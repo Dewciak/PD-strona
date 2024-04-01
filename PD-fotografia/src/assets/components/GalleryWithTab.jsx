@@ -97,7 +97,7 @@ export function GalleryWithTab() {
   return (
     <>
       <Tabs value="html">
-        <TabsHeader className="max-w-[95%] mx-auto flex justify-center items-center z-[1]">
+        <TabsHeader className="max-w-[95%] mx-auto flex justify-center bg-blue-gray-100 items-center z-[1]">
           {data.map(({ label, value }) => (
             <Tab key={value} value={value}>
               {label}
@@ -107,7 +107,7 @@ export function GalleryWithTab() {
         <TabsBody className="grid grid-cols-1 gap-4">
           {data.map(({ value, images }) => (
             <TabPanel
-              className="grid grid-cols-1 gap-4 md:grid-cols-3"
+              className="grid grid-cols-1 gap-4 md:grid-cols-3 mt-6"
               key={value}
               value={value}
             >
@@ -141,7 +141,7 @@ export function GalleryWithTab() {
             X
           </Button>
         </Modal.Header>
-        <Modal.Body className="w-[60%] mx-auto relative top-[-25px]">
+        <Modal.Body className="md:w-[60%] w-[90%] mx-auto relative md:top-[-25px]">
           {selectedImages.length > 0 && (
             <FeaturedImageGallery
               key={activeImage}

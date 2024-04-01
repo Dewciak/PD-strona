@@ -40,15 +40,15 @@ function Hero() {
             <Slideshow slides={slides1} delay="10000" initialDelay="2000" />
             {/* <img src={Img1} /> */}
           </div>
-          <div className="w-[30%] h-[100%] bg-yellow-500">
+          <div className="w-[30%] h-[100%] ">
             <Slideshow slides={slides2} delay="10000" initialDelay="6000" />
           </div>
         </div>
         <div className="w-[100%] h-[180px]  flex flex-row">
-          <div className="w-[135px] h-[180px] bg-green-500">
+          <div className="w-[135px] h-[180px] ">
             <Slideshow slides={slides3} delay="10000" initialDelay="8000" />
           </div>
-          <div className="w-[70%] h-[150px] bg-amber-600">
+          <div className="w-[70%] h-[150px] ">
             <Slideshow slides={slides4} delay="10000" initialDelay="4000" />
           </div>
         </div>

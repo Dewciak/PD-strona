@@ -36,25 +36,39 @@
 // };
 
 // export default Slideshow;
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 const Slideshow = ({ slides, delay = 0, initialDelay = 0 }) => {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
+  const intervalRef = useRef(null);
+  const timeoutRef = useRef(null);
 
   useEffect(() => {
-    // Set the initial delay for the first slide change
-    const initialTimeout = setTimeout(() => {
-      // After the initial delay, start changing slides at the specified interval
-      const interval = setInterval(() => {
-        setCurrentSlideIndex((prevIndex) => (prevIndex + 1) % slides.length);
-      }, delay);
+    const startSlideshow = () => {
+      timeoutRef.current = setTimeout(() => {
+        intervalRef.current = setInterval(() => {
+          setCurrentSlideIndex((prevIndex) => (prevIndex + 1) % slides.length);
+        }, delay);
+      }, initialDelay);
+    };
 
-      // Cleanup function to clear the interval
-      return () => clearInterval(interval);
-    }, initialDelay);
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === "visible") {
+        startSlideshow();
+      } else {
+        clearInterval(intervalRef.current);
+        clearTimeout(timeoutRef.current);
+      }
+    };
 
-    // Cleanup function to clear the initial timeout
-    return () => clearTimeout(initialTimeout);
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    startSlideshow();
+
+    return () => {
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+      clearInterval(intervalRef.current);
+      clearTimeout(timeoutRef.current);
+    };
   }, [slides, delay, initialDelay]);
 
   return (

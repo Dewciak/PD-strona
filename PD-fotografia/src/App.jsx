@@ -9,6 +9,7 @@ import Portfolio from "./assets/components/Portfolio";
 import ScrollToTop from "./assets/components/ScrollToTop";
 import CarouselDefault from "./assets/components/Carousel";
 import AccordionCustomIcon from "./assets/components/AccordionCustomIcon";
+import SlideText from "./assets/components/SlideText";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <About />
       <Portfolio />
       <Offer />
+      <SlideText />
       <CarouselDefault />
       <AccordionCustomIcon />
       <Contact />

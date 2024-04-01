@@ -2,23 +2,11 @@ import { Carousel } from "@material-tailwind/react";
 import item1 from "../images/carousel-1.jpg";
 import item2 from "../images/carousel-2.jpg";
 import item3 from "../images/carousel-3.jpg";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import React, { useEffect } from "react";
 
 export function CarouselDefault() {
-  useEffect(() => {
-    AOS.init({ duration: 1500 });
-  });
   return (
     <>
-      <p
-        className="mx-auto max-w-[300px] text-center md:text-left py-12 tracking-[3px]"
-        data-aos="slide-up"
-      >
-        Jeśli sesja jaka Cię interesuje nie znajduję się w tej zakładce, napisz
-        do mnie, a na pewno razem coś wymyślimy :)
-      </p>
       <Carousel
         autoplay={true}
         autoplayDelay={4000}

@@ -31,11 +31,10 @@ function About() {
           </h1>
 
           <p1 data-aos="slide-right" className="px-6 tracking-[2px]">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
-            accusamus, earum consequatur, modi distinctio magnam culpa dolor
-            molestias facere id mollitia fugiat tempora voluptatum iure, sequi
-            eius temporibus veniam porro quis assumenda exercitationem dolorum
-            perferendis vitae quaerat? Ex ullam laborum, temporibus ducimus
+            Cześć, jestem Patrycja Dawid. Fotografuję zwierzęta od 2014 roku.
+            Dorastałam z psami i końmi, co pozwala mi świetnie porozumieć się z
+            Waszymi pupilami i uchwycić je w migawce aparatu. W wolnym czasie
+            lubię jeździć konno, uprawiam agility i uwielbiam spacery po lesie.
           </p1>
         </div>
         {/* zdjęcie about */}

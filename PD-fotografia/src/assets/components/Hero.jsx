@@ -30,7 +30,7 @@ function Hero() {
           charakteru to coś co definiuje moje zdjęcia. Zapewnij sobie świetną
           pamiątke ze swoim pupilem!
         </p>
-        <button className="px-6 tracking-[3px] w-fit mx-auto md:mx-0 py-[10px] md:mt-6 mt-2 text-white rounded-md text-center bg-gradient-to-r from-blue-500 to-purple-500">
+        <button className="px-6 tracking-[1.5px] w-fit mx-auto md:mx-0 py-[10px] md:mt-6 mt-2 text-white rounded-md text-center bg-gradient-to-r from-blue-500 to-purple-500">
           Portfolio
         </button>
       </div>

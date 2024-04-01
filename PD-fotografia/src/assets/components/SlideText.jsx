@@ -4,17 +4,18 @@ import React, { useEffect } from "react";
 
 function SlideText() {
   useEffect(() => {
-    AOS.init({ duration: 500 });
-  });
+    AOS.init({ duration: 2000 });
+    AOS.refresh(); // Ensure animations are triggered correctly
+  }, []);
+
   return (
     <>
-      <p
-        className="mx-auto max-w-[300px] text-center md:text-left py-12 tracking-[3px]"
-        data-aos="fade-left"
-      >
-        Jeśli sesja jaka Cię interesuje nie znajduję się w tej zakładce, napisz
-        do mnie, a na pewno razem coś wymyślimy :)
-      </p>
+      <div className="w-[98.8vw] mx-auto h-auto   my-14">
+        <h2 className="mx-auto max-w-[300px] text-center md:text-left tracking-[3px] overflow-visible z-10 ">
+          Jeśli sesja jaka Cię interesuje nie znajduję się w tej zakładce,
+          napisz do mnie, a na pewno razem coś wymyślimy :)
+        </h2>
+      </div>
     </>
   );
 }

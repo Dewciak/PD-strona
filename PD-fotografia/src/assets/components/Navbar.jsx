@@ -10,7 +10,7 @@ function Navbar() {
     setNav(!nav);
   };
   return (
-    <div className="w-full h-auto">
+    <div className="w-full h-auto bg-transparent">
       <div className="md:hidden w-[100%] mx-auto h-8 flex flex-row py-10 justify-center items-center fixed z-[10] top-0 left-[50%] bg-white px-4 translate-x-[-50%]">
         <div
           onClick={handleNav}
@@ -80,8 +80,8 @@ function Navbar() {
           <img src={Logo} className="" />
         </div>
       </div>
-      <div className="w-[90%] hidden mx-auto h-8 md:flex flex-row py-10 justify-center items-center absolute top-0 left-[50%] translate-x-[-50%] z-[10]">
-        <ul className="hidden md:flex flex-row gap-x-16 items-center cursor-pointer absolute">
+      <div className="w-[90%] bg-transparent hidden mx-auto h-8 md:flex flex-row py-10 justify-center items-center absolute top-0 left-[50%] translate-x-[-50%] z-[10]">
+        <ul className="hidden md:flex flex-row gap-x-16 items-center cursor-pointer absolute bg-transparent">
           <Link
             activeClass="active"
             to="About"
@@ -131,7 +131,7 @@ function Navbar() {
             </li>
           </Link>
         </ul>
-        <div className="w-20 mx-4 h-auto object-scale-dow ml-auto">
+        <div className="w-20 mx-4 h-auto object-scale-dow ml-auto ">
           <img src={Logo} className="" />
         </div>
       </div>

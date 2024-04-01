@@ -1,19 +1,15 @@
 import React, { useEffect } from "react";
-import AboutImage from "../images/About-img.png";
+import AboutImage from "../images/About-img.jpg";
 import Animals from "../images/animals.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-scroll";
 
 function About() {
-  useEffect(() => {
-    AOS.init({ duration: 1500 });
-  });
-
   return (
     <div
       id="About"
-      className="max-w-[1050px] h-auto md:h-screen mx-auto md:pt-8 overflow-hidden bg-white rounded-xl shadow-[#0000000d]"
+      className="max-w-[1050px] h-auto md:h-screen mx-auto md:pt-8 overflow-hidden   shadow-[#0000000d]"
     >
       <div className="w-full text-center">
         <h1 className="text-5xl mt-12 md:mt-0 tracking-[3px]">Profesjonalna</h1>

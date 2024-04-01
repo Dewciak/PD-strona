@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import Horse from "../images/offer-horse.png";
-import Dog from "../images/offer-dog.png";
-import Event from "../images/offer-event.png";
+import Horse from "../images/offer-horse.jpg";
+import Dog from "../images/offer-dog.jpg";
+import Event from "../images/offer-event.jpg";
 import { Link } from "react-scroll";
 
 function Offer() {
@@ -10,7 +10,7 @@ function Offer() {
       id="Offer"
       className="max-w-[1050px] justify-center mx-auto flex flex-col md:mt-[-20px] mt-[-50px]"
     >
-      <h1 className="text-center md:text-6xl text-6xl tracking-[3px] bg-gradient-to-r from-blue-600 to-purple-500 inline-block text-transparent bg-clip-text w-[180px] mx-auto">
+      <h1 className="text-center md:text-6xl text-6xl tracking-[3px] mx-auto">
         Oferta
       </h1>
       <div className="flex flex-col md:flex-row gap-y-8 gap-x-8 mt-14 mx-auto">

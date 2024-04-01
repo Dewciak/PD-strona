@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Navbar from "./assets/components/Navbar";
 import Hero from "./assets/components/Hero";
 import About from "./assets/components/About";
@@ -12,8 +14,13 @@ import AccordionCustomIcon from "./assets/components/AccordionCustomIcon";
 import SlideText from "./assets/components/SlideText";
 
 function App() {
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+    AOS.refresh(); // Ensure animations are triggered correctly
+  }, []);
+
   return (
-    <div>
+    <div className="App">
       <Navbar />
       <ScrollToTop />
       <Hero />

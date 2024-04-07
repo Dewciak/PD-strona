@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import AboutImage from "../images/About-img.jpg";
 import Animals from "../images/animals.png";
-import AOS from "aos";
-import "aos/dist/aos.css";
+// import AOS from "aos";
+// import "aos/dist/aos.css";
 import { Link } from "react-scroll";
 
 function About() {
@@ -20,13 +20,17 @@ function About() {
       <div className="w-full flex flex-col-reverse md:flex-row justify-center items-center md:mt-6 ">
         <div className="flex flex-col md:w-[45%] pl-4">
           <h1
-            data-aos="slide-right"
+            // data-aos="slide-right"
+
             className="text-4xl pb-8 font-bold tracking-[3px] bg-gradient-to-r from-blue-500 to-purple-500 inline-block text-transparent md:mt-0 bg-clip-text mt-8 text-center md:text-left mx-6 "
           >
             Poznaj mnie!
           </h1>
 
-          <p1 data-aos="slide-right" className="px-6 tracking-[2px]">
+          <p1
+            // data-aos="slide-right"
+            className="px-6 tracking-[2px]"
+          >
             Cześć, jestem Patrycja Dawid. Fotografuję zwierzęta od 2014 roku.
             Dorastałam z psami i końmi, co pozwala mi świetnie porozumieć się z
             Waszymi pupilami i uchwycić je w migawce aparatu. W wolnym czasie
@@ -34,7 +38,10 @@ function About() {
           </p1>
         </div>
         {/* zdjęcie about */}
-        <div data-aos="slide-left" className="md:ml-auto mx-auto ">
+        <div
+          //  data-aos="slide-left"
+          className="md:ml-auto mx-auto "
+        >
           <img src={AboutImage} className=" md:w-[500px] w-[95%] mx-auto"></img>
         </div>
       </div>

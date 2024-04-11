@@ -43,6 +43,17 @@ function Navbar() {
             </Link>
             <Link
               activeClass="active"
+              to="Portfolio"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              onClick={handleNav}
+              duration={500}
+            >
+              <li className="text-2xl p-4">Portfolio</li>
+            </Link>
+            <Link
+              activeClass="active"
               to="Offer"
               spy={true}
               smooth={true}
@@ -62,17 +73,6 @@ function Navbar() {
               duration={500}
             >
               <li className="text-2xl p-4">Kontakt</li>
-            </Link>
-            <Link
-              activeClass="active"
-              to="Portfolio"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              onClick={handleNav}
-              duration={500}
-            >
-              <li className="text-2xl p-4">Portfolio</li>
             </Link>
           </ul>
         </div>

@@ -28,7 +28,7 @@ function App() {
       <Portfolio />
       <Offer />
       <SlideText />
-      <CarouselDefault />
+      {/* <CarouselDefault /> */}
       <AccordionCustomIcon />
       <Contact />
       <Footer />

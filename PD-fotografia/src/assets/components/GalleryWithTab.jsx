@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Modal, Button } from "react-bootstrap";
+import { AiOutlineClose } from "react-icons/ai";
 import {
   Tabs,
   TabsHeader,
@@ -97,7 +98,7 @@ export function GalleryWithTab() {
   return (
     <>
       <Tabs value="html">
-        <TabsHeader className="max-w-[95%] mx-auto flex justify-center bg-blue-gray-100 items-center z-[1]">
+        <TabsHeader className="max-w-[95%] mx-auto flex justify-center bg-gray-100 items-center z-[1]">
           {data.map(({ label, value }) => (
             <Tab key={value} value={value}>
               {label}
@@ -107,7 +108,7 @@ export function GalleryWithTab() {
         <TabsBody className="grid grid-cols-1 gap-4">
           {data.map(({ value, images }) => (
             <TabPanel
-              className="grid grid-cols-1 gap-4 md:grid-cols-3 mt-6"
+              className="grid grid-cols-1  gap-4 md:grid-cols-3 mt-6"
               key={value}
               value={value}
             >
@@ -136,18 +137,20 @@ export function GalleryWithTab() {
           <Button
             variant="secondary"
             onClick={handleClose}
-            className="mx-[90%] mt-2 bg-blue-500 font-bold text-white px-6 rounded-xl text-2xl"
+            className="md:mx-[90%] mx-[80%] my-10 md:mt:2 bg-blue-500 font-bold text-white px-6 rounded-xl text-2xl"
           >
             X
           </Button>
         </Modal.Header>
-        <Modal.Body className="md:w-[60%] w-[90%] mx-auto relative md:top-[-25px]">
+
+        <Modal.Body className="flex w-[90%] md:w-[60%] items-center  justify-center mx-auto h-[500px] md:h-full md:top-[-110px] relative ">
           {selectedImages.length > 0 && (
             <FeaturedImageGallery
               key={activeImage}
               images={selectedImages}
               activeImage={activeImage}
-              onImageClick={handleImageClick} // Pass the click handler to the gallery component
+              onImageClick={handleImageClick}
+              className="w-full h-full" // Ensure the gallery takes up full space
             />
           )}
         </Modal.Body>

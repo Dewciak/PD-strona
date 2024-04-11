@@ -2,16 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @font-face {
-  font-family: "Montserrat";
-  src: url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-} */
 /* * {
   font-family: "Montserrat";
 } */
 * {
   letter-spacing: 1.5px;
-  /* cursor: default; */
+  /* font-weight: 500; */
+  color: rgb(38, 50, 56);
+  /* line-height: 28px; */
 }
 .App {
   background-image: url("assets/images/background.jpg");

@@ -10,7 +10,7 @@ function Contact() {
   return (
     <div
       id="Contact"
-      className="max-w-[850px] flex justify-center flex-col items-center mx-auto  mb-6 md:mb-20"
+      className="max-w-[850px] flex justify-center flex-col items-center mx-auto  mb-6 md:mb-10"
     >
       <h1 className="text-6xl text-center">Skontaktuj</h1>
       <h2 className="text-center text-2xl font-semibold bg-gradient-to-r from-blue-500 to-purple-500 inline-block text-transparent md:mt-0 bg-clip-text">
@@ -26,7 +26,7 @@ function Contact() {
             method="POST"
             className="flex flex-col justify-center items-center "
           >
-            <div className="md:min-w-[385px] min-w-[325px] flex flex-col space-y-6">
+            <div className="md:min-w-[355px] min-w-[295px] flex flex-col space-y-6">
               <input
                 type="hidden"
                 name="access_key"
@@ -47,31 +47,40 @@ function Contact() {
               ></textarea>
               <button
                 type="submit"
-                className="px-6 py-[10px] mr-auto mt-2 text-white rounded-xl text-center bg-gradient-to-r from-blue-500 to-purple-500"
+                className="px-6 py-[10px] md:mr-auto mx-auto font-semibold mt-2 text-white rounded-xl text-center bg-gradient-to-r from-blue-500 to-purple-500"
               >
                 wyślij
               </button>
             </div>
           </form>
         </div>
-        <div className="md:w-[50%] h-full md:mb-6 flex justify-center mx-auto pt-14">
+        <div className="md:w-[50%] h-full md:mb-6 flex justify-center mx-auto pt-4">
           <ul>
-            <li className="flex flex-row py-2 items-center space-x-2 text-xl">
-              <img src={Fb} width={40}></img>
-              <p>Patrycja Dawid Fotografia</p>
-            </li>
-            <li className="flex flex-row py-2 items-center space-x-2 text-xl">
-              <img src={Mess} width={40}></img>
-              <p>Patrycja Dawid Fotografia</p>
-            </li>
-            <li className="flex flex-row py-2 items-center space-x-2 text-xl">
-              <img src={Ig} width={40}></img>
-              <p>patrycjadfotografia</p>
-            </li>
-            <li className="flex flex-row py-2 items-center space-x-2 text-xl">
-              <img src={Mail} width={40}></img>
-              <p>patrycjad20@gmail.com</p>
-            </li>
+            <a href="https://www.facebook.com/patrycjadawidfotografia?locale=pl_PL">
+              <li className="flex flex-row py-2 items-center space-x-2 text-xl">
+                <img src={Fb} width={40}></img>
+                <p>Patrycja Dawid Fotografia</p>
+              </li>
+            </a>
+
+            <a href="https://m.me/patrycjadawidfotografia">
+              <li className="flex flex-row py-2 items-center space-x-2 text-xl">
+                <img src={Mess} width={40}></img>
+                <p>Patrycja Dawid Fotografia</p>
+              </li>
+            </a>
+            <a href="https://www.instagram.com/patrycjadfotografia/">
+              <li className="flex flex-row py-2 items-center space-x-2 text-xl">
+                <img src={Ig} width={40}></img>
+                <p>patrycjadfotografia</p>
+              </li>
+            </a>
+            <a href="mailto:wiktorskid@wp.pl">
+              <li className="flex flex-row py-2 items-center space-x-2 text-xl">
+                <img src={Mail} width={40}></img>
+                <p>patrycjad20@gmail.com</p>
+              </li>
+            </a>
           </ul>
         </div>
       </div>

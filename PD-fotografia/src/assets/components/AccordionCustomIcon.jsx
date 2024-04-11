@@ -32,7 +32,7 @@ export function AccordionCustomIcon() {
   const handleOpen = (value) => setOpen(open === value ? 0 : value);
 
   return (
-    <div className="w-[85%] md:w-[55%]  py-6 mb-10 mx-auto">
+    <div className="w-[85%] max-w-[900px]  md:w-[55%] py-6  mx-auto mb-10">
       <Accordion open={open === 1} icon={<Icon id={1} open={open} />}>
         <AccordionHeader onClick={() => handleOpen(1)}>
           W jakiej formie są zdjęcia?

@@ -5,7 +5,7 @@ function Portfolio() {
   return (
     <div
       id="Portfolio"
-      className="max-w-[1050px] h-auto py-0 mx-auto pb-24 mt-8  md:mt-[0px] "
+      className="max-w-[1050px] h-auto py-0 mx-auto pb-24 mt-12  "
     >
       <h1 className="text-center text-6xl pb-12 tracking-[3px]">Portfolio</h1>
       <GalleryWithTab />

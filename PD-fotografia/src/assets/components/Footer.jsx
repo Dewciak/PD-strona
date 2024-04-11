@@ -7,11 +7,11 @@ import { Link } from "react-scroll"; // Import Link from react-scroll
 
 function Footer() {
   return (
-    <div className="w-full max-w-[1050px]  mx-auto flex flex-col justify-center items-center">
+    <div className="w-full max-w-[1050px]  mx-auto flex flex-col justify-center cursor-pointer items-center">
       <ul className="md:w-[60%] w-[90%]">
         <Link
           activeClass="active"
-          to="Main"
+          to="Hero"
           spy={true}
           smooth={true}
           offset={-70}

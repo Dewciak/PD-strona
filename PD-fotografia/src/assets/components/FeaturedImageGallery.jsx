@@ -16,7 +16,7 @@ export default function FeaturedImageGallery({
     <div className="grid gap-4">
       <div>
         <img
-          className="h-auto w-full max-w-full rounded-lg object-cover object-center md:h-[480px]"
+          className="h-auto w-full  max-w-full rounded-lg object-cover object-center md:h-[480px]"
           src={active}
           alt=""
         />
@@ -27,7 +27,7 @@ export default function FeaturedImageGallery({
             <img
               onClick={() => onImageClick(imageLink)}
               src={imageLink}
-              className="h-20 max-w-full cursor-pointer rounded-lg object-cover object-center"
+              className="h-20 max-w-full cursor-pointer  rounded-lg object-cover object-center"
               alt="gallery-image"
             />
           </div>

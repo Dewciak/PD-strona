@@ -1,6 +1,8 @@
 import React from "react";
 import Navbar from "./Navbar";
 import Slideshow from "./Slideshow";
+import { Link } from "react-scroll";
+
 import s11 from "../images/Hero/s1-1.jpg";
 import s12 from "../images/Hero/s1-2.jpg";
 
@@ -20,8 +22,11 @@ function Hero() {
   const slides4 = [s41, s42];
 
   return (
-    <div className="max-w-[1050px] md:mt-[60px] w-full h-auto mx-auto flex md:flex-row flex-col-reverse justify-center pt-14  ">
-      <div className="w-full md:w-[500px] px-6  flex flex-col">
+    <div
+      id="Hero"
+      className="max-w-[1050px] md:mt-[40px] w-full h-auto mx-auto flex md:flex-row flex-col-reverse justify-center mt-10 pt-14  "
+    >
+      <div className="w-full md:w-[500px] px-6 md:mt-12 flex flex-col items-center md:items-start">
         <h1 className="text-5xl md:py-6 mx-auto  md:mx-0 tracking-[5px]">
           Cześć
         </h1>
@@ -30,9 +35,18 @@ function Hero() {
           charakteru to coś co definiuje moje zdjęcia. Zapewnij sobie świetną
           pamiątke ze swoim pupilem!
         </p>
-        <button className="px-6 tracking-[1.5px] w-fit mx-auto md:mx-0 py-[10px] md:mt-6 mt-2 text-white rounded-md text-center bg-gradient-to-r from-blue-500 to-purple-500">
-          Portfolio
-        </button>
+        <Link
+          activeClass="active"
+          to="Portfolio"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+        >
+          <button className="px-6 tracking-[1.5px] w-fit mx-auto md:mx-0 py-[10px] md:mt-6 mt-2 text-white rounded-md text-center bg-gradient-to-r from-blue-500 to-purple-500">
+            Portfolio
+          </button>
+        </Link>
       </div>
       <div className="  w-[100%] max-w-[480px] px-4 md:w-[50%] md:max-w-[480px] h-[400px]  md:ml-auto mx-auto">
         <div className="w-[100%] h-[180px] flex flex-row items-end">

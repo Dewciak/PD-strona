@@ -2,17 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-/* * {
-  font-family: "Montserrat";
-} */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
 * {
   letter-spacing: 1.5px;
-  /* font-weight: 500; */
   color: rgb(38, 50, 56);
-  /* line-height: 28px; */
 }
 .App {
   background-image: url("assets/images/background.jpg");
 
   background-size: cover;
+}
+#Start {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings: "slnt" 0;
 }

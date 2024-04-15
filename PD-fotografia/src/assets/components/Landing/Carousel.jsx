@@ -1,7 +1,8 @@
 import { Carousel } from "@material-tailwind/react";
-import item1 from "../images/carousel-1.jpg";
-import item2 from "../images/carousel-2.jpg";
-import item3 from "../images/carousel-3.jpg";
+import item1 from "../../images/carousel-1.jpg";
+import item2 from "../../images/carousel-2.jpg";
+import item3 from "../../images/carousel-2.jpg";
+
 import React, { useEffect } from "react";
 
 export function CarouselDefault() {

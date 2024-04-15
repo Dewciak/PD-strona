@@ -9,26 +9,26 @@ import {
   TabPanel,
 } from "@material-tailwind/react";
 import FeaturedImageGallery from "./FeaturedImageGallery";
-import dog1 from "../images/Gallery/Dogs/1.jpg";
-import dog2 from "../images/Gallery/Dogs/2.jpg";
-import dog3 from "../images/Gallery/Dogs/3.jpg";
-import dog4 from "../images/Gallery/Dogs/4.jpg";
-import dog5 from "../images/Gallery/Dogs/5.jpg";
-import dog6 from "../images/Gallery/Dogs/6.jpg";
+import dog1 from "../../images/Gallery/Dogs/1.jpg";
+import dog2 from "../../images/Gallery/Dogs/2.jpg";
+import dog3 from "../../images/Gallery/Dogs/3.jpg";
+import dog4 from "../../images/Gallery/Dogs/4.jpg";
+import dog5 from "../../images/Gallery/Dogs/5.jpg";
+import dog6 from "../../images/Gallery/Dogs/6.jpg";
 
-import horse1 from "../images/Gallery/Horses/1.jpg";
-import horse2 from "../images/Gallery/Horses/2.jpg";
-import horse3 from "../images/Gallery/Horses/3.jpg";
-import horse4 from "../images/Gallery/Horses/4.jpg";
-import horse5 from "../images/Gallery/Horses/5.jpg";
-import horse6 from "../images/Gallery/Horses/6.jpg";
+import horse1 from "../../images/Gallery/Horses/1.jpg";
+import horse2 from "../../images/Gallery/Horses/2.jpg";
+import horse3 from "../../images/Gallery/Horses/3.jpg";
+import horse4 from "../../images/Gallery/Horses/4.jpg";
+import horse5 from "../../images/Gallery/Horses/5.jpg";
+import horse6 from "../../images/Gallery/Horses/6.jpg";
 
-import event1 from "../images/Gallery/Events/1.jpg";
-import event2 from "../images/Gallery/Events/2.jpg";
-import event3 from "../images/Gallery/Events/3.jpg";
-import event4 from "../images/Gallery/Events/4.jpg";
-import event5 from "../images/Gallery/Events/5.jpg";
-import event6 from "../images/Gallery/Events/6.jpg";
+import event1 from "../../images/Gallery/Events/1.jpg";
+import event2 from "../../images/Gallery/Events/2.jpg";
+import event3 from "../../images/Gallery/Events/3.jpg";
+import event4 from "../../images/Gallery/Events/4.jpg";
+import event5 from "../../images/Gallery/Events/5.jpg";
+import event6 from "../../images/Gallery/Events/6.jpg";
 
 export function GalleryWithTab() {
   const [showModal, setShowModal] = useState(false);

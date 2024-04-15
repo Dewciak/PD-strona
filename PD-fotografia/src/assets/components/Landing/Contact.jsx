@@ -1,8 +1,8 @@
 import React from "react";
-import Fb from "../images/fb.png";
-import Ig from "../images/ig.png";
-import Mail from "../images/mail.png";
-import Mess from "../images/messenger.png";
+import Fb from "../../images/fb.png";
+import Ig from "../../images/ig.png";
+import Mail from "../../images/mail.png";
+import Mess from "../../images/messenger.png";
 import AccordionCustomIcon from "./AccordionCustomIcon";
 import { Link } from "react-scroll";
 

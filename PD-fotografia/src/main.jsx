@@ -1,15 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
+import Home from "./Home.jsx";
 import "./index.css";
 import { ThemeProvider } from "@material-tailwind/react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Dogs from "./assets/components/Dogs/Dogs.jsx";
+import Dogs from "./Dogs.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <Home />,
     errorElement: <div>404 coś poszło nie tak</div>,
   },
   {

@@ -3,12 +3,13 @@ import Logo from "../images/nav-logo.png";
 import { IoMenu } from "react-icons/io5";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { Link } from "react-scroll"; // Import Link from react-scroll
-
+import { Link as RouterLink } from "react-router-dom";
 function Navbar() {
   const [nav, setNav] = useState(false);
   const handleNav = () => {
     setNav(!nav);
   };
+
   return (
     <div className="w-full h-auto bg-transparent">
       <div className="md:hidden w-[100%] mx-auto h-8 flex flex-row py-10 justify-center items-center fixed z-[10] top-0 left-[50%] bg-white px-4 translate-x-[-50%]">
@@ -80,7 +81,7 @@ function Navbar() {
           <img src={Logo} className="" />
         </div>
       </div>
-      <div className="w-[90%] bg-transparent hidden mx-auto h-8 md:flex flex-row py-10 justify-center items-center absolute top-0 left-[50%] translate-x-[-50%] z-[10]">
+      <div className="w-[100%] bg-white hidden mx-auto h-8 md:flex flex-row py-10 justify-center items-center absolute top-0 left-[50%] translate-x-[-50%] z-[10]">
         <ul className="hidden md:flex flex-row gap-x-16 items-center cursor-pointer absolute bg-transparent">
           <Link
             activeClass="active"
@@ -94,6 +95,7 @@ function Navbar() {
               O mnie
             </li>
           </Link>
+
           <Link
             activeClass="active"
             to="Portfolio"
@@ -102,9 +104,11 @@ function Navbar() {
             offset={-70}
             duration={500}
           >
-            <li className="font-medium hover:text-[#0009] text-lg tracking-[4px]">
-              Portfolio
-            </li>
+            <RouterLink to="/">
+              <li className="font-medium hover:text-[#0009] text-lg tracking-[4px]">
+                Portfolio
+              </li>
+            </RouterLink>
           </Link>
           <Link
             activeClass="active"

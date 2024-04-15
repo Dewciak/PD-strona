@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
-import Navbar from "./assets/components/Landing/Navbar";
+import Navbar from "./assets/components/Navbar";
 import Hero from "./assets/components/Landing/Hero";
 import About from "./assets/components/Landing/About";
 import Offer from "./assets/components/Landing/Offer";
 import Contact from "./assets/components/Landing/Contact";
-import Footer from "./assets/components/Landing/Footer";
+import Footer from "./assets/components/Footer";
 import Portfolio from "./assets/components/Landing/Portfolio";
-import ScrollToTop from "./assets/components/Landing/ScrollToTop";
+import ScrollToTop from "./assets/components/ScrollToTop";
 import CarouselDefault from "./assets/components/Landing/Carousel";
 import AccordionCustomIcon from "./assets/components/Landing/AccordionCustomIcon";
 import SlideText from "./assets/components/Landing/SlideText";

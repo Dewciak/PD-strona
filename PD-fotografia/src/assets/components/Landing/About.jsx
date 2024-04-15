@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import AboutImage from "../images/About-img.jpg";
-import Animals from "../images/animals.png";
+import AboutImage from "../../images/About-img.jpg";
+import Animals from "../../images/animals.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-scroll";

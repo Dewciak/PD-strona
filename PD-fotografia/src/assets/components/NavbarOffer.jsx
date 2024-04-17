@@ -11,7 +11,7 @@ function Navbar() {
   };
 
   return (
-    <div className="w-full h-auto bg-transparent">
+    <div className="w-full h-auto z-[200] mx-auto bg-red-500">
       <div className="md:hidden w-[100%] mx-auto h-8 flex flex-row py-10 justify-center items-center fixed z-[10] top-0 left-[50%] bg-white px-4 translate-x-[-50%]">
         <div
           onClick={handleNav}
@@ -40,7 +40,7 @@ function Navbar() {
               duration={500}
               onClick={handleNav}
             >
-              <li className="text-2xl p-4 ">O mnie</li>
+              <li className="text-2xl p-4 ">Główna</li>
             </Link>
             <Link
               activeClass="active"
@@ -51,7 +51,7 @@ function Navbar() {
               onClick={handleNav}
               duration={500}
             >
-              <li className="text-2xl p-4">Portfolio</li>
+              <li className="text-2xl p-4">O sesji</li>
             </Link>
             <Link
               activeClass="active"
@@ -62,7 +62,7 @@ function Navbar() {
               duration={500}
               onClick={handleNav}
             >
-              <li className="text-2xl p-4">Oferta</li>
+              <li className="text-2xl p-4">Rodzaje sesji</li>
             </Link>
             <Link
               activeClass="active"
@@ -73,7 +73,7 @@ function Navbar() {
               onClick={handleNav}
               duration={500}
             >
-              <li className="text-2xl p-4">Kontakt</li>
+              <li className="text-2xl p-4">Pakiety</li>
             </Link>
           </ul>
         </div>
@@ -81,8 +81,22 @@ function Navbar() {
           <img src={Logo} className="" />
         </div>
       </div>
-      <div className="w-[100%] bg-white hidden mx-auto h-8 md:flex flex-row py-10 justify-center items-center absolute top-0 left-[50%] translate-x-[-50%] z-[10]">
-        <ul className="hidden md:flex flex-row gap-x-16 items-center cursor-pointer absolute bg-transparent">
+      <div
+        id="NavbarOffer"
+        className="w-[100%] bg-white hidden h-8 md:flex flex-row py-10 start fixed top-0 left-0 items-center justify-center z-[10]"
+      >
+        <div className="w-20 h-10 mx-4  bg-transparent object-scale-down  "></div>
+        <ul className=" hidden md:flex flex-row gap-x-16 items-center cursor-pointer mx-auto ">
+          <RouterLink
+            to="/"
+            onClick={() => {
+              window.scrollTo(0, 0);
+            }}
+          >
+            <li className="font-medium hover:text-[#0009] text-lg tracking-[4px]">
+              Główna
+            </li>
+          </RouterLink>
           <Link
             activeClass="active"
             to="About"
@@ -92,49 +106,48 @@ function Navbar() {
             duration={500}
           >
             <li className="font-medium hover:text-[#0009] text-lg tracking-[4px]">
-              O mnie
+              O sesji
             </li>
           </Link>
-
           <Link
             activeClass="active"
-            to="Portfolio"
+            to="Sessions"
             spy={true}
             smooth={true}
             offset={-70}
             duration={500}
           >
             <li className="font-medium hover:text-[#0009] text-lg tracking-[4px]">
-              Portfolio
+              Rodzaje sesji
             </li>
           </Link>
           <Link
             activeClass="active"
-            to="Offer"
+            to="Packages"
             spy={true}
             smooth={true}
             offset={-70}
             duration={500}
           >
             <li className="font-medium hover:text-[#0009] text-lg tracking-[4px]">
-              Oferta
+              Pakiety
             </li>
-          </Link>
+          </Link>{" "}
           <Link
             activeClass="active"
-            to="Contact"
+            to="FAQ"
             spy={true}
             smooth={true}
             offset={-70}
             duration={500}
           >
             <li className="font-medium hover:text-[#0009] text-lg tracking-[4px]">
-              Kontakt
+              FAQ
             </li>
           </Link>
         </ul>
 
-        <div className="w-20 mx-4 h-auto object-scale-dow ml-auto ">
+        <div className="w-20 mx-4 h-auto  object-scale-down ">
           <RouterLink to="/">
             <img src={Logo} className="" />
           </RouterLink>

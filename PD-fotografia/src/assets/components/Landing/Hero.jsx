@@ -43,7 +43,10 @@ function Hero() {
           offset={-70}
           duration={500}
         >
-          <button className="px-6 tracking-[1.5px] w-fit mx-auto md:mx-0 py-[10px] md:mt-6 mt-2 text-white rounded-md text-center bg-gradient-to-r from-blue-500 to-purple-500">
+          <button
+            className="px-6 tracking-[1.5px] w-fit mx-auto md:mx-0 py-[10px] md:mt-6 mt-2 text-white rounded-md text-center 
+          bg-gradient-to-r from-blue-300 to-purple-300"
+          >
             Portfolio
           </button>
         </Link>

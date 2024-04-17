@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "./assets/components/Navbar";
+import Navbar from "./assets/components/NavbarOffer";
 import Start from "./assets/components/Dogs/Start";
 import TypesOfSessions from "./assets/components/Dogs/TypesOfSessions";
 import ScrollToTop from "./assets/components/ScrollToTop";

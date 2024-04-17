@@ -32,9 +32,9 @@ export function Questions() {
   const handleOpen = (value) => setOpen(open === value ? 0 : value);
 
   return (
-    <div className="flex flex-col justify-center items-center">
-      <div className="w-[100%] max-w-[1000px]  md:w-[85%] pt-14  mx-auto mb-10">
-        <h1 className="text-center text-3xl font-semibold py-8">
+    <div id="FAQ" className="flex flex-col justify-center items-center">
+      <div className="w-[100%] max-w-[1000px]  md:w-[85%] pt-16  mx-auto mb-10">
+        <h1 className="text-center text-3xl font-semibold py-8 mb-10">
           Często zadawane pytania
         </h1>
         <Accordion open={open === 1} icon={<Icon id={1} open={open} />}>
@@ -72,7 +72,7 @@ export function Questions() {
         </Accordion>
       </div>
       <a href="">
-        <button className="bg-blue-200 rounded-[50px] mx-auto px-6 py-4 mb-16">
+        <button className="bg-blue-200 rounded-[50px] mx-auto px-6 py-4 mb-16 mt-10">
           Regulamin sesji
         </button>
       </a>

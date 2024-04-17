@@ -8,19 +8,25 @@ import Dog4 from "../../images/Dogs/puppy.jpg";
 function TypesOfSessions() {
   return (
     // KONTENER NA WSZYSTKO
-    <div className="max-w-[1100px] flex flex-col justify-center items-center mx-auto">
+    <div
+      id="Sessions"
+      className="max-w-[1100px] flex flex-col justify-center items-center mx-auto"
+    >
       {/* HEADER */}
       <h1 className="text-center py-16 text-4xl font-semibold">
         Rodzaje sesji
       </h1>
       {/* KONTENER NA SESJE */}
-      <div className="w-full flex flex-col justify-center items-center mx-auto space-y-28">
-        {/* SESJE PLENEROWE */}
-        <div className="w-full flex flex-row justify-center items-start">
+      <div className="w-full flex flex-col justify-center items-center mx-auto md:space-y-28 space-y-6">
+        {/* SESJE PLENEROWE  1*/}
+        <div className="w-full flex md:flex-row flex-col  justify-center items-start">
           {/* ZDJĘCIE */}
-          <img className="w-[50%] rounded-[15px] " src={Dog1}></img>
+          <img
+            className="md:w-[50%] w-[80%] rounded-[15px] mx-auto"
+            src={Dog1}
+          ></img>
           {/* TEKST */}
-          <div className="w-[50%] px-14">
+          <div className="md:w-[50%] w-[70%] md:px-14 mt-6 md:mt-0 mx-auto">
             <h1 className="text-2xl font-semibold py-6">Sesja plenerowa</h1>
             <p>
               Podczas tej sesji mogę wykonać zarówno zdjęcia samego psa jak i
@@ -35,10 +41,10 @@ function TypesOfSessions() {
             </p>
           </div>
         </div>
-        {/* SESJE EKSTERIEROWE */}
-        <div className="w-full flex flex-row justify-center items-start">
+        {/* SESJE EKSTERIEROWE 2 */}
+        <div className="w-full flex md:flex-row flex-col-reverse  justify-center items-start">
           {/* TEKST */}
-          <div className="w-[50%] px-14">
+          <div className="md:w-[50%] w-[70%] md:px-14 mt-6 md:mt-0 mx-auto">
             <h1 className="text-2xl font-semibold py-6">Sesja eksterierowa</h1>
             <p>
               Jest to idealny wybór jeśli potrzebujesz zapowiedzi miotu, reklamy
@@ -48,12 +54,18 @@ function TypesOfSessions() {
             </p>
           </div>
           {/* ZDJĘCIE */}
-          <img className="w-[50%] rounded-[15px] " src={Dog4}></img>
+          <img
+            className="md:w-[50%] w-[80%] rounded-[15px] mx-auto mt-6"
+            src={Dog4}
+          ></img>
         </div>
-        {/* SESJE  TRENINGOWE */}
-        <div className="w-full flex flex-row justify-center items-start">
-          <img className="w-[50%] rounded-[15px] " src={Dog2}></img>
-          <div className="w-[50%] px-14">
+        {/* SESJE  TRENINGOWE 3*/}
+        <div className="w-full flex md:flex-row flex-col  justify-center items-start">
+          <img
+            className="md:w-[50%] w-[80%] rounded-[15px] mx-auto mt-6 "
+            src={Dog2}
+          ></img>
+          <div className="md:w-[50%] w-[70%] md:px-14 mt-6 md:mt-0 mx-auto">
             <h1 className="text-2xl font-semibold py-6">Treningowa</h1>
             <p>
               sesja zdjęciowa z treningu psa to doskonała okazja do uwiecznienia
@@ -63,9 +75,9 @@ function TypesOfSessions() {
             </p>
           </div>
         </div>
-        {/* SESJE MIOTÓW */}
-        <div className="w-full flex flex-row justify-center items-start">
-          <div className="w-[50%] px-14">
+        {/* SESJE MIOTÓW 4*/}
+        <div className="w-full flex md:flex-row flex-col-reverse  justify-center items-start">
+          <div className="md:w-[50%] w-[70%] md:px-14 mt-6 md:mt-0 mx-auto">
             <h1 className="text-2xl font-semibold py-6">Sesja miotów</h1>
             <p>
               Jeśli w Twojej hodowli urodziły się szczenięta warto zrobić im
@@ -75,7 +87,10 @@ function TypesOfSessions() {
               zabieram ze sobą kiedy nie możemy robić zdjęć na zewnątrz :)
             </p>
           </div>
-          <img className="w-[50%] rounded-[15px] " src={Dog3}></img>
+          <img
+            className="md:w-[50%] w-[80%] rounded-[15px] mx-auto mt-6"
+            src={Dog3}
+          ></img>
         </div>
       </div>
     </div>

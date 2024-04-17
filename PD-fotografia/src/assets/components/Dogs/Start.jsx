@@ -7,20 +7,26 @@ function Start() {
     <div id="Start">
       {/* Zdjęcie góra czarne */}
       <div className="w-full bg-black h-auto">
-        <img className="mt-[-100px] w-[70%] mx-auto" src={Bg}></img>
+        <img
+          className="md:mt-[-100px] mt-[100px]  md:w-[70%] mx-auto"
+          src={Bg}
+        ></img>
       </div>
       <div className="max-w-[1000px] mx-auto">
         {/* Nagłówek fotografia */}
-        <h1 className="text-center text-6xl font-semibold tracking-wider mt-[50px]  ">
+        <h1 className="text-center text-4xl md:text-6xl font-semibold tracking-wider mt-[50px]  ">
           Fotografia Psów
         </h1>
         {/* Nagłówek P tag */}
-        <p className="text-center text-[#747474] mt-4 text-base">
+        <p className="text-center text-[#747474] mt-4 text-sm md:text-base">
           Zapraszam Ciebie i Twojego czworonożnego przyjaciela na <br></br>{" "}
           wyjątkową sesję zdjęciową
         </p>
         {/* Main górny tekst */}
-        <div className="mx-auto flex  py-6 flex-col text-lg tracking-wide w-[970px] mt-12">
+        <div
+          id="About"
+          className="mx-auto flex  py-6 flex-col text-lg tracking-wide md:w-[970px] w-[80%] md:mt-12 mt-6"
+        >
           <h1 className="font-semibold">
             Jeśli marzysz o pamiątce na długie lata to trafiłeś w dobre ręce.{" "}
           </h1>
@@ -32,12 +38,12 @@ function Start() {
           </p>
         </div>
         {/* Main dolny tekst ze zdjęciem */}
-        <div className="w-full flex flex-row mt-10 ">
-          <div className="w-[60%] px-4">
-            <h1 className="font-bold pb-8 pt-4 text-2xl">
+        <div className="w-full flex md:flex-row flex-col mt-10 ">
+          <div className="md:w-[60%] px-4 mx-auto ">
+            <h1 className="font-bold pb-8 md:pt-4 md:text-2xl text-3xl text-center md:text-start">
               Czym się kieruje podczas sesji?
             </h1>
-            <p className="px-6">
+            <p className="md:px-6 px-4">
               <span className="text-blue-400 font-semibold">
                 Indywidualne podejście
               </span>{" "}
@@ -64,7 +70,10 @@ function Start() {
             </p>
           </div>
           {/* Dolne zdjęcie */}
-          <img className="w-[40%] rounded-[15px] px-2" src={AboutDog}></img>
+          <img
+            className="md:w-[40%] w-[80%] mx-auto mt-16 md:mt-0 rounded-[15px] px-2"
+            src={AboutDog}
+          ></img>
         </div>
       </div>
     </div>

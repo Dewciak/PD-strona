@@ -21,7 +21,12 @@ function Offer() {
             Konie
           </h1>
         </div>
-        <RouterLink reset to="/oferta-psy">
+        <RouterLink
+          to="/oferta-psy"
+          onClick={() => {
+            window.scrollTo(0, 0);
+          }}
+        >
           <div className="relative w-[300px] h-auto hover:scale-105 transition duration-300">
             <img src={Dog} alt="dog" className="w-full h-auto " />
             <h1 className="absolute  tracking-[3px] inset-0 flex justify-center items-center text-white text-4xl  z-10 cursor-pointer">

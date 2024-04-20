@@ -1,9 +1,12 @@
 import React from "react";
 
-import Dog1 from "../../images/Dogs/plenerowa.jpg";
-import Dog2 from "../../images/Dogs/treningowa.jpg";
-import Dog3 from "../../images/Dogs/eksterierowa.jpg";
-import Dog4 from "../../images/Dogs/puppy.jpg";
+import Dog1 from "../../images/Dogs/plener1.jpg";
+import Dog3 from "../../images/Dogs/trening1.jpg";
+import Dog2 from "../../images/Dogs/eksterier1.jpg";
+import Dog4 from "../../images/Dogs/miot1.jpg";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function TypesOfSessions() {
   return (
@@ -19,7 +22,10 @@ function TypesOfSessions() {
       {/* KONTENER NA SESJE */}
       <div className="w-full flex flex-col justify-center items-center mx-auto md:space-y-28 space-y-6">
         {/* SESJE PLENEROWE  1*/}
-        <div className="w-full flex md:flex-row flex-col  justify-center items-start">
+        <div
+          data-aos="fade-left"
+          className="w-full flex md:flex-row flex-col  justify-center items-start"
+        >
           {/* ZDJĘCIE */}
           <img
             className="md:w-[50%] w-[80%] rounded-[15px] mx-auto"
@@ -42,7 +48,10 @@ function TypesOfSessions() {
           </div>
         </div>
         {/* SESJE EKSTERIEROWE 2 */}
-        <div className="w-full flex md:flex-row flex-col-reverse  justify-center items-start">
+        <div
+          data-aos="fade-right"
+          className="w-full flex md:flex-row flex-col-reverse  justify-center items-start"
+        >
           {/* TEKST */}
           <div className="md:w-[50%] w-[70%] md:px-14 mt-6 md:mt-0 mx-auto">
             <h1 className="text-2xl font-semibold py-6">Sesja eksterierowa</h1>
@@ -56,17 +65,20 @@ function TypesOfSessions() {
           {/* ZDJĘCIE */}
           <img
             className="md:w-[50%] w-[80%] rounded-[15px] mx-auto mt-6"
-            src={Dog4}
+            src={Dog2}
           ></img>
         </div>
         {/* SESJE  TRENINGOWE 3*/}
-        <div className="w-full flex md:flex-row flex-col  justify-center items-start">
+        <div
+          data-aos="fade-left"
+          className="w-full flex md:flex-row flex-col  justify-center items-start"
+        >
           <img
             className="md:w-[50%] w-[80%] rounded-[15px] mx-auto mt-6 "
-            src={Dog2}
+            src={Dog3}
           ></img>
           <div className="md:w-[50%] w-[70%] md:px-14 mt-6 md:mt-0 mx-auto">
-            <h1 className="text-2xl font-semibold py-6">Treningowa</h1>
+            <h1 className="text-2xl font-semibold py-6">Sesja treningowa</h1>
             <p>
               sesja zdjęciowa z treningu psa to doskonała okazja do uwiecznienia
               Waszych postępów i zaangażowania w treningu. Oglądanie zdjęć z
@@ -76,7 +88,10 @@ function TypesOfSessions() {
           </div>
         </div>
         {/* SESJE MIOTÓW 4*/}
-        <div className="w-full flex md:flex-row flex-col-reverse  justify-center items-start">
+        <div
+          data-aos="fade-right"
+          className="w-full flex md:flex-row flex-col-reverse  justify-center items-start"
+        >
           <div className="md:w-[50%] w-[70%] md:px-14 mt-6 md:mt-0 mx-auto">
             <h1 className="text-2xl font-semibold py-6">Sesja miotów</h1>
             <p>
@@ -89,7 +104,7 @@ function TypesOfSessions() {
           </div>
           <img
             className="md:w-[50%] w-[80%] rounded-[15px] mx-auto mt-6"
-            src={Dog3}
+            src={Dog4}
           ></img>
         </div>
       </div>

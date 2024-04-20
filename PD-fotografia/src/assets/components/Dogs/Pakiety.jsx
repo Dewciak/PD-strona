@@ -3,7 +3,7 @@ import { UnderlineTabs } from "../UnderLineTabs";
 
 function Pakiety() {
   return (
-    <div id="Packages" className="max-w-[1150px] mx-auto mt-32 pt-6 ">
+    <div id="Packages" className="max-w-[1150px] mx-auto md:mt-32 mt-16 pt-6 ">
       <h1 className="text-5xl  trackig-widest font-semibold text-center">
         Pakiety
       </h1>

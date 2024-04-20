@@ -5,11 +5,14 @@ import Event from "../../images/offer-event.jpg";
 import { Link } from "react-scroll";
 import { Link as RouterLink } from "react-router-dom";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 function Offer() {
   return (
     <div
       id="Offer"
-      className="max-w-[1050px] justify-center mx-auto flex flex-col md:mt-[-20px] mt-[-50px]"
+      className="max-w-[1050px] justify-center mx-auto flex flex-col md:mt-[0px]  md:pt-20 mt-[-50px]"
     >
       <h1 className="text-center md:text-6xl text-6xl tracking-[3px] mx-auto">
         Oferta
@@ -40,6 +43,16 @@ function Offer() {
             Wydarzenia
           </h1>
         </div>
+      </div>
+      <div className=" mx-auto h-auto py-8 mt-12">
+        <h2
+          data-aos="slide-up"
+          className="mx-auto max-w-[900px] text-center  tracking-[3px] pb-4 overflow-visible z-10 "
+        >
+          Jeśli sesja jaka Cię interesuje nie znajduję się w tej zakładce,
+          <br></br>
+          napisz do mnie, a na pewno razem coś wymyślimy :)
+        </h2>
       </div>
     </div>
   );

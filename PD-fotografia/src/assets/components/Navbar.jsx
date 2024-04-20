@@ -1,14 +1,35 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Logo from "../images/nav-logo.png";
 import { IoMenu } from "react-icons/io5";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { Link } from "react-scroll"; // Import Link from react-scroll
 import { Link as RouterLink } from "react-router-dom";
-function Navbar() {
+
+function Navbar({ sections }) {
   const [nav, setNav] = useState(false);
   const handleNav = () => {
     setNav(!nav);
   };
+
+  useEffect(() => {
+    const navLinks = document.querySelectorAll("ul li a"); // Adjusted to select <a> elements within <li>
+    window.onscroll = () => {
+      sections.forEach((sec) => {
+        let top = window.scrollY;
+        let offset = sec.offsetTop - 150;
+        let height = sec.offsetHeight;
+        let id = sec.getAttribute("id");
+        if (top >= offset && top < offset + height) {
+          navLinks.forEach((link) => {
+            link.classList.remove("active");
+            if (link.getAttribute("href") === `#${id}`) {
+              link.classList.add("active");
+            }
+          });
+        }
+      });
+    };
+  }, [sections]);
 
   return (
     <div className="w-full h-auto bg-transparent">
@@ -81,7 +102,7 @@ function Navbar() {
           <img src={Logo} className="" />
         </div>
       </div>
-      <div className="w-[100%] bg-white hidden mx-auto h-8 md:flex flex-row py-10 justify-center items-center absolute top-0 left-[50%] translate-x-[-50%] z-[10]">
+      <div className="w-[100%] bg-white hidden fixed mx-auto h-8 md:flex flex-row py-10 justify-center items-center  top-0 left-[50%] translate-x-[-50%] z-[10]">
         <ul className="hidden md:flex flex-row gap-x-16 items-center cursor-pointer absolute bg-transparent">
           <Link
             activeClass="active"
@@ -91,9 +112,7 @@ function Navbar() {
             offset={-70}
             duration={500}
           >
-            <li className="font-medium hover:text-[#0009] text-lg tracking-[4px]">
-              O mnie
-            </li>
+            <li className="font-medium hover:text-[#0009] text-lg">O mnie</li>
           </Link>
 
           <Link
@@ -104,7 +123,7 @@ function Navbar() {
             offset={-70}
             duration={500}
           >
-            <li className="font-medium hover:text-[#0009] text-lg tracking-[4px]">
+            <li className="font-medium hover:text-[#0009] text-lg ">
               Portfolio
             </li>
           </Link>
@@ -116,9 +135,7 @@ function Navbar() {
             offset={-70}
             duration={500}
           >
-            <li className="font-medium hover:text-[#0009] text-lg tracking-[4px]">
-              Oferta
-            </li>
+            <li className="font-medium hover:text-[#0009] text-lg ">Oferta</li>
           </Link>
           <Link
             activeClass="active"
@@ -128,9 +145,7 @@ function Navbar() {
             offset={-70}
             duration={500}
           >
-            <li className="font-medium hover:text-[#0009] text-lg tracking-[4px]">
-              Kontakt
-            </li>
+            <li className="font-medium hover:text-[#0009] text-lg ">Kontakt</li>
           </Link>
         </ul>
 

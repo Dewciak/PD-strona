@@ -10,16 +10,20 @@ import {
   useLocation,
 } from "react-router-dom";
 import Dogs from "./Dogs.jsx";
+import PageNotFound from "./assets/components/PageNotFound.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/PD-strona",
+    // path: "/",
+
     element: <Home />,
-    errorElement: <div>404 coś poszło nie tak</div>,
+    errorElement: <PageNotFound />,
   },
   {
     path: "/oferta-psy",
     element: <Dogs />,
+    errorElement: <PageNotFound />,
   },
 ]);
 

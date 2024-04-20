@@ -7,8 +7,9 @@ import { Link } from "react-scroll"; // Import Link from react-scroll
 
 function Footer() {
   return (
-    <div className="w-full max-w-[1050px]  mx-auto flex flex-col justify-center cursor-pointer items-center">
-      <ul className="md:w-[60%] w-[90%]">
+    // <div className="w-full max-w-[1050px]  mx-auto flex flex-col justify-center cursor-pointer items-center">
+    <div className="w-screen bg-gray-100 mx-auto flex flex-col justify-center cursor-pointer items-center">
+      {/* <ul className="md:w-[60%] w-[90%]">
         <Link
           activeClass="active"
           to="Hero"
@@ -77,7 +78,7 @@ function Footer() {
             </h1>
           </li>
         </Link>
-      </ul>
+      </ul> */}
       {/* <div className="flex flex-row items-center justify-center my-6 space-x-1">
         <a href="#">
           <img src={Fb} width={45}></img>

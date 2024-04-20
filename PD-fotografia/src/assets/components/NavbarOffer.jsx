@@ -4,6 +4,8 @@ import { IoMenu } from "react-icons/io5";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { Link } from "react-scroll"; // Import Link from react-scroll
 import { Link as RouterLink } from "react-router-dom";
+import { MdOutlineArrowBackIos } from "react-icons/md";
+
 function Navbar() {
   const [nav, setNav] = useState(false);
   const handleNav = () => {
@@ -31,17 +33,9 @@ function Navbar() {
           }
         >
           <ul className="z-10 text-black m-4 md:flex flex-row gap-x-16 items-center cursor-pointer">
-            <Link
-              activeClass="active"
-              to="About"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              onClick={handleNav}
-            >
+            <RouterLink to="/PD-strona">
               <li className="text-2xl p-4 ">Główna</li>
-            </Link>
+            </RouterLink>
             <Link
               activeClass="active"
               to="Portfolio"
@@ -88,11 +82,14 @@ function Navbar() {
         <div className="w-20 h-10 mx-4  bg-transparent object-scale-down  "></div>
         <ul className=" hidden md:flex flex-row gap-x-16 items-center cursor-pointer mx-auto ">
           <RouterLink
-            to="/"
+            to="/PD-strona"
+            // to="/"
             onClick={() => {
               window.scrollTo(0, 0);
             }}
+            className="flex flex-row items-center justify-center space-x-1"
           >
+            <MdOutlineArrowBackIos />
             <li className="font-medium hover:text-[#0009] text-lg tracking-[4px]">
               Główna
             </li>

@@ -1,29 +1,38 @@
 import React, { useEffect } from "react";
 import Navbar from "./assets/components/Navbar";
 import Hero from "./assets/components/Landing/Hero";
-import About from "./assets/components/Landing/About";
 import Offer from "./assets/components/Landing/Offer";
 import Contact from "./assets/components/Landing/Contact";
 import Footer from "./assets/components/Footer";
 import Portfolio from "./assets/components/Landing/Portfolio";
 import ScrollToTop from "./assets/components/ScrollToTop";
-import CarouselDefault from "./assets/components/Landing/Carousel";
-import AccordionCustomIcon from "./assets/components/Landing/AccordionCustomIcon";
-import SlideText from "./assets/components/Landing/SlideText";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
+import About from "./assets/components/Landing/About";
 function App() {
+  let sections = document.querySelectorAll("section");
+  useEffect(() => {
+    AOS.init({
+      // You can pass options here if needed
+      debug: true, // Enable debugging
+    });
+  }, []);
+  let samt = 0;
+
+  window.addEventListener("scroll", function () {
+    samt <= 10 ? samt++ : AOS.refresh();
+  });
+
   return (
     <div className="App">
-      <Navbar />
+      <Navbar sections={sections} />
       <ScrollToTop />
-      <Hero />
+      <Hero className="Section" id="Hero" />
       <About />
-      <Portfolio />
-      <Offer />
-      <SlideText />
-      {/* <CarouselDefault /> */}
-      <AccordionCustomIcon />
-      <Contact />
+      <Portfolio className="Section" id="Portfolio" />
+      <Offer className="Section" id="Offer" />
+      <Contact className="Section" id="Contact" />
+
       <Footer />
     </div>
   );

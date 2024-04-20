@@ -1,5 +1,5 @@
 import React from "react";
-import Bg from "../../images/Dogs/background.jpg";
+import Bg from "../../images/Dogs/bg2.jpg";
 import AboutDog from "../../images/Dogs/About.jpg";
 
 function Start() {
@@ -8,7 +8,7 @@ function Start() {
       {/* Zdjęcie góra czarne */}
       <div className="w-full bg-black h-auto">
         <img
-          className="md:mt-[-100px] mt-[100px]  md:w-[70%] mx-auto"
+          className="md:mt-[0px] mt-[100px]  md:w-[70%] mx-auto"
           src={Bg}
         ></img>
       </div>

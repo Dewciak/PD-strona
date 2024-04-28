@@ -13,7 +13,7 @@ function TypesOfSessions() {
     // KONTENER NA WSZYSTKO
     <div
       id="Sessions"
-      className="max-w-[1100px] flex flex-col justify-center items-center mx-auto"
+      className="max-w-[1100px] flex flex-col justify-center items-center mx-auto relative "
     >
       {/* HEADER */}
       <h1 className="text-center py-16 text-4xl font-semibold">

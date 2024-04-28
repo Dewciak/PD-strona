@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Fb from "../../images/fb.png";
 import Ig from "../../images/ig.png";
 import Mail from "../../images/mail.png";
@@ -7,18 +7,35 @@ import AccordionCustomIcon from "./AccordionCustomIcon";
 import { Link } from "react-scroll";
 
 function Contact() {
+  const [isChecked, setIsChecked] = useState(false);
+  const [showHiddenText, setShowHiddenText] = useState(false); // Step 1: New state for hidden text visibility
+
+  const handleCheckboxChange = (event) => {
+    setIsChecked(event.target.checked);
+    if (event.target.checked) {
+      setShowHiddenText(false); // Hide the hidden text when checkbox is checked
+    }
+  };
+
+  const handleSubmitClick = (event) => {
+    if (!isChecked) {
+      setShowHiddenText(true); // Show the hidden text when submit button is clicked and checkbox is unchecked
+      event.preventDefault(); // Prevent form submission
+    }
+  };
+
   return (
     <div>
       <AccordionCustomIcon className="py-6" />
       <div
         id="Contact"
-        className="max-w-[850px] flex justify-center flex-col items-center mx-auto  mb-6 md:mb-10 pt-20 pb-16"
+        className="max-w-[850px] flex justify-center flex-col items-center mx-auto mb-0 md:mb-10 md:pt-20 pb-10"
       >
         <h1 className="text-6xl text-center">Skontaktuj</h1>
         <h2 className="text-center text-2xl font-semibold bg-gradient-to-r from-blue-500 to-purple-500 inline-block text-transparent md:mt-0 bg-clip-text">
           się ze mną!
         </h2>
-        <div className="w-full  h-full flex flex-col md:flex-row mt-2 justify-between items-center py-4 ">
+        <div className="w-full h-full flex flex-col md:flex-row mt-2 justify-between items-start py-4 ">
           <div className="md:w-[50%] w-[70%] flex flex-col ">
             <h1 className="text-center text-2xl font-medium py-3">
               Zapytaj o termin!
@@ -28,7 +45,7 @@ function Contact() {
               method="POST"
               className="flex flex-col justify-center items-center "
             >
-              <div className="md:min-w-[355px] min-w-[295px] flex flex-col space-y-6">
+              <div className="md:min-w-[355px] min-w-[295px] flex flex-col justify-start space-y-6">
                 <input
                   type="hidden"
                   name="access_key"
@@ -49,14 +66,37 @@ function Contact() {
                 ></textarea>
                 <button
                   type="submit"
-                  className="px-6 py-[10px] md:mr-auto mx-auto font-semibold mt-2 text-white rounded-xl text-center bg-gradient-to-r from-blue-500 to-purple-500"
+                  // disabled={!isChecked}
+                  onClick={handleSubmitClick} // Modify the onClick event
+                  div
+                  classname="border-4 border-gradient-to-r from-blue-300 to-purple-400 gradient-border rounded-xl px-6 py-[10px] text-black mr-auto font-semibold mt-2 text-center"
                 >
                   wyślij
                 </button>
+                <div className="flex flex-row items-start justify-center">
+                  <input
+                    type="checkbox"
+                    id="checkbox"
+                    className="mt-1 mr-2 "
+                    onChange={handleCheckboxChange}
+                  ></input>
+                  <p className="text-xs text-gray-400">
+                    Wyrażam zgodę na przetwarzanie moich danych osobowych w
+                    celach kontaktowych przez administratora strony
+                  </p>
+                </div>
+                <p
+                  id="needed"
+                  className={`text-red-200 text-xs ${
+                    showHiddenText ? "" : "hidden"
+                  }`}
+                >
+                  *Zaznaczenie tej zgody jest wymagane
+                </p>
               </div>
             </form>
           </div>
-          <div className="md:w-[50%] h-full md:mb-6 flex justify-center mx-auto pt-4">
+          <div className="md:w-[50%] h-full md:mb-6 flex justify-center mx-auto md:pt-20">
             <ul>
               <a href="https://www.facebook.com/patrycjadawidfotografia?locale=pl_PL">
                 <li className="flex flex-row py-2 items-center space-x-2 text-xl">
@@ -64,7 +104,6 @@ function Contact() {
                   <p>Patrycja Dawid Fotografia</p>
                 </li>
               </a>
-
               <a href="https://m.me/patrycjadawidfotografia">
                 <li className="flex flex-row py-2 items-center space-x-2 text-xl">
                   <img src={Mess} width={40}></img>

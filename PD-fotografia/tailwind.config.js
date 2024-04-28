@@ -12,6 +12,9 @@ module.exports = withMT({
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      borderImage: (theme) => ({
+        "gradient-border": "linear-gradient(to right, #63b3ed, #9333ea)",
+      }),
       colors: {
         myBlue: "",
       },

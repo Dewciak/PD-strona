@@ -38,13 +38,13 @@ export function AccordionCustomIcon() {
           className="font-[Montserrat]"
           onClick={() => handleOpen(1)}
         >
-          W jakiej formie są zdjęcia?
+          Jak przygotować się przed sesją?
         </AccordionHeader>
         <AccordionBody className="font-[Montserrat]">
-          Oferuję różne opcje dostawy zdjęć, w tym pliki cyfrowe wysokiej
-          jakości oraz wydruki w formie odbitek, zdjęć na płótnie czy albumów
-          fotograficznych. Możemy omówić Twoje preferencje i dostosować ofertę
-          do Twoich potrzeb.
+          Przed sesją warto nakreślić mi swoje oczekiwania co do zdjęć. Jeśli
+          robisz ujęcia swojego pupila zadbaj o to by był on wypoczęty, jego
+          sierść nie była posklejana i brudna, a na sesje zabierz ulubione
+          smaczki.
         </AccordionBody>
       </Accordion>
       <Accordion open={open === 2} icon={<Icon id={2} open={open} />}>
@@ -52,13 +52,12 @@ export function AccordionCustomIcon() {
           className="font-[Montserrat]"
           onClick={() => handleOpen(2)}
         >
-          Jak przygotować mojego pupila do sesji?
+          Czy mogę dostać nieobrobione zdjęcia z sesji?
         </AccordionHeader>
         <AccordionBody className="font-[Montserrat]">
-          Przed sesją zdjęciową ważne jest, aby konie i psy były odpowiednio
-          przygotowane. Wskazówki obejmują czyszczenie i pielęgnację sierści,
-          wypoczęcie zwierzęcia, przygotowanie odpowiednich rekwizytów oraz
-          przygotowanie miejsca, w którym odbędzie się sesja.
+          Nie wysyłam nieobrobionych zdjęć. Po sesji wybieram najlepsze kadry i
+          poddaje je starannej obróbce, aby zapewnić najlepszą jakość materiału
+          który otrzymacie.
         </AccordionBody>
       </Accordion>
       <Accordion open={open === 3} icon={<Icon id={3} open={open} />}>
@@ -66,13 +65,12 @@ export function AccordionCustomIcon() {
           className="font-[Montserrat] font-semibold"
           onClick={() => handleOpen(3)}
         >
-          Czy dostępne są sesje zdjęciowe w studio oraz na zewnątrz?
+          Ile zwierząt mogę zabrać na sesje?
         </AccordionHeader>
         <AccordionBody className="font-[Montserrat] ">
-          Tak, oferuję zarówno sesje w studio, które są idealne do uzyskania
-          czystych i profesjonalnych portretów, jak i sesje na zewnątrz, które
-          pozwalają na uchwycenie naturalnej radości i energii zwierząt w
-          otwartym powietrzu.
+          Co do zasady ile chcesz, jednak pamiętaj, że najlepiej jest nam się
+          skupić na mniejszej ilości modeli. Jeśli planujesz ujęcia z większą
+          ilością zwierzaków, napisz mi to wcześniej :)
         </AccordionBody>
       </Accordion>
     </div>

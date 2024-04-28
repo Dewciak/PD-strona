@@ -92,9 +92,9 @@ export function UnderlineTabs() {
             <TabPanel
               key={value}
               value={value}
-              className="rounded-[20px] mt-16  w-[100%]  flex flex-col md:flex-row justify-center items-center space-x-6 pb-10 "
+              className="rounded-[20px]  mt-16 space-y-6   w-[100%] relative left-[-10]  flex flex-col md:flex-row justify-center items-center space-x-6 pb-10 "
             >
-              <div className="md:w-[355px] w-[90%] px-6  shadow-md shadow-[#00000035] rounded-[20px] flex flex-col justify-center items-center hover:scale-105 duration-500 cursor-default">
+              <div className="md:w-[355px] h-[470px] md:mt-10 ml-6 w-[100%] px-6 bg-white shadow-md shadow-[#00000035] rounded-[20px] flex flex-col justify-center items-center md:hover:scale-105 duration-500 cursor-default">
                 <h1 className="pt-20 pb-14 text-center text-3xl font-semibold">
                   Pakiet 1
                 </h1>
@@ -112,8 +112,8 @@ export function UnderlineTabs() {
               </div>
 
               {/* drugi pakiet */}
-              <div className="md:w-[355px] w-[90%] px-6  shadow-md shadow-[#00000035] rounded-[20px] flex flex-col justify-center items-center hover:scale-105 duration-500 cursor-default">
-                <h1 className="pt-20 pb-14 text-center text-3xl font-semibold">
+              <div className="md:w-[355px] h-[470px] w-[100%] px-6 mx-auto bg-white shadow-md shadow-[#00000035] rounded-[20px] flex flex-col justify-center items-center md:hover:scale-105 duration-500 cursor-default">
+                <h1 className="pt-20 pb-14 mt-4 text-center text-3xl font-semibold">
                   Pakiet 2
                 </h1>
                 <div className="text-center  font-semibold text-2xl ">
@@ -130,7 +130,7 @@ export function UnderlineTabs() {
               </div>
               {/* trzeci pakiet */}
               {descCount >= 5 && (
-                <div className="md:w-[355px] w-[90%] px-6 mx-auto shadow-md shadow-[#00000035] rounded-[20px] flex flex-col justify-center items-center hover:scale-105 duration-500 cursor-default">
+                <div className="md:w-[355px] h-[470px] w-[100%] px-6 bg-white  mx-auto shadow-md shadow-[#00000035] rounded-[20px] flex flex-col justify-center items-center md:hover:scale-105 duration-500 cursor-default">
                   <h1 className="pt-20 pb-14 text-center text-3xl font-semibold">
                     Pakiet 3
                   </h1>

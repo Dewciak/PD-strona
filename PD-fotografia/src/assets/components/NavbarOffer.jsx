@@ -13,7 +13,7 @@ function Navbar() {
   };
 
   return (
-    <div className="w-full h-auto z-[200] mx-auto bg-red-500">
+    <div className=" h-auto z-[200] mx-auto">
       <div className="md:hidden w-[100%] mx-auto h-8 flex flex-row py-10 justify-center items-center fixed z-[10] top-0 left-[50%] bg-white px-4 translate-x-[-50%]">
         <div
           onClick={handleNav}
@@ -33,8 +33,18 @@ function Navbar() {
           }
         >
           <ul className="z-10 text-black m-4 md:flex flex-row gap-x-16 items-center cursor-pointer">
-            <RouterLink to="/PD-strona">
-              <li className="text-2xl p-4 ">Główna</li>
+            <RouterLink
+              // to="/PD-strona"
+              to="/"
+              onClick={() => {
+                window.scrollTo(0, 0);
+              }}
+              className="flex flex-row items-center justify-center space-x-1"
+            >
+              <MdOutlineArrowBackIos className="mb-2" />
+              <li className="font-medium hover:text-[#0009] text-lg tracking-[4px]">
+                Główna
+              </li>
             </RouterLink>
             <Link
               activeClass="active"
@@ -82,14 +92,14 @@ function Navbar() {
         <div className="w-20 h-10 mx-4  bg-transparent object-scale-down  "></div>
         <ul className=" hidden md:flex flex-row gap-x-16 items-center cursor-pointer mx-auto ">
           <RouterLink
-            to="/PD-strona"
-            // to="/"
+            // to="/PD-strona"
+            to="/"
             onClick={() => {
               window.scrollTo(0, 0);
             }}
             className="flex flex-row items-center justify-center space-x-1"
           >
-            <MdOutlineArrowBackIos />
+            <MdOutlineArrowBackIos className="mb-2" />
             <li className="font-medium hover:text-[#0009] text-lg tracking-[4px]">
               Główna
             </li>

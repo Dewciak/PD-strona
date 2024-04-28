@@ -22,14 +22,10 @@ function Dogs() {
     samt <= 10 ? samt++ : AOS.refresh();
   });
   return (
-    <div id="Dogs">
+    <div id="Dogs" className="overflow-hidden md:overflow-visible">
       <Navbar />
       <ScrollToTop />
       <Start />
-      <TypesOfSessions />
-      <Pakiety />
-      <Questions />
-      <Footer />
     </div>
   );
 }

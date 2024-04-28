@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import "~@flaticon/flaticon-uicons/css/all/all";
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 
 * {
@@ -15,16 +15,10 @@
 
   background-size: cover;
 }
+
 #Start {
-  /* font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-variation-settings: "slnt" 0; */
-}
-#Dogs {
   background-image: url("assets/images/Dogs/ciapki.jpg");
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: 0, 0px, 0, 0;
+  background-size: cover;
 }
 .active li {
   color: #5da9e7;
@@ -40,4 +34,9 @@ li::after {
 }
 .active li::after {
   width: 100%; /* This makes the border span the full width of the li element */
+}
+
+.gradient-border {
+  border-image: var(--tw-gradient-border);
+  border-image-slice: 1;
 }

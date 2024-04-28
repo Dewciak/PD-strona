@@ -32,14 +32,14 @@ export function Questions() {
   const handleOpen = (value) => setOpen(open === value ? 0 : value);
 
   return (
-    <div id="FAQ" className="flex flex-col justify-center items-center">
-      <div className="w-[80%] max-w-[1000px]  md:w-[85%] pt-16  mx-auto mb-10">
+    <div id="FAQ" className="flex flex-col justify-center items-center  ">
+      <div className="w-[80%] max-w-[1000px]  md:w-[85%] pt-16  mx-auto mb-10 min-h-[550px]">
         <h1 className="text-center text-3xl font-semibold py-8 mb-10">
           Często zadawane pytania
         </h1>
         <Accordion open={open === 1} icon={<Icon id={1} open={open} />}>
           <AccordionHeader
-            className="font-Montserrat"
+            className="font-Montserrat "
             onClick={() => handleOpen(1)}
           >
             W jakiej formie są zdjęcia?

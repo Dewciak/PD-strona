@@ -1,106 +1,38 @@
 import React from "react";
-import Ig from "../images/footer-ig.png";
-import Fb from "../images/footer-fb.png";
-import Mail from "../images/footer-mail.png";
-import Mess from "../images/footer-mess.png";
+import { FaFacebookMessenger } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
+import { FaCopyright } from "react-icons/fa";
+
 import { Link } from "react-scroll"; // Import Link from react-scroll
 
 function Footer() {
   return (
-    // <div className="w-full max-w-[1050px]  mx-auto flex flex-col justify-center cursor-pointer items-center">
-    <div className="w-screen bg-gray-100 mx-auto flex flex-col justify-center cursor-pointer items-center">
-      {/* <ul className="md:w-[60%] w-[90%]">
-        <Link
-          activeClass="active"
-          to="Hero"
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-        >
-          <li className="text-center ">
-            <h1 className="border-b text-3xl py-2 text-gray-500">Główna</h1>
-          </li>
-        </Link>
-        <Link
-          activeClass="active"
-          to="About"
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-        >
-          <li className="text-center ">
-            <h1 className="border-b text-3xl py-2 text-gray-500 cursor-pointer">
-              O mnie
-            </h1>
-          </li>
-        </Link>
-        <Link
-          activeClass="active"
-          to="Portfolio"
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-        >
-          <li className="text-center ">
-            <h1 className="border-b text-3xl py-2 text-gray-500 cursor-pointer">
-              Portfolio
-            </h1>
-          </li>
-        </Link>
-        <Link
-          activeClass="active"
-          to="Offer"
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-        >
-          <li className="text-center ">
-            <h1 className="border-b text-3xl py-2 text-gray-500 cursor-pointer">
-              Oferta
-            </h1>
-          </li>
-        </Link>
-        <Link
-          activeClass="active"
-          to="Contact"
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-        >
-          <li className="text-center ">
-            <h1 className="border-b text-3xl py-2 text-gray-500 cursor-pointer">
-              Kontakt
-            </h1>
-          </li>
-        </Link>
-      </ul> */}
-      {/* <div className="flex flex-row items-center justify-center my-6 space-x-1">
-        <a href="#">
-          <img src={Fb} width={45}></img>
-        </a>
-        <a href="#">
-          <img src={Mess} width={45}></img>
-        </a>
-        <a href="#">
-          <img src={Ig} width={45}></img>
-        </a>
-        <a href="#">
-          <img src={Mail} width={45}></img>
-        </a>
-      </div> */}
-      <div className="w-full h-auto flex flex-col justify-center items-center mt-6">
-        <h1>Patrycja Dawid©</h1>
-        <h1 className="w-[90%] text-center">
-          Projekt Graficzny i oprogramowanie:
-        </h1>
-        <a href="#" className="cursor-pointer hover:text-purple-500 mb-4">
-          Wiktor Dawid
-        </a>
+    <div className="flex flex-col">
+      <div className="w-screen flex flex-row text-center bg-gray-200 py-1">
+        <ul className="mx-auto flex flex-row gap-x-8 text-sm items-center justify-center">
+          <li>Polityka Prywatności</li>
+          <li>Regulamin Sesji</li>
+        </ul>
+      </div>
+      <div className="w-screen py-4 bg-gray-100 mx-auto flex flex-col justify-center cursor-pointer items-center">
+        <div className="w-[1080px] h-auto flex flex-row justify-around mx-auto   items-start">
+          <div className="w-[33%] flex flex-row gap-x-0 justify-center items-center">
+            <h1>Patrycja Dawid</h1>
+            <FaCopyright className="" />
+          </div>
+          <div className="w-[33%] h-full  flex flex-row justify-center items-center gap-x-2">
+            <FaFacebookMessenger className="text-white text-3xl" />
+            <FaFacebook className="text-white text-3xl" />
+            <FaInstagram className="text-white text-3xl" />
+          </div>
+          <h1 className=" text-center w-[33%]">
+            Realizacja:{" "}
+            <a href="#" className="cursor-pointer hover:text-purple-500 mb-4">
+              Wiktor Dawid
+            </a>
+          </h1>
+        </div>
       </div>
     </div>
   );

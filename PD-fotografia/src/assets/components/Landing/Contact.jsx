@@ -32,12 +32,13 @@ function Contact() {
         className="max-w-[850px] flex justify-center flex-col items-center mx-auto mb-0 md:mb-10 md:pt-20 pb-10"
       >
         <h1 className="text-6xl text-center">Skontaktuj</h1>
-        <h2 className="text-center text-2xl font-semibold bg-gradient-to-r from-blue-500 to-purple-500 inline-block text-transparent md:mt-0 bg-clip-text">
+        <h2 className="text-center text-2xl font-semibold bg-gradient-to-r from-blue-400 to-purple-400 inline-block text-transparent bg-clip-text md:mt-0">
           się ze mną!
         </h2>
+
         <div className="w-full h-full flex flex-col md:flex-row mt-2 justify-between items-start py-4 ">
           <div className="md:w-[50%] w-[70%] flex flex-col ">
-            <h1 className="text-center text-2xl font-medium py-3">
+            <h1 className="text-center text-2xl font-semibold text-[#4b4b4b] py-3">
               Zapytaj o termin!
             </h1>
             <form
@@ -64,15 +65,17 @@ function Contact() {
                   placeholder="tutaj możesz wpisać jaki termin cie interesuje"
                   className="w-[100%] pb-[100px] rounded-xl bg-gray-300 py-2 px-4 border-none text-"
                 ></textarea>
-                <button
-                  type="submit"
-                  // disabled={!isChecked}
-                  onClick={handleSubmitClick} // Modify the onClick event
-                  div
-                  classname="border-4 border-gradient-to-r from-blue-300 to-purple-400 gradient-border rounded-xl px-6 py-[10px] text-black mr-auto font-semibold mt-2 text-center"
-                >
-                  wyślij
-                </button>
+                <div className="w-[130px] cursor-pointer bg-red-500 flex justify-center items-center py-1 rounded-[50px] bg-gradient-to-r from-blue-300 to-purple-300">
+                  <button
+                    type="submit"
+                    onClick={handleSubmitClick} // Modify the onClick event
+                    id="ContactButton"
+                    className="rounded-[50px] mx-auto bg-white mr-auto w-[120px] py-1 text-[17px] font-bold text-[#747474] hover:text-[#9b9b9b]"
+                  >
+                    Wyślij
+                  </button>
+                </div>
+
                 <div className="flex flex-row items-start justify-center">
                   <input
                     type="checkbox"
@@ -96,7 +99,7 @@ function Contact() {
               </div>
             </form>
           </div>
-          <div className="md:w-[50%] h-full md:mb-6 flex justify-center mx-auto md:pt-20">
+          <div className="md:w-[50%] ml-10 h-full md:mb-6 flex justify-center mx-auto md:pt-20">
             <ul>
               <a href="https://www.facebook.com/patrycjadawidfotografia?locale=pl_PL">
                 <li className="flex flex-row py-2 items-center space-x-2 text-xl">

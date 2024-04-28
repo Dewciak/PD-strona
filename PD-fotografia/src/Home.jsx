@@ -9,6 +9,7 @@ import ScrollToTop from "./assets/components/ScrollToTop";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import About from "./assets/components/Landing/About";
+import BlueBar from "./assets/components/Landing/BlueBar";
 function App() {
   let sections = document.querySelectorAll("section");
   useEffect(() => {
@@ -24,13 +25,14 @@ function App() {
   });
 
   return (
-    <div className="App">
+    <div className="App overflow-hidden">
       <Navbar sections={sections} />
       <ScrollToTop />
       <Hero className="Section" id="Hero" />
       <About />
       <Portfolio className="Section" id="Portfolio" />
       <Offer className="Section" id="Offer" />
+      <BlueBar />
       <Contact className="Section" id="Contact" />
 
       <Footer />

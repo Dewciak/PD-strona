@@ -30,7 +30,7 @@ function About() {
           <div className="flex flex-col md:w-[45%] pl-4">
             <h1
               data-aos="slide-right"
-              className="text-4xl pb-8 font-bold tracking-[3px]  text-blue-400  mt-8 text-center md:text-left mx-6 "
+              className="text-4xl pb-8 font-bold tracking-[3px]  bg-gradient-to-r from-blue-400 to-purple-500 inline-block text-transparent bg-clip-text  mt-8 text-center md:text-left mx-6 "
             >
               Poznaj mnie!
             </h1>

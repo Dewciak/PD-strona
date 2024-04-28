@@ -8,7 +8,7 @@ import { Link } from "react-scroll"; // Import Link from react-scroll
 
 function Footer() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col overflow-hidden">
       <div className="w-screen flex flex-row text-center bg-gray-200 py-1">
         <ul className="mx-auto flex flex-row gap-x-8 text-sm items-center justify-center">
           <li>Polityka Prywatności</li>
@@ -22,9 +22,21 @@ function Footer() {
             <FaCopyright className="" />
           </div>
           <div className="w-[33%] h-full  flex flex-row justify-center items-center gap-x-2">
-            <FaFacebookMessenger className="text-white text-3xl" />
-            <FaFacebook className="text-white text-3xl" />
-            <FaInstagram className="text-white text-3xl" />
+            <a href="https://m.me/patrycjadawidfotografia" target="blank">
+              <FaFacebookMessenger className="text-white text-3xl" />
+            </a>
+            <a
+              href="https://www.facebook.com/patrycjadawidfotografia?locale=pl_PL"
+              target="blank"
+            >
+              <FaFacebook className="text-white text-3xl" />
+            </a>
+            <a
+              href="https://www.instagram.com/patrycjadfotografia/"
+              target="blank"
+            >
+              <FaInstagram className="text-white text-3xl" />
+            </a>
           </div>
           <h1 className=" text-center w-[33%]">
             Realizacja:{" "}

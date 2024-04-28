@@ -80,11 +80,11 @@ export function Questions() {
           </AccordionBody>
         </Accordion>
       </div>
-      <a href="">
+      {/* <a href="">
         <button className="bg-blue-200 rounded-[50px] mx-auto px-6 py-4 mb-16 mt-10">
           Regulamin sesji
         </button>
-      </a>
+      </a> */}
     </div>
   );
 }

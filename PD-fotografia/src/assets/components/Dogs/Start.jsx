@@ -24,7 +24,7 @@ function Start() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-    <div id="Start" className="mx-auto">
+    <div id="Start" className="mx-auto  ">
       {/* Zdjęcie góra czarne */}
       <div className=" bg-black h-auto relative ">
         <div

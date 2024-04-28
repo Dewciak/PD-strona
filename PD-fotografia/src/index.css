@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import "~@flaticon/flaticon-uicons/css/all/all";
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 
 * {
@@ -12,7 +11,6 @@
 }
 .App {
   background-image: url("assets/images/background.jpg");
-
   background-size: cover;
 }
 
@@ -34,9 +32,4 @@ li::after {
 }
 .active li::after {
   width: 100%; /* This makes the border span the full width of the li element */
-}
-
-.gradient-border {
-  border-image: var(--tw-gradient-border);
-  border-image-slice: 1;
 }

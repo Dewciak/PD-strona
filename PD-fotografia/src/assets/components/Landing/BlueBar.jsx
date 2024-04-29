@@ -4,19 +4,19 @@ import Dog from "../../images/BlueBarDog.jpg";
 function BlueBar() {
   return (
     <div>
-      <div className="w-screen bg-[#DFF0FA] my-20">
-        <div className="max-w-[900px] flex mx-auto flex-row justify-center items-start py-[0px]">
-          <div className="flex flex-col items-start justify-start h-full mx-auto w-[50%]">
+      <div className="w-screen bg-[#DFF0FA] md:my-20 my-10 ">
+        <div className="max-w-[900px] flex mx-auto md:flex-row flex-col justify-center md:items-start items-center py-[0px]">
+          <div className="flex flex-col px-6 md:items-start items-center justify-center md:justify-start h-full mx-auto md:w-[50%]">
             <h1 className="text-center mx-auto font-semibold text-3xl py-10">
               Lorem
             </h1>
-            <p1>
+            <p1 className="">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
               repellat asperiores voluptatibus voluptate, quo unde sequi
               deserunt distinctio ullam alias.
             </p1>
           </div>
-          <div className="w-[40%]">
+          <div className="md:w-[40%] w-[90%] my-4 md:my-0">
             <img src={Dog}></img>
           </div>
         </div>

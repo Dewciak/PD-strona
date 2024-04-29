@@ -34,7 +34,7 @@ function Start() {
         >
           <div className="w-[100%] bg-black">
             <img
-              className="md:mt-[0px] mt-[100px] max-w-[1280px] mx-auto "
+              className="md:mt-[0px] mt-[100px] md:max-w-[1280px] mx-auto "
               src={Bg}
             ></img>
           </div>

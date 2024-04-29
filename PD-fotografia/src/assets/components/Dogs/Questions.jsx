@@ -33,7 +33,7 @@ export function Questions() {
 
   return (
     <div id="FAQ" className="flex flex-col justify-center items-center  ">
-      <div className="w-[80%] max-w-[1000px]  md:w-[85%] pt-16  mx-auto mb-10 min-h-[550px]">
+      <div className="w-[80%] max-w-[1000px]  md:w-[85%] pt-16  mx-auto md:mb-10 mb-28 min-h-[550px]">
         <h1 className="text-center text-3xl font-semibold py-8 mb-10">
           Często zadawane pytania
         </h1>

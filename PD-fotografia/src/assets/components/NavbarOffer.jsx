@@ -39,10 +39,10 @@ function Navbar() {
               onClick={() => {
                 window.scrollTo(0, 0);
               }}
-              className="flex flex-row items-center justify-center space-x-1"
+              className="flex flex-row items-center justify-start space-x-1"
             >
               <MdOutlineArrowBackIos className="mb-2" />
-              <li className="font-medium hover:text-[#0009] text-lg tracking-[4px]">
+              <li className="font-medium hover:text-[#0009] text-2xl tracking-[4px]">
                 Główna
               </li>
             </RouterLink>
@@ -97,7 +97,7 @@ function Navbar() {
             onClick={() => {
               window.scrollTo(0, 0);
             }}
-            className="flex flex-row items-center justify-center space-x-1"
+            className="flex flex-row items-center justify-start space-x-1"
           >
             <MdOutlineArrowBackIos className="mb-2" />
             <li className="font-medium hover:text-[#0009] text-lg tracking-[4px]">

@@ -11,6 +11,7 @@ import {
 } from "react-router-dom";
 import Dogs from "./Dogs.jsx";
 import PageNotFound from "./assets/components/PageNotFound.jsx";
+import PolicyPrivacy from "./assets/components/PolicyPrivacy.jsx";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,11 @@ const router = createBrowserRouter([
   {
     path: "/oferta-psy",
     element: <Dogs />,
+    errorElement: <PageNotFound />,
+  },
+  {
+    path: "/PolitykaPrywatności",
+    element: <PolicyPrivacy />,
     errorElement: <PageNotFound />,
   },
 ]);

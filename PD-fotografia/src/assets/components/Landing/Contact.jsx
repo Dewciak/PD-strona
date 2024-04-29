@@ -29,15 +29,15 @@ function Contact() {
       <AccordionCustomIcon className="py-6" />
       <div
         id="Contact"
-        className="max-w-[850px] flex justify-center flex-col items-center mx-auto mb-0 md:mb-10 md:pt-20 pb-10"
+        className="max-w-[850px] flex justify-center flex-col items-center mx-auto mb-0 md:mb-10 md:pt-20 pt-6 pb-10"
       >
         <h1 className="text-6xl text-center">Skontaktuj</h1>
         <h2 className="text-center text-2xl font-semibold bg-gradient-to-r from-blue-400 to-purple-400 inline-block text-transparent bg-clip-text md:mt-0">
           się ze mną!
         </h2>
 
-        <div className="w-full h-full flex flex-col md:flex-row mt-2 justify-between items-start py-4 ">
-          <div className="md:w-[50%] w-[70%] flex flex-col ">
+        <div className="w-full h-full flex flex-col md:flex-row mt-2 justify-between items-start  py-4 ">
+          <div className="md:w-[50%] w-[70%] flex flex-col mx-auto">
             <h1 className="text-center text-2xl font-semibold text-[#4b4b4b] py-3">
               Zapytaj o termin!
             </h1>
@@ -76,11 +76,11 @@ function Contact() {
                   </button>
                 </div>
 
-                <div className="flex flex-row items-start justify-center">
+                <div className="flex flex-row items-start justify-center ml-2 pb-4">
                   <input
                     type="checkbox"
                     id="checkbox"
-                    className="mt-1 mr-2 "
+                    className="mt-1 mr-2"
                     onChange={handleCheckboxChange}
                   ></input>
                   <p className="text-xs text-gray-400">
@@ -99,28 +99,28 @@ function Contact() {
               </div>
             </form>
           </div>
-          <div className="md:w-[50%] ml-10 h-full md:mb-6 flex justify-center mx-auto md:pt-20">
+          <div className="md:w-[50%] md:ml-10 h-full md:mb-6 flex justify-center mx-auto md:pt-20 ">
             <ul>
               <a href="https://www.facebook.com/patrycjadawidfotografia?locale=pl_PL">
-                <li className="flex flex-row py-2 items-center space-x-2 text-xl">
+                <li className="flex flex-row py-2 items-center space-x-2 text-lg">
                   <img src={Fb} width={40}></img>
                   <p>Patrycja Dawid Fotografia</p>
                 </li>
               </a>
               <a href="https://m.me/patrycjadawidfotografia">
-                <li className="flex flex-row py-2 items-center space-x-2 text-xl">
+                <li className="flex flex-row py-2 items-center space-x-2 text-lg">
                   <img src={Mess} width={40}></img>
                   <p>Patrycja Dawid Fotografia</p>
                 </li>
               </a>
               <a href="https://www.instagram.com/patrycjadfotografia/">
-                <li className="flex flex-row py-2 items-center space-x-2 text-xl">
+                <li className="flex flex-row py-2 items-center space-x-2 text-lg">
                   <img src={Ig} width={40}></img>
                   <p>patrycjadfotografia</p>
                 </li>
               </a>
               <a href="mailto:wiktorskid@wp.pl">
-                <li className="flex flex-row py-2 items-center space-x-2 text-xl">
+                <li className="flex flex-row py-2 items-center space-x-2 text-lg">
                   <img src={Mail} width={40}></img>
                   <p>patrycjad20@gmail.com</p>
                 </li>

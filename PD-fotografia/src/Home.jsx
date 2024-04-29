@@ -25,7 +25,7 @@ function App() {
   });
 
   return (
-    <div className="App overflow-hidden">
+    <div className="App overflow-hidden scroll-smooth">
       <Navbar sections={sections} />
       <ScrollToTop />
       <Hero className="Section" id="Hero" />

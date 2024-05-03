@@ -10,13 +10,14 @@ import {
   useLocation,
 } from "react-router-dom";
 import Dogs from "./Dogs.jsx";
+import Horses from "./Horses.jsx";
 import PageNotFound from "./assets/components/PageNotFound.jsx";
 import PolicyPrivacy from "./assets/components/PolicyPrivacy.jsx";
 
 const router = createBrowserRouter([
   {
-    path: "/PD-strona",
-    // path: "/",
+    // path: "/PD-strona",
+    path: "/",
 
     element: <Home />,
     errorElement: <PageNotFound />,
@@ -24,6 +25,11 @@ const router = createBrowserRouter([
   {
     path: "/oferta-psy",
     element: <Dogs />,
+    errorElement: <PageNotFound />,
+  },
+  {
+    path: "/oferta-konie",
+    element: <Horses />,
     errorElement: <PageNotFound />,
   },
   {

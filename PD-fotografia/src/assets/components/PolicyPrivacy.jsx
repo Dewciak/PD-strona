@@ -10,13 +10,15 @@ function PolicyPrivacy() {
       {/*  */}
       <Navbar />
       <div className="w-screen h-[300px] bg-blue-100 flex items-center justify-center">
-        <h1 className="text-center  font-bold text-4xl">
+        <h1 className="text-center   text-4xl tracking-[5px] font-light text-titleGray">
           Polityka Prywatności
         </h1>
       </div>
       <div className="flex flex-col space-y-12 mx-auto max-w-[1080px] pt-16 mt h-auto justify-center items-center mb-32">
-        <h1 className="text-start mr-auto text-3xl font-bold">Naszym Celem</h1>
-        <h2>
+        <h1 className="text-start mr-auto text-3xl tracking-[5px] font-light text-titleGray">
+          Naszym Celem
+        </h1>
+        <h2 className="tracking-[0px] font-[Lora] text-myGray font-normal text-[17px] leading-[34px]">
           jest zapewnienie Państwu poczucia bezpieczeństwa na naszym Portalu,
           dlatego też Państwa prywatność i ochrona danych osobowych są dla nas
           bardzo ważne. Prosimy o staranne zapoznanie się z poniższym
@@ -25,13 +27,13 @@ function PolicyPrivacy() {
           przejrzysty i uczciwy, oraz że dołożymy wszelkich starań, aby były
           traktowane z zachowaniem ostrożności i odpowiedzialnie.
         </h2>
-        <h3>
+        <h3 className="tracking-[0px] font-[Lora] text-myGray font-normal text-[17px] leading-[34px]">
           Poniższa Polityka prywatności ma na celu poinformowanie o sposobie
           wykorzystywania przez nas Państwa danych osobowych, względem których
           spełniamy wszystkie wymogi Rozporządzenia Parlamentu Europejskiego i
           Rady (UE) 2016/679 UE z dnia 27 kwietnia 2016 r. (dalej jako: „RODO”).
         </h3>
-        <p>
+        <p className="tracking-[0px] font-[Lora] text-myGray font-normal text-[17px] leading-[34px]">
           §1 POSTANOWIENIA OGÓLNE Korzystanie ze Strony www.patrycjadowid.pl
           oznacza akceptację poniższych warunków Polityki Prywatności i Polityki
           Cookies. Polityka Prywatności i Polityka Cookies określa zasady

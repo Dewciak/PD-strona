@@ -98,7 +98,7 @@ export function GalleryWithTab() {
   return (
     <>
       <Tabs value="html">
-        <TabsHeader className="max-w-[95%] mx-auto flex justify-center bg-gray-100 items-center z-[1]">
+        <TabsHeader className="max-w-[95%] mx-auto flex justify-center tracking-[5px] font-light bg-gray-100 items-center z-[1]">
           {data.map(({ label, value }) => (
             <Tab key={value} value={value}>
               {label}

@@ -17,6 +17,8 @@ module.exports = withMT({
       }),
       colors: {
         myBlue: "",
+        myGray: "rgba(58,58,58,0.96)",
+        titleGray: "rgb(45,45,45)",
       },
     },
   },

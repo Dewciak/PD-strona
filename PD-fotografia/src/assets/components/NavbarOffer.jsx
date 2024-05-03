@@ -42,7 +42,7 @@ function Navbar() {
               className="flex flex-row items-center justify-start space-x-1"
             >
               <MdOutlineArrowBackIos className="mb-2" />
-              <li className="font-medium hover:text-[#0009] text-2xl tracking-[4px]">
+              <li className="text-2xl p-4 font-light tracking-[5px]  text-titleGray">
                 Główna
               </li>
             </RouterLink>
@@ -55,7 +55,9 @@ function Navbar() {
               onClick={handleNav}
               duration={500}
             >
-              <li className="text-2xl p-4">O sesji</li>
+              <li className="text-2xl p-4 font-light tracking-[5px]  text-titleGray">
+                O sesji
+              </li>
             </Link>
             <Link
               activeClass="active"
@@ -66,7 +68,9 @@ function Navbar() {
               duration={500}
               onClick={handleNav}
             >
-              <li className="text-2xl p-4">Rodzaje sesji</li>
+              <li className="text-2xl p-4 font-light tracking-[5px]  text-titleGray">
+                Rodzaje sesji
+              </li>
             </Link>
             <Link
               activeClass="active"
@@ -77,7 +81,9 @@ function Navbar() {
               onClick={handleNav}
               duration={500}
             >
-              <li className="text-2xl p-4">Pakiety</li>
+              <li className="text-2xl p-4 font-light tracking-[5px]  text-titleGray">
+                Pakiety
+              </li>
             </Link>
           </ul>
         </div>
@@ -100,7 +106,7 @@ function Navbar() {
             className="flex flex-row items-center justify-start space-x-1"
           >
             <MdOutlineArrowBackIos className="mb-2" />
-            <li className="font-medium hover:text-[#0009] text-lg tracking-[4px]">
+            <li className="font-light hover:text-[#0009] text-lg tracking-[5px]  text-titleGray">
               Główna
             </li>
           </RouterLink>
@@ -112,7 +118,7 @@ function Navbar() {
             offset={-70}
             duration={500}
           >
-            <li className="font-medium hover:text-[#0009] text-lg tracking-[4px]">
+            <li className="font-light hover:text-[#0009] text-lg tracking-[5px]  text-titleGray">
               O sesji
             </li>
           </Link>
@@ -124,7 +130,7 @@ function Navbar() {
             offset={-70}
             duration={500}
           >
-            <li className="font-medium hover:text-[#0009] text-lg tracking-[4px]">
+            <li className="font-light hover:text-[#0009] text-lg tracking-[5px]  text-titleGray">
               Rodzaje sesji
             </li>
           </Link>
@@ -136,7 +142,7 @@ function Navbar() {
             offset={-70}
             duration={500}
           >
-            <li className="font-medium hover:text-[#0009] text-lg tracking-[4px]">
+            <li className="font-light hover:text-[#0009] text-lg tracking-[5px]  text-titleGray">
               Pakiety
             </li>
           </Link>{" "}
@@ -148,7 +154,7 @@ function Navbar() {
             offset={-70}
             duration={500}
           >
-            <li className="font-medium hover:text-[#0009] text-lg tracking-[4px]">
+            <li className="font-light hover:text-[#0009] text-lg tracking-[5px]  text-titleGray">
               FAQ
             </li>
           </Link>

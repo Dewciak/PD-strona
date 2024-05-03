@@ -61,7 +61,9 @@ function Navbar({ sections }) {
               duration={500}
               onClick={handleNav}
             >
-              <li className="text-2xl p-4 ">O mnie</li>
+              <li className="text-2xl p-4 font-light tracking-[5px]  text-titleGray">
+                O mnie
+              </li>
             </Link>
             <Link
               activeClass="active"
@@ -72,7 +74,9 @@ function Navbar({ sections }) {
               onClick={handleNav}
               duration={500}
             >
-              <li className="text-2xl p-4">Portfolio</li>
+              <li className="text-2xl p-4 font-light tracking-[5px]  text-titleGray">
+                Portfolio
+              </li>
             </Link>
             <Link
               activeClass="active"
@@ -83,7 +87,9 @@ function Navbar({ sections }) {
               duration={500}
               onClick={handleNav}
             >
-              <li className="text-2xl p-4">Oferta</li>
+              <li className="text-2xl p-4 font-light tracking-[5px]  text-titleGray">
+                Oferta
+              </li>
             </Link>
             <Link
               activeClass="active"
@@ -94,7 +100,9 @@ function Navbar({ sections }) {
               onClick={handleNav}
               duration={500}
             >
-              <li className="text-2xl p-4">Kontakt</li>
+              <li className="text-2xl p-4 font-light tracking-[5px]  text-titleGray">
+                Kontakt
+              </li>
             </Link>
           </ul>
         </div>
@@ -112,7 +120,9 @@ function Navbar({ sections }) {
             offset={-70}
             duration={500}
           >
-            <li className="font-medium hover:text-[#0009] text-lg">O mnie</li>
+            <li className="font-light hover:text-[#0009] text-lg tracking-[5px]  text-titleGray">
+              O mnie
+            </li>
           </Link>
 
           <Link
@@ -123,7 +133,7 @@ function Navbar({ sections }) {
             offset={-70}
             duration={500}
           >
-            <li className="font-medium hover:text-[#0009] text-lg ">
+            <li className="hover:text-[#0009]  font-light text-lg tracking-[5px]  text-titleGray">
               Portfolio
             </li>
           </Link>
@@ -135,7 +145,9 @@ function Navbar({ sections }) {
             offset={-70}
             duration={500}
           >
-            <li className="font-medium hover:text-[#0009] text-lg ">Oferta</li>
+            <li className="font-light hover:text-[#0009] text-lg tracking-[5px]  text-titleGray">
+              Oferta
+            </li>
           </Link>
           <Link
             activeClass="active"
@@ -145,7 +157,9 @@ function Navbar({ sections }) {
             offset={-70}
             duration={500}
           >
-            <li className="font-medium hover:text-[#0009] text-lg ">Kontakt</li>
+            <li className="font-light hover:text-[#0009] text-lg tracking-[5px]  text-titleGray">
+              Kontakt
+            </li>
           </Link>
         </ul>
 

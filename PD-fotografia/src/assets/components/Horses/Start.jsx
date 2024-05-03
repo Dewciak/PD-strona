@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Bg from "../../images/Dogs/bg2.jpg";
+import Bg from "../../images/Horses/bg.jpg";
 import AboutDog from "../../images/Dogs/About.jpg";
 import TypesOfSessions from "./TypesOfSessions";
 import Pakiety from "./Pakiety";
@@ -28,23 +28,23 @@ function Start() {
       {/* Zdjęcie góra czarne */}
       <div className=" bg-black h-auto relative ">
         <div
-          className={`fixed w-[100%] top-0 z-[-1] md:left-1/2 md:transform md:-translate-x-1/2 ${
+          className={`fixed w-[100%] top-[50px] z-[-1] md:left-1/2 md:transform md:-translate-x-1/2 ${
             isVisible ? "" : "opacity-0"
           }`}
         >
           <div className="w-[100%] bg-black">
             <img
-              className="md:mt-[0px] mt-[100px] md:max-w-[1280px] mx-auto "
+              className="md:mt-[0px] mt-[100px] md:max-w-[800px] mx-auto "
               src={Bg}
             ></img>
           </div>
         </div>
       </div>
       <div className="w-[98%]  relative z-0 mx-auto">
-        <div className="max-w-[1000px] mx-auto md:mt-[670px] mt-[330px] z-[10] relative  pt-8">
+        <div className="max-w-[1000px] mx-auto md:mt-[590px] mt-[330px] z-[10] relative  pt-8">
           {/* Nagłówek fotografia */}
-          <h1 className="text-center text-4xl md:text-6xl  md:mt-[50px] tracking-[5px] font-light text-titleGray ">
-            Fotografia Psów
+          <h1 className="text-center text-4xl md:text-6xl  md:mt-[20px] tracking-[5px] font-light text-titleGray ">
+            Fotografia Koni
           </h1>
           {/* Nagłówek P tag */}
           <p className="text-center text-[#747474] mt-4 text-sm  tracking-[0px] font-[Lora]  font-normal text-[20px] leading-[34px]">

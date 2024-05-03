@@ -60,7 +60,9 @@ function Navbar({ sections }) {
                 window.scrollTo(0, 700);
               }}
             >
-              <li className="text-2xl p-4 ">O mnie</li>
+              <li className="text-2xl p-4 font-light tracking-[5px]  text-titleGray">
+                O mnie
+              </li>
             </RouterLink>
             <RouterLink
               activeClass="active"
@@ -70,7 +72,9 @@ function Navbar({ sections }) {
                 window.scrollTo(0, 1600);
               }}
             >
-              <li className="text-2xl p-4 ">Portfolio</li>
+              <li className="text-2xl p-4 font-light tracking-[5px]  text-titleGray ">
+                Portfolio
+              </li>
             </RouterLink>
             <RouterLink
               activeClass="active"
@@ -80,7 +84,9 @@ function Navbar({ sections }) {
                 window.scrollTo(0, 3600);
               }}
             >
-              <li className="text-2xl p-4 ">Oferta</li>
+              <li className="text-2xl p-4 font-light tracking-[5px]  text-titleGray ">
+                Oferta
+              </li>
             </RouterLink>
             <RouterLink
               activeClass="active"
@@ -90,7 +96,9 @@ function Navbar({ sections }) {
                 window.scrollTo(0, 9000);
               }}
             >
-              <li className="text-2xl p-4 ">Kontakt</li>
+              <li className="text-2xl p-4 font-light tracking-[5px]  text-titleGray ">
+                Kontakt
+              </li>
             </RouterLink>
           </ul>
         </div>
@@ -109,7 +117,9 @@ function Navbar({ sections }) {
               window.scrollTo(0, 500);
             }}
           >
-            <li className="font-medium hover:text-[#0009] text-lg">O mnie</li>
+            <li className="font-light hover:text-[#0009] text-lg tracking-[5px]  text-titleGray">
+              O mnie
+            </li>
           </RouterLink>
 
           <RouterLink
@@ -119,7 +129,7 @@ function Navbar({ sections }) {
               window.scrollTo(0, 1300);
             }}
           >
-            <li className="font-medium hover:text-[#0009] text-lg ">
+            <li className="font-light hover:text-[#0009] text-lg tracking-[5px]  text-titleGray">
               Portfolio
             </li>
           </RouterLink>
@@ -130,7 +140,9 @@ function Navbar({ sections }) {
               window.scrollTo(0, 2200);
             }}
           >
-            <li className="font-medium hover:text-[#0009] text-lg ">Oferta</li>
+            <li className="font-light hover:text-[#0009] text-lg tracking-[5px]  text-titleGray">
+              Oferta
+            </li>
           </RouterLink>
           <RouterLink
             activeClass="active"
@@ -139,7 +151,9 @@ function Navbar({ sections }) {
               window.scrollTo(0, 4000);
             }}
           >
-            <li className="font-medium hover:text-[#0009] text-lg ">Kontakt</li>
+            <li className="font-light hover:text-[#0009] text-lg tracking-[5px]  text-titleGray">
+              Kontakt
+            </li>
           </RouterLink>
         </ul>
 

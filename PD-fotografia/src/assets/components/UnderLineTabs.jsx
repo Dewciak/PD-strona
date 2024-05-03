@@ -59,7 +59,7 @@ export function UnderlineTabs() {
         className=" border-b max-w-[100%] md:max-w-[80%] mx-auto border-blue-gray-50 bg-transparent py-1 rounded-[12px] z-[1]  bg-gradient-to-r from-blue-100 to-[#EBDFFA]"
         indicatorProps={{
           className:
-            "w-[90%] mt-1 mx-auto bg-transparent border-b-2 border-gray-900 shadow-none rounded-none",
+            "w-[90%] mt-1 mx-auto bg-transparent border-b-2 border-gray-600 shadow-none rounded-none ",
         }}
       >
         {data.map(({ label, value }) => (
@@ -69,8 +69,8 @@ export function UnderlineTabs() {
             onClick={() => setActiveTab(value)}
             className={
               activeTab === value
-                ? "text-gray-900 text-sm md:text-2xl duration-300"
-                : "md:text-xl text-sm"
+                ? "text-gray-700 text-sm md:text-xl tracking-[5px]  duration-300"
+                : "md:text-xl text-sm tracking-[5px] font-light "
             }
           >
             {label}
@@ -95,17 +95,17 @@ export function UnderlineTabs() {
               className="rounded-[20px]  mt-16 space-y-6   w-[100%] relative left-[-10]  flex flex-col md:flex-row justify-center items-center space-x-6 pb-10 "
             >
               <div className="md:w-[355px] h-[470px] md:mt-10 ml-6 w-[100%] px-6 bg-white shadow-md shadow-[#00000035] rounded-[20px] flex flex-col justify-center items-center md:hover:scale-105 duration-500 cursor-default">
-                <h1 className="pt-20 pb-14 text-center text-3xl font-semibold">
+                <h1 className="pt-20 pb-14 text-center text-3xl  tracking-[5px] font-light text-titleGray">
                   Pakiet 1
                 </h1>
                 <div className="text-center  font-semibold text-2xl ">
                   {desc}
                 </div>
-                <div className="py-10 text-sm text-gray-500 text-center">
+                <div className="py-10 text-sm text-gray-500  text-center">
                   {desc2}
                 </div>
                 <a href="https://m.me/patrycjadawidfotografia" target="blank">
-                  <button className="mx-auto py-1 px-10 mb-16 text-lg font-semibold bg-[#DFF0FA] rounded-[50px]">
+                  <button className="mx-auto py-1 px-10 mb-16 text-lg tracking-[4px] font-medium text-titleGray bg-[#DFF0FA] rounded-[50px]">
                     Umów się
                   </button>
                 </a>
@@ -113,7 +113,7 @@ export function UnderlineTabs() {
 
               {/* drugi pakiet */}
               <div className="md:w-[355px] h-[470px] w-[100%] px-6 mx-auto bg-white shadow-md shadow-[#00000035] rounded-[20px] flex flex-col justify-center items-center md:hover:scale-105 duration-500 cursor-default">
-                <h1 className="pt-20 pb-14 mt-4 text-center text-3xl font-semibold">
+                <h1 className="pt-20 pb-14 mt-4 text-center text-3xl tracking-[5px] font-light text-titleGray">
                   Pakiet 2
                 </h1>
                 <div className="text-center  font-semibold text-2xl ">
@@ -123,7 +123,7 @@ export function UnderlineTabs() {
                   {desc4}
                 </div>
                 <a href="https://m.me/patrycjadawidfotografia" target="blank">
-                  <button className="mx-auto py-1 px-10 mb-16 text-lg font-semibold bg-[#F9DFFA] rounded-[50px]">
+                  <button className="mx-auto py-1 px-10 mb-16 text-lg tracking-[4px] font-medium text-titleGray bg-[#F9DFFA] rounded-[50px]">
                     Umów się
                   </button>
                 </a>
@@ -131,7 +131,7 @@ export function UnderlineTabs() {
               {/* trzeci pakiet */}
               {descCount >= 5 && (
                 <div className="md:w-[355px] h-[470px] w-[100%] px-6 bg-white  mx-auto shadow-md shadow-[#00000035] rounded-[20px] flex flex-col justify-center items-center md:hover:scale-105 duration-500 cursor-default">
-                  <h1 className="pt-20 pb-14 text-center text-3xl font-semibold">
+                  <h1 className="pt-20 pb-14 text-center text-3xl tracking-[5px] font-light text-titleGray">
                     Pakiet 3
                   </h1>
                   <div className="text-center font-semibold text-2xl">
@@ -141,7 +141,7 @@ export function UnderlineTabs() {
                     {currentTabData.desc6}
                   </div>
                   <a href="https://m.me/patrycjadawidfotografia" target="blank">
-                    <button className="mx-auto py-1 px-10 mb-16 text-lg font-semibold bg-[#EBDFFA] rounded-[50px]">
+                    <button className="mx-auto py-1 px-10 mb-16 text-lg tracking-[4px] font-medium text-titleGray bg-[#EBDFFA] rounded-[50px]">
                       Umów się
                     </button>
                   </a>

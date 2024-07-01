@@ -22,7 +22,7 @@ function About() {
           <h1 className="md:text-5xl text-4xl mt-10 md:mt-0 tracking-[5px] font-light">
             Profesjonalna
           </h1>
-          <h2 className="md:text-xl text-xl md:py-4 py-2 mb-4 tracking-[0px] font-[Lora] text-gray-500 font-extralight text-[17px] leading-[34px] ">
+          <h2 className="md:text-xl text-xl md:py-4 py-2 mb-4 tracking-[5px] font-light text-gray-500  text-[17px] leading-[34px] ">
             fotografia zwierząt
           </h2>
         </div>

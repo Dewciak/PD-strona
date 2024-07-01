@@ -26,10 +26,9 @@ function Contact() {
 
   return (
     <div>
-      <AccordionCustomIcon className="py-6" />
       <div
         id="Contact"
-        className="max-w-[850px] flex justify-center flex-col items-center mx-auto mb-0 md:mb-10 md:pt-20 pt-6 pb-10"
+        className="max-w-[850px] flex justify-center flex-col items-center mx-auto mb-0 md:mb-10 md:pt-6 pt-6 pb-4"
       >
         <h1 className="text-5xl md:text-6xl text-center tracking-[5px] font-light text-titleGray">
           Skontaktuj
@@ -38,7 +37,7 @@ function Contact() {
           się ze mną!
         </h2>
 
-        <div className="w-full h-full flex flex-col md:flex-row mt-2 justify-between items-start  py-4 ">
+        <div className="w-full h-full flex flex-col md:flex-row mt-6 justify-between items-start  py-4 ">
           <div className="md:w-[50%] w-[70%] flex flex-col mx-auto">
             <h1 className="text-center text-xl  py-3 tracking-[5px] font-light text-titleGray">
               Zapytaj o termin!

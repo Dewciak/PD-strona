@@ -10,6 +10,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import About from "./assets/components/Landing/About";
 import BlueBar from "./assets/components/Landing/BlueBar";
+import AccordionCustomIcon from "./assets/components/Landing/AccordionCustomIcon";
 function App() {
   let sections = document.querySelectorAll("section");
   useEffect(() => {
@@ -31,8 +32,10 @@ function App() {
       <Hero className="Section" id="Hero" />
       <About />
       <Portfolio className="Section" id="Portfolio" />
-      <Offer className="Section" id="Offer" />
       <BlueBar />
+      {/* <AccordionCustomIcon className="py-6" /> */}
+
+      <Offer className="Section" id="Offer" />
       <Contact className="Section" id="Contact" />
 
       <Footer />

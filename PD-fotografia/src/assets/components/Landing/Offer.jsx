@@ -12,14 +12,12 @@ function Offer() {
   return (
     <div
       id="Offer"
-      className="max-w-[1050px] justify-center mx-auto flex flex-col md:mt-[40px] md:pt-20 mt-[50px]"
+      className="max-w-[1050px] justify-center mx-auto flex flex-col md:mt-[90px] md:pt-0 mt-[50px]"
     >
       <h1 className="text-center md:text-6xl text-6xl pb-4 mx-auto tracking-[5px] font-light text-titleGray">
         Oferta
       </h1>
-      <h2 className="text-center  text-lg pb-0 trakcing-[2px] text-gray-500 tracking-[3px] font-[Lora] font-light">
-        dla każdego coś fajnego!
-      </h2>
+      {/* <h2 className="text-center  text-lg pb-0 trakcing-[2px] text-gray-500 tracking-[3px] font-[Lora] font-light"></h2> */}
       <div className="flex flex-col md:flex-row gap-y-8 gap-x-8 mt-14 mx-auto">
         <RouterLink
           to="/oferta-konie"

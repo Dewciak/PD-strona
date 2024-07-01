@@ -4,19 +4,26 @@ import Dog from "../../images/BlueBarDog.jpg";
 function BlueBar() {
   return (
     <div>
-      <div className="w-screen bg-[#DFF0FA] md:my-20 my-10 ">
-        <div className="max-w-[900px] flex mx-auto md:flex-row flex-col justify-center md:items-start items-center py-[0px]">
-          <div className="flex flex-col px-6 md:items-start items-center justify-center md:justify-start h-full mx-auto md:w-[50%]">
-            <h1 className="text-center mx-auto text-3xl py-10 tracking-[5px] font-light">
-              Lorem
-            </h1>
-            <p1 className="tracking-[0px] font-[Lora] text-myGray font-normal text-[17px] leading-[34px]">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
-              repellat asperiores voluptatibus voluptate, quo unde sequi
-              deserunt distinctio ullam alias.
+      <div className="w-screen bg-[#DFF0FA] md:my-10  py-[0px] ">
+        <div className="max-w-[900px] flex mx-auto md:flex-row flex-row justify-center items-center py-[30px]">
+          <div className="flex flex-col px-6 md:items-start  items-start justify-start h-full mx-auto md:w-[60%]">
+            <p1 className="text-start text-2xl pb-6   tracking-[2px] font-light leading-10 ">
+              K I L K A   P O W O D Ó W  <br /> D L A C Z E G O . . .
+            </p1>
+            <p1 className="tracking-[1.7px]  text-myGray font-light text-[18px] leading-[32px]  mr-10">
+              • Zyskujesz wspaniałą pamiątkę na całe życie <br />
+              {/* <br />• Sesja może być dobrym sposobem na spędzenie wspólnie czasu{" "} */}
+              <br />
+              • Twój czworonożny przyjaciel zostanie uwieczniony w najlepszy
+              możliwy sposób
+              <br />
+              <br />• Ukażę na fotografiach piękną więź, jaka was łączy
+              <br />
+              <br />• Zdjęcia są wysokiej rozdzielczości idealne do wydruków,
+              foto książek i innych niekomercyjnych zastosowań.
             </p1>
           </div>
-          <div className="md:w-[40%] w-[90%] my-4 md:my-0">
+          <div className="md:w-[37%] w-[90%] h-full my-4 md:my-0">
             <img src={Dog}></img>
           </div>
         </div>

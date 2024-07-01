@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Bg from "../../images/Horses/bg.jpg";
-import AboutDog from "../../images/Dogs/About.jpg";
+import About from "../../images/Horses/About.jpg";
 import TypesOfSessions from "./TypesOfSessions";
 import Pakiety from "./Pakiety";
 import Questions from "./Questions";
@@ -48,8 +48,8 @@ function Start() {
           </h1>
           {/* Nagłówek P tag */}
           <p className="text-center text-[#747474] mt-4 text-sm  tracking-[0px] font-[Lora]  font-normal text-[20px] leading-[34px]">
-            Zapraszam Ciebie i Twojego czworonożnego przyjaciela na wyjątkową
-            sesję zdjęciową
+            Czy jeździectwo jest Twoją pasją i chcesz uwiecznić niezapomniane
+            chwile spędzone z Twoim końskim przyjacielem?
           </p>
           {/* Main górny tekst */}
           <div
@@ -57,52 +57,55 @@ function Start() {
             className="mx-auto flex  py-6 flex-col text-lg tracking-wide md:w-[970px] w-[80%] md:mt-12 mt-6"
           >
             <h1 className=" tracking-[5px] font-light text-titleGray ">
-              Jeśli marzysz o pamiątce na długie lata to trafiłeś w dobre ręce.{" "}
+              Zapraszam Cię na sesje jeździeckie, gdzie stworzymy piękne
+              fotografie, którymi będziesz mógł cieszyć się przez całe życie!{" "}
             </h1>
             <p className="mt-6 text-base text-justify tracking-[0px] font-[Lora] text-myGray font-normal text-[17px] leading-[34px]">
-              Podczas tworzenia zdjęć każdy szczegół jest dla mnie ważny,
-              dodatkowo moje doświadczenie w fotografii zwierząt sprawi, że
-              Twoje pupile przed obiektywem będą czuły się swobodnie, co
-              przełoży się na naturalne i ujmujące kadry.
+              Przed samą sesją konsultuje z Wami rodzaj i charakter zdjęć tak by
+              efekty w pełni Was zadowoliły. Jeśli chcesz mieć pamiątkę ze swoim
+              koniem, pamiętaj, że nie musisz być profesjonalnym modelem, to
+              moim zadaniem jest oddać więź jaka łączy Ciebie i Twojego
+              kopytnego pupila, staram się wkładać w to całe swoje serducho i
+              pokłady humoru :)
             </p>
           </div>
           {/* Main dolny tekst ze zdjęciem */}
           <div className="w-full flex md:flex-row flex-col mt-10 ">
             <div className="md:w-[60%] px-4 mx-auto ">
               <h1 className=" pb-8 md:pt-4 md:text-2xl text-3xl text-center md:text-start tracking-[5px] font-light text-titleGray">
-                Czym się kieruje podczas sesji?
+                Co sprawia że dobrze uchwycę Waszego konia podczas sesji?
               </h1>
               <p className="md:px-6 px-4 text-justify tracking-[0px] font-[Lora] text-myGray font-normal text-[17px] leading-[34px]">
                 <span className="text-blue-400 font-semibold tracking-[0px] font-[Lora]  text-[17px] leading-[34px]">
-                  Indywidualne podejście
+                  Pracuję z cierpliwością i empatią-
                 </span>{" "}
-                wiem że każdy pies jest wyjątkowy, dlatego też nasza sesja
-                zostanie dostosowana do jego charakteru, temperamentu i
-                ulubionych zajęć. Niezależnie od tego, czy Twój pies jest
-                energicznym psem sportowym czy też spokojnym i wylegującym się
-                futrzakiem, nasz fotograf będzie umiał uchwycić jego osobowość.
+                aby koń czuł się komfortowo. Na zdjęcia przeznaczam tyle czasu
+                ile trzeba żeby uzyskać najlepsze kadry.
                 <br></br>
                 <br></br>
                 <span className="text-blue-400 font-semibold tracking-[0px] font-[Lora]  text-[17px] leading-[34px]">
-                  Bezpieczeństwo
+                  pasja i zrozumienie jego natury-
                 </span>{" "}
-                i dobre samopoczucie Twojego psa jest dla mnie priorytetem.
+                uchwycenie piękna i charakteru Waszego konia w aparacie wymaga
+                nie tylko umiejętności technicznych, ale również wyczucia, pasji
+                i zrozumienia jego natury. Każde zdjęcie, które tworzę, jest
+                efektem długich lat obserwowania końskich zachowań, a także
+                darzenia ich ogromnym szacunkiem.
                 <br></br>
                 <br></br>
                 <span className="text-blue-400 font-semibold tracking-[0px] font-[Lora]   text-[17px] leading-[34px]">
-                  Niezwykłe wspomnienia
+                  przedstawienie koni w naturalny sposób-
                 </span>{" "}
-                które zapewnia sesja zdjęciowa to nie tylko okazja do
-                uwiecznienia pięknych chwil z Twoim psem, ale także stworzenia
-                trwałych wspomnień, którymi będziesz mógł cieszyć się przez
-                wiele lat. Mam nadzieję, że każde stworzone zdjęcie przywoła
-                uśmiech na Twojej twarzy za każdym razem, gdy na nie spojrzysz.
+                jest to dla mnie szczególnie ważne aby podkreślić ich piękno bez
+                zbędnego retuszu. Dlatego też staram się fotografować je w
+                naturalnym środowisku, gdzie mogą pokazać w pełni swój
+                charakter.
               </p>
             </div>
             {/* Dolne zdjęcie */}
             <img
               className="md:w-[40%] w-[80%] mx-auto mt-16 md:mt-0 rounded-[15px] px-2"
-              src={AboutDog}
+              src={About}
             ></img>
           </div>
         </div>

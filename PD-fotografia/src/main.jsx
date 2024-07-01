@@ -16,8 +16,8 @@ import PolicyPrivacy from "./assets/components/PolicyPrivacy.jsx";
 
 const router = createBrowserRouter([
   {
-    // path: "/PD-strona",
-    path: "/",
+    path: "/PD-strona",
+    // path: "/",
 
     element: <Home />,
     errorElement: <PageNotFound />,

@@ -1,9 +1,9 @@
 import React from "react";
 
-import Dog1 from "../../images/Dogs/plener1.jpg";
-import Dog3 from "../../images/Dogs/trening1.jpg";
-import Dog2 from "../../images/Dogs/eksterier1.jpg";
-import Dog4 from "../../images/Dogs/miot1.jpg";
+import horse1 from "../../images/Horses/plenerowa.jpg";
+import horse3 from "../../images/Horses/sprzedazowa.jpg";
+import horse4 from "../../images/Horses/czarnetlo.jpg";
+import horse2 from "../../images/Dogs/miot1.jpg";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -29,23 +29,24 @@ function TypesOfSessions() {
           {/* ZDJĘCIE */}
           <img
             className="md:w-[50%] w-[80%] rounded-[15px] mx-auto"
-            src={Dog1}
+            src={horse1}
           ></img>
           {/* TEKST */}
           <div className="md:w-[50%] w-[70%] md:px-14 mt-6 md:mt-0 mx-auto">
             <h1 className="text-2xl  pb-6 tracking-[5px] font-light text-titleGray text-center md:text-left ">
               Sesja plenerowa
             </h1>
-            <p className="tracking-[0px] font-[Lora] text-myGray font-normal text-[17px] leading-[34px]">
-              Podczas tej sesji mogę wykonać zarówno zdjęcia samego psa jak i
-              uchwycić Wasze wspólne chwile.
+            <p className="tracking-[0px] font-[Lora] text-myGray font-normal text-[17px] leading-[28px]">
+              Podczas tej sesji mogę wykonać zarówno zdjęcia samego konia jak i
+              uchwycić Was wspólnie.
               <br />
-              Zazwyczaj zdjęcia zajmują nam około 1-1,5 h. To oferta dla osób,
-              które chcą mieć pamiątkę na długie lata pod postacią zdjęć
-              ukazujących osobowość i charakter swojego psa.
+              <br /> Zazwyczaj zdjęcia zajmują nam około 1-1,5 h. To oferta dla
+              osób, które chcą mieć pamiątkę na długie lata.
               <br />
-              Podczas sesji wspólnie wybieramy miejsce gdzie będziemy
-              fotografować, tak by Twój pupil czuł się komfortowo. {" "}
+              <br /> Podczas sesji wspólnie wybieramy miejsce gdzie będziemy
+              fotografować, tak by Twój pupil czuł się komfortowo, może to być
+              zarówno teren stajni, pastwisko czy pobliski las.
+              <br /> (Dostępne są III pakiety cenowe opisane poniżej)
             </p>
           </div>
         </div>
@@ -57,19 +58,19 @@ function TypesOfSessions() {
           {/* TEKST */}
           <div className="md:w-[50%] w-[70%] md:px-14 mt-6 md:mt-0 mx-auto">
             <h1 className="text-2xl text-center md:text-left  py-6 tracking-[5px] font-light text-titleGray">
-              Sesja eksterierowa
+              Sesja treningowa
             </h1>
             <p className="tracking-[0px] font-[Lora] text-myGray font-normal text-[17px] leading-[34px]">
-              Jest to idealny wybór jeśli potrzebujesz zapowiedzi miotu, reklamy
-              reproduktora czy po prostu chcesz podkreślić atuty Twojego psa
-              <br></br>Sesja trwa do czasu uzyskania najlepszych ujęć z
-              uwzględnieniem zmęczenia psiego modela :)
+              Jeśli chcesz mieć pamiątkę z treningu, jest to oferta skeirowana
+              idelanie dla Ciebie.
+              <br /> Podczas tego rodzaju sesji jestem dla Was dostępna przez
+              cały trening łąpiąc najlepsze momenty.
             </p>
           </div>
           {/* ZDJĘCIE */}
           <img
             className="md:w-[50%] w-[80%] rounded-[15px] mx-auto mt-6"
-            src={Dog2}
+            src={horse2}
           ></img>
         </div>
         {/* SESJE  TRENINGOWE 3*/}
@@ -79,17 +80,20 @@ function TypesOfSessions() {
         >
           <img
             className="md:w-[50%] w-[80%] rounded-[15px] mx-auto mt-6 "
-            src={Dog3}
+            src={horse3}
           ></img>
           <div className="md:w-[50%] w-[70%] md:px-14 mt-6 md:mt-0 mx-auto">
             <h1 className="text-2xl  py-6 tracking-[5px] font-light text-titleGray text-center md:text-left ">
-              Sesja treningowa
+              Sesja sprzedażowa / sesja ogiera
             </h1>
             <p className="tracking-[0px] font-[Lora] text-myGray font-normal text-[17px] leading-[34px]">
-              sesja zdjęciowa z treningu psa to doskonała okazja do uwiecznienia
-              Waszych postępów i zaangażowania w treningu. Oglądanie zdjęć z
-              treningu może pomóc Ci zauważyć i docenić osiągnięcia Twojego psa
-              i dodatkowo zmotywuje Was do dalszego rozwoju.
+              Z przyjemnością oferuję Ci profesjonalną sesję zdjęciową, która
+              pomoże w promocji Twojego konia i przyciągnie potencjalnych
+              klientów. <br />
+              <br />
+              Podczas tego rodzaju sesji skupiam się głównie na ujęciach
+              zootechnicznych, portretowych oraz zdjęciach z przodu konia. Jeśli
+              masz ochotę możemy wykonać również ujęcia w ruchu.
             </p>
           </div>
         </div>
@@ -100,19 +104,16 @@ function TypesOfSessions() {
         >
           <div className="md:w-[50%] w-[70%] md:px-14 mt-6 md:mt-0 mx-auto">
             <h1 className="text-2xl  py-6 tracking-[5px] font-light text-titleGray text-center md:text-left ">
-              Sesja miotów
+              Portrety na czarnym tle
             </h1>
             <p className="tracking-[0px] font-[Lora] text-myGray font-normal text-[17px] leading-[34px] ">
-              Jeśli w Twojej hodowli urodziły się szczenięta warto zrobić im
-              sesje zdjęciową. <br />
-              Zdjęcia  możemy wykonać zarówno w domu jak i ogrodzie. Dostępne
-              mam odpowiednie akcesoria oraz niewielkie przenośne studio, które
-              zabieram ze sobą kiedy nie możemy robić zdjęć na zewnątrz :)
+              Jeśli marzysz o portretach swojego konia na czarnym tle, jestem do
+              dyspozycji
             </p>
           </div>
           <img
             className="md:w-[50%] w-[80%] rounded-[15px] mx-auto mt-6"
-            src={Dog4}
+            src={horse4}
           ></img>
         </div>
       </div>

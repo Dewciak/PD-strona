@@ -57,7 +57,7 @@ export function AccordionCustomIcon() {
         <AccordionBody className=" tracking-[0px] font-[Lora] text-myGray font-normal text-[17px] leading-[34px]">
           Nie wysyłam nieobrobionych zdjęć. Po sesji wybieram najlepsze kadry i
           poddaje je starannej obróbce, aby zapewnić najlepszą jakość materiału
-          który otrzymacie.
+          który otrzymasz.
         </AccordionBody>
       </Accordion>
       <Accordion open={open === 3} icon={<Icon id={3} open={open} />}>

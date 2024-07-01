@@ -115,7 +115,7 @@ export function GalleryWithTab() {
               {images?.map(({ imageLink }, index) => (
                 <div key={index} onClick={() => handleShow(value, imageLink)}>
                   <img
-                    className="h-60 w-full max-w-full rounded-lg object-cover object-center hover:scale-100 duration-300 cursor-pointer"
+                    className="h-60 w-full max-w-full rounded-lg object-cover object-center hover:scale-105 duration-300 cursor-pointer"
                     src={imageLink}
                     alt="image-photo"
                   />

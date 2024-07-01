@@ -1,5 +1,5 @@
 import React from "react";
-import { UnderlineTabs } from "../UnderLineTabs";
+import { UnderlineTabs } from "../Horses/UnderLineTabs";
 
 function Pakiety() {
   return (

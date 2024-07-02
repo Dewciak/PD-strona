@@ -11,13 +11,14 @@ import {
 } from "react-router-dom";
 import Dogs from "./Dogs.jsx";
 import Horses from "./Horses.jsx";
+import Events from "./Events.jsx";
 import PageNotFound from "./assets/components/PageNotFound.jsx";
 import PolicyPrivacy from "./assets/components/PolicyPrivacy.jsx";
 
 const router = createBrowserRouter([
   {
-    path: "/PD-strona",
-    // path: "/",
+    // path: "/PD-strona",
+    path: "/",
 
     element: <Home />,
     errorElement: <PageNotFound />,
@@ -30,6 +31,11 @@ const router = createBrowserRouter([
   {
     path: "/oferta-konie",
     element: <Horses />,
+    errorElement: <PageNotFound />,
+  },
+  {
+    path: "/oferta-wydarzenia",
+    element: <Events />,
     errorElement: <PageNotFound />,
   },
   {

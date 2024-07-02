@@ -45,12 +45,19 @@ function Offer() {
             </h1>
           </div>
         </RouterLink>
-        <div className="relative w-[300px] h-auto hover:scale-105 transition duration-300">
-          <img src={Event} alt="wydarzenia" className="w-full h-auto " />
-          <h1 className="absolute inset-0  tracking-[5px] font-light flex justify-center items-start pt-16 text-white text-4xl  z-10 cursor-pointer">
-            Wydarzenia
-          </h1>
-        </div>
+        <RouterLink
+          to="/oferta-wydarzenia"
+          onClick={() => {
+            window.scrollTo(0, 0);
+          }}
+        >
+          <div className="relative w-[300px] h-auto hover:scale-105 transition duration-300">
+            <img src={Event} alt="wydarzenia" className="w-full h-auto " />
+            <h1 className="absolute inset-0  tracking-[5px] font-light flex justify-center items-start pt-16 text-white text-4xl  z-10 cursor-pointer">
+              Wydarzenia
+            </h1>
+          </div>
+        </RouterLink>
       </div>
       <div className=" mx-auto h-auto py-8 mt-20">
         <h2

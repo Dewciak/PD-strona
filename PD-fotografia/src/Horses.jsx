@@ -9,7 +9,7 @@ import Footer from "./assets/components/Footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-function Dogs() {
+function Horses() {
   useEffect(() => {
     AOS.init({
       // You can pass options here if needed
@@ -22,7 +22,7 @@ function Dogs() {
     samt <= 10 ? samt++ : AOS.refresh();
   });
   return (
-    <div id="Dogs" className="overflow-hidden md:overflow-visible">
+    <div id="Horses" className="overflow-hidden md:overflow-visible">
       <Navbar />
       <ScrollToTop />
       <Start />
@@ -30,4 +30,4 @@ function Dogs() {
   );
 }
 
-export default Dogs;
+export default Horses;

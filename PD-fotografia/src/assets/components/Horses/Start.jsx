@@ -3,9 +3,8 @@ import Bg from "../../images/Horses/bg.jpg";
 import About from "../../images/Horses/About.jpg";
 import TypesOfSessions from "./TypesOfSessions";
 import Pakiety from "./Pakiety";
-import Questions from "./Questions";
+import Questions from "../../../Questions";
 import Footer from "../Footer";
-import GoodToKnow from "./GoodToKnow";
 
 function Start() {
   const [isVisible, setIsVisible] = useState(true);
@@ -29,7 +28,7 @@ function Start() {
       {/* Zdjęcie góra czarne */}
       <div className=" bg-black h-auto relative ">
         <div
-          className={`fixed w-[100%] top-[50px] z-[-1] md:left-1/2 md:transform md:-translate-x-1/2 ${
+          className={`fixed w-[100%] md:top-[50px] top-[-30px] z-[-1] md:left-1/2 md:transform md:-translate-x-1/2 ${
             isVisible ? "" : "opacity-0"
           }`}
         >
@@ -55,9 +54,9 @@ function Start() {
           {/* Main górny tekst */}
           <div
             id="About"
-            className="mx-auto flex  py-6 flex-col text-lg tracking-wide md:w-[970px] w-[80%] md:mt-12 mt-6"
+            className="mx-auto flex  py-6 flex-col text-lg tracking-wide md:w-[970px] w-[80%] md:mt-12 mt-2"
           >
-            <h1 className=" tracking-[5px] font-light text-titleGray ">
+            <h1 className=" tracking-[2px] md:tracking-[5px] font-light text-titleGray text-lg ">
               Zapraszam Cię na sesje jeździeckie, gdzie stworzymy piękne
               fotografie, którymi będziesz mógł cieszyć się przez całe życie!{" "}
             </h1>
@@ -87,7 +86,7 @@ function Start() {
                 <span className="text-blue-400 font-semibold tracking-[0px] font-[Lora]  text-[17px] leading-[34px]">
                   pasja i zrozumienie jego natury-
                 </span>{" "}
-                uchwycenie piękna i charakteru Waszego konia w aparacie wymaga
+                Uchwycenie piękna i charakteru Waszego konia w aparacie wymaga
                 nie tylko umiejętności technicznych, ale również wyczucia, pasji
                 i zrozumienia jego natury. Każde zdjęcie, które tworzę, jest
                 efektem długich lat obserwowania końskich zachowań, a także
@@ -95,7 +94,7 @@ function Start() {
                 <br></br>
                 <br></br>
                 <span className="text-blue-400 font-semibold tracking-[0px] font-[Lora]   text-[17px] leading-[34px]">
-                  przedstawienie koni w naturalny sposób-
+                  Przedstawienie koni w naturalny sposób-
                 </span>{" "}
                 jest to dla mnie szczególnie ważne aby podkreślić ich piękno bez
                 zbędnego retuszu. Dlatego też staram się fotografować je w

@@ -3,7 +3,7 @@ import Bg from "../../images/Dogs/bg2.jpg";
 import AboutDog from "../../images/Dogs/About.jpg";
 import TypesOfSessions from "./TypesOfSessions";
 import Pakiety from "./Pakiety";
-import Questions from "./Questions";
+import Questions from "../../../Questions";
 import Footer from "../Footer";
 
 function Start() {

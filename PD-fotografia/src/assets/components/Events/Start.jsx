@@ -3,9 +3,8 @@ import Bg from "../../images/Horses/bg.jpg";
 import About from "../../images/Horses/About.jpg";
 import TypesOfSessions from "./TypesOfSessions";
 import Pakiety from "./Pakiety";
-import Questions from "./Questions";
+import Questions from "../../../Questions";
 import Footer from "../Footer";
-import GoodToKnow from "./GoodToKnow";
 
 function Start() {
   const [isVisible, setIsVisible] = useState(true);
@@ -45,29 +44,24 @@ function Start() {
         <div className="max-w-[1000px] mx-auto md:mt-[590px] mt-[330px] z-[10] relative  pt-8">
           {/* Nagłówek fotografia */}
           <h1 className="text-center text-4xl md:text-6xl  md:mt-[20px] tracking-[5px] font-light text-titleGray ">
-            Fotografia Koni
+            Reportaże z Wydarzeń
           </h1>
-          {/* Nagłówek P tag */}
-          <p className="text-center text-[#747474] mt-4 text-sm  tracking-[0px] font-[Lora]  font-normal text-[20px] leading-[34px]">
-            Czy jeździectwo jest Twoją pasją i chcesz uwiecznić niezapomniane
-            chwile spędzone z Twoim końskim przyjacielem?
-          </p>
+
           {/* Main górny tekst */}
           <div
             id="About"
             className="mx-auto flex  py-6 flex-col text-lg tracking-wide md:w-[970px] w-[80%] md:mt-12 mt-6"
           >
             <h1 className=" tracking-[5px] font-light text-titleGray ">
-              Zapraszam Cię na sesje jeździeckie, gdzie stworzymy piękne
-              fotografie, którymi będziesz mógł cieszyć się przez całe życie!{" "}
+              Moja pasja do zwierząt prowadzi mnie w podróż przez wyjątkowe
+              wydarzenia, na których głównym tematem są psy i konie.
             </h1>
             <p className="mt-6 text-base text-justify tracking-[0px] font-[Lora] text-myGray font-normal text-[17px] leading-[34px]">
-              Przed samą sesją konsultuje z Wami rodzaj i charakter zdjęć tak by
-              efekty w pełni Was zadowoliły. Jeśli chcesz mieć pamiątkę ze swoim
-              koniem, pamiętaj, że nie musisz być profesjonalnym modelem, to
-              moim zadaniem jest oddać więź jaka łączy Ciebie i Twojego
-              kopytnego pupila, staram się wkładać w to całe swoje serducho i
-              pokłady humoru :)
+              Od zawodów i pokazów po wystawy i szkolenia. Staram się uchwycić
+              najlepsze momenty podczas Waszych wspólnych startów, oraz oddać
+              towarzyszące Wam emocje. Na moich social mediach regularnie
+              publikuje daty imprez na jakich pojawię się z aparatem, dlatego
+              zachęcam do śledzenia postów na bieżąco.
             </p>
           </div>
           {/* Main dolny tekst ze zdjęciem */}

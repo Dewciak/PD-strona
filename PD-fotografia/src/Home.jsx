@@ -33,7 +33,7 @@ function App() {
       <About />
       <Portfolio className="Section" id="Portfolio" />
       <BlueBar />
-      {/* <AccordionCustomIcon className="py-6" /> */}
+      <AccordionCustomIcon />
 
       <Offer className="Section" id="Offer" />
       <Contact className="Section" id="Contact" />

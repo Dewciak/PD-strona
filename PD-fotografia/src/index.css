@@ -10,13 +10,15 @@
   font-weight: 500;
 }
 .App {
-  background-image: url("assets/images/background.jpg");
+  /* background-image: url("assets/images/background.jpg"); */
+  background-image: url("assets/images/bg4.png");
+
   background-size: cover;
 }
 
 #Start {
   background-image: url("assets/images/Dogs/ciapki.jpg");
-  background-size: cover;
+  background-size: auto;
 }
 .active li {
   color: #5da9e7;

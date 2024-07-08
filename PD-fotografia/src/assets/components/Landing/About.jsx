@@ -16,7 +16,7 @@ function About() {
     <>
       <div
         id="About"
-        className="max-w-[1050px] h-auto  mx-auto md:pt-24 mt-10 overflow-hidden  shadow-[#0000000d]"
+        className="max-w-[1050px] h-auto  mx-auto md:pt-24 mt-10 overflow-hidden bg-red-500  shadow-[#0000000d]"
       >
         <div className="w-full text-center ">
           <h1 className="md:text-5xl text-4xl mt-10 md:mt-0 tracking-[5px] font-light">
@@ -44,7 +44,7 @@ function About() {
               były moimi najlepszymi modelami. Dzięki temu łatwo jest mi
               uchwycić ich naturalne piękno i charakter. W wolnych chwilach
               najbardziej lubię zapuszczać się w długie tereny na końskim
-              grzbiecie i spacerować po lesie
+              grzbiecie i spacerować po lesie.
             </p>
           </div>
           {/* zdjęcie about */}

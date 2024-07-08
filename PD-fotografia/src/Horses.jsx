@@ -4,7 +4,7 @@ import Start from "./assets/components/Horses/Start";
 import TypesOfSessions from "./assets/components/Dogs/TypesOfSessions";
 import ScrollToTop from "./assets/components/ScrollToTop";
 import Pakiety from "./assets/components/Dogs/Pakiety";
-import Questions from "./assets/components/Dogs/Questions";
+
 import Footer from "./assets/components/Footer";
 import AOS from "aos";
 import "aos/dist/aos.css";

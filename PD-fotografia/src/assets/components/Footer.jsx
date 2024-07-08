@@ -11,26 +11,30 @@ function Footer() {
   return (
     <div className="flex flex-col overflow-hidden">
       <div className="w-screen flex flex-row text-center bg-gray-200 py-1">
-        <ul className="md:w-[1080px] mx-auto flex md:flex-row flex-col space-y-2 gap-x-8 text-sm items-center justify-center">
-          <li className="  md:w-[33%] tracking-[5px] font-light text-titleGray ">
-            Creditsy
-          </li>
+        <ul className="md:w-[1080px]  mx-auto flex md:flex-row flex-col  text-sm md:items-start items-center justify-center">
           <RouterLink
-            // to="/PD-strona"
-            to="PolitykaPrywatności"
+            to="Regulamin-Sesji"
             onClick={() => {
               window.scrollTo(0, 0);
             }}
-            className="  md:w-[33%]"
+            className="  md:w-[50%]  h-full"
           >
-            <li className="hover:text-gray-500 tracking-[5px] font-light text-titleGray">
+            <li className="hover:text-gray-500 tracking-[5px] text-center font-light text-titleGray">
               Regulamin Sesji
             </li>
           </RouterLink>
-
-          <li className="  md:w-[33%] tracking-[5px] font-light text-titleGray">
-            Polityka Prywatności
-          </li>
+          <RouterLink
+            // to="/PD-strona"
+            to="Polityka-Prywatności"
+            onClick={() => {
+              window.scrollTo(0, 0);
+            }}
+            className="  md:w-[50%]  h-full"
+          >
+            <li className="hover:text-gray-500 tracking-[5px] font-light text-titleGray text-center">
+              Polityka Prywatności
+            </li>
+          </RouterLink>
         </ul>
       </div>
       <div className="w-screen py-8 bg-gray-100 mx-auto flex flex-col justify-evenly  items-center">
@@ -59,8 +63,8 @@ function Footer() {
           <h1 className=" text-center md:w-[33%] tracking-[5px] font-light text-titleGray">
             Realizacja:{" "}
             <a
-              href="#"
-              className="cursor-pointer hover:text-purple-500 mb-4 tracking-[5px] font-light text-titleGray"
+              href="https://x.com/Dewu54082478"
+              className="cursor-pointer hover:text-gray-500 mb-4 tracking-[5px] font-light text-titleGray"
             >
               Wiktor Dawid
             </a>

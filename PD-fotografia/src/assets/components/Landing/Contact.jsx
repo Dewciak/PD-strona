@@ -5,6 +5,7 @@ import Mail from "../../images/mail.png";
 import Mess from "../../images/messenger.png";
 import AccordionCustomIcon from "./AccordionCustomIcon";
 import { Link } from "react-scroll";
+import { Link as RouterLink } from "react-router-dom";
 
 function Contact() {
   const [isChecked, setIsChecked] = useState(false);
@@ -85,7 +86,18 @@ function Contact() {
                     onChange={handleCheckboxChange}
                   ></input>
                   <p className="text-xs text-gray-400 tracking-[3px] font-light ">
-                    Wyrażam zgodę na przetwarzanie moich danych osobowych w
+                    Oświadczam iż przeczytałem{" "}
+                    <RouterLink
+                      // to="/PD-strona"
+                      to="Polityka-Prywatności"
+                      onClick={() => {
+                        window.scrollTo(0, 0);
+                      }}
+                    >
+                      {" "}
+                      politykę prywatności
+                    </RouterLink>{" "}
+                    i wyrażam zgodę na przetwarzanie moich danych osobowych w
                     celach kontaktowych przez administratora strony
                   </p>
                 </div>

@@ -1,11 +1,11 @@
 import React from "react";
-import { UnderlineTabs } from "../Horses/UnderLineTabs";
+import { UnderlineTabs } from "../Events/UnderLineTabs";
 
 function Pakiety() {
   return (
     <div
       id="Packages"
-      className="max-w-[1150px] h-[1800px] sm:h-auto  mx-auto md:mt-32 pt-20 z-1 relative  "
+      className="max-w-[1150px]  sm:h-auto  mx-auto md:mt-32 pt-20 z-1 relative  "
     >
       <h1 className="text-5xl  text-center tracking-[5px] font-light text-titleGray">
         Pakiety

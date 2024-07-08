@@ -25,7 +25,7 @@ function Hero() {
     <>
       <div
         id="Hero"
-        className="max-w-[1050px] md:mt-[40px] w-full h-auto mx-auto flex md:flex-row flex-col-reverse justify-center mt-10 pt-14  "
+        className="max-w-[1050px] md:mt-[40px] w-full  h-auto mx-auto flex md:flex-row flex-col-reverse justify-center mt-10 pt-14  "
       >
         <div className="w-full md:w-[500px] px-6 md:mt-12 flex flex-col items-center md:items-start">
           <h1 className="text-5xl md:py-6 mx-auto  md:mx-0 tracking-[5px] font-light text-titleGray">

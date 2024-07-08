@@ -8,41 +8,29 @@ import {
 } from "@material-tailwind/react";
 
 export function UnderlineTabs() {
-  const [activeTab, setActiveTab] = React.useState("Plenerowa");
+  const [activeTab, setActiveTab] = React.useState("Z wystaw");
   const data = [
     {
-      label: "Plenerowa",
-      value: "Plenerowa",
-      desc: "5 zdjęć - 300 zł",
-      desc2: "Możliwość dokupienia kolejnego ujęcia w cenie 40 zł",
+      label: "Z wystaw",
+      value: "Z wystaw",
+      desc: "35zł / szt",
+      desc2: "koszt ujęcia z ringu",
       //   druga karta
-      desc3: "8 zdjęć - 400 zł",
-      desc4: "Możliwość dokupienia kolejnego ujęcia w cenie 35 zł",
+      desc3: "45zł / szt",
+      desc4: "Ujęcia w plenerze",
       //   trzecia karta
-      desc5: "12 zdjęć - 500zł",
-      desc6: "Możliwość dokupienia kolejnego ujęcia w cenie 30 zł",
     },
     {
-      label: "Treningowa",
-      value: "Eksterierowa",
-      desc: `10 zdjęć - 350 zł`,
-      desc2: `Mozliwość dokupienia pojedynczego ujecia w cenie 30 zł`,
-      desc3: `15 zdjęć - 450 zł`,
-      desc4: `Mozliwość dokupienia pojedynczego ujecia w cenie 25 zł`,
+      label: "Z zawodów",
+      value: "Z zawodów",
+      desc: `6 zdjęć - 140zł`,
+      desc2: `koszt pojedynczego ujęcia to 30zł`,
     },
     {
-      label: "Sprzedażowa",
-      value: "Treningowa",
-      desc: "5 zdjęć - 300zł",
-      desc2: `Mozliwość dokupienia pojedynczego ujecia w cenie 40 zł`,
-      desc3: `8 zdjęć - 400 zł`,
-      desc4: `Mozliwość dokupienia pojedynczego ujecia w cenie 35 zł`,
-    },
-    {
-      label: "Portretowa",
-      value: "Miotów",
-      desc: `3 zdjęcia - 300 zł`,
-      desc2: `Możliwość dokupienia pojedyńczego ujęcia w cenie 50 zł`,
+      label: "Inne",
+      value: "Inne",
+      desc: "ustalimy wspólnie :)",
+      // desc2: `Mozliwość dokupienia pojedynczego ujecia w cenie 40 zł`,
     },
   ];
   const currentTabData = data.find((item) => item.value === activeTab);

@@ -14,6 +14,8 @@ import Horses from "./Horses.jsx";
 import Events from "./Events.jsx";
 import PageNotFound from "./assets/components/PageNotFound.jsx";
 import PolicyPrivacy from "./assets/components/PolicyPrivacy.jsx";
+import Credits from "./assets/components/Credits.jsx";
+import Regulations from "./assets/components/Regulations.jsx";
 
 const router = createBrowserRouter([
   {
@@ -39,8 +41,18 @@ const router = createBrowserRouter([
     errorElement: <PageNotFound />,
   },
   {
-    path: "/PolitykaPrywatności",
+    path: "/Polityka-Prywatności",
     element: <PolicyPrivacy />,
+    errorElement: <PageNotFound />,
+  },
+  {
+    path: "/Regulamin-Sesji",
+    element: <Regulations />,
+    errorElement: <PageNotFound />,
+  },
+  {
+    path: "/Źródła",
+    element: <Credits />,
     errorElement: <PageNotFound />,
   },
 ]);

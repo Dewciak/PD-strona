@@ -15,6 +15,9 @@ import dog3 from "../../images/Gallery/Dogs/3.jpg";
 import dog4 from "../../images/Gallery/Dogs/4.jpg";
 import dog5 from "../../images/Gallery/Dogs/5.jpg";
 import dog6 from "../../images/Gallery/Dogs/6.jpg";
+// import dog7 from "../../images/Gallery/Dogs/6.jpg";
+// import dog8 from "../../images/Gallery/Dogs/6.jpg";
+// import dog9 from "../../images/Gallery/Dogs/6.jpg";
 
 import horse1 from "../../images/Gallery/Horses/1.jpg";
 import horse2 from "../../images/Gallery/Horses/2.jpg";
@@ -45,6 +48,9 @@ export function GalleryWithTab() {
         { imageLink: dog4 },
         { imageLink: dog5 },
         { imageLink: dog6 },
+        // { imageLink: dog7 },
+        // { imageLink: dog8 },
+        // { imageLink: dog9 },
       ],
     },
     {
@@ -73,16 +79,15 @@ export function GalleryWithTab() {
     },
   ];
   const handleClose = () => setShowModal(false);
-  const [activeImage, setActiveImage] = useState(null); // New state for the active image
+  const [activeImage, setActiveImage] = useState(null); 
 
   const handleShow = (value, clickedImageLink) => {
     const images = data.find((item) => item.value === value).images;
-    // Filter out the clicked image
     const filteredImages = images.filter(
       ({ imageLink }) => imageLink !== clickedImageLink
     );
     setSelectedImages(filteredImages);
-    setActiveImage(clickedImageLink); // Set the clicked image as the active image
+    setActiveImage(clickedImageLink); 
     setShowModal(true);
   };
 
@@ -118,6 +123,7 @@ export function GalleryWithTab() {
                     className="h-60 w-full max-w-full rounded-lg object-cover object-center hover:scale-105 duration-300 cursor-pointer"
                     src={imageLink}
                     alt="image-photo"
+                    loading="lazy"
                   />
                 </div>
               ))}

@@ -107,8 +107,10 @@ function TypesOfSessions() {
               Portrety na czarnym tle
             </h1>
             <p className="tracking-[0px] font-[Lora] text-myGray font-normal text-[17px] leading-[34px] ">
-              Jeśli marzysz o portretach swojego konia na czarnym tle, jestem do
-              dyspozycji
+              Oferta przeznaczona jest dla osób, które chcą zyskać portret
+              swojego konia w klasycznym i eleganckim ujęciu. Czarne tło
+              sprawia, że wszystkie detale konia są mocno wyeksponowane, co
+              nadaje zdjęciom ponadczasowy i profesjonalny wygląd.
             </p>
           </div>
           <img

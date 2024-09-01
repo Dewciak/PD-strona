@@ -1,21 +1,17 @@
-import React from "react";
 import ReactDOM from "react-dom/client";
+
 import Home from "./Home.jsx";
 import "./index.css";
-import { ThemeProvider } from "@material-tailwind/react";
-import {
-  createBrowserRouter,
-  RouterProvider,
-  ScrollRestoration,
-  useLocation,
-} from "react-router-dom";
+import {ThemeProvider} from "@material-tailwind/react";
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import Dogs from "./Dogs.jsx";
 import Horses from "./Horses.jsx";
 import Events from "./Events.jsx";
-import PageNotFound from "./assets/components/PageNotFound.jsx";
-import PolicyPrivacy from "./assets/components/PolicyPrivacy.jsx";
-import Credits from "./assets/components/Credits.jsx";
-import Regulations from "./assets/components/Regulations.jsx";
+import PageNotFound from "./assets/components/Utils/PageNotFound.jsx";
+import PolicyPrivacy from "./assets/components/Utils/PolicyPrivacy.jsx";
+import Credits from "./assets/components/Utils/Credits.jsx";
+import Regulations from "./assets/components/Utils/Regulations.jsx";
+import React from "react";
 
 const router = createBrowserRouter([
   {
@@ -57,11 +53,10 @@ const router = createBrowserRouter([
   },
 ]);
 
-// W korzeniu aplikacji, renderujemy ScrollToTop w RouterProvider
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ThemeProvider>
-      <RouterProvider router={router}>{/* Reszta aplikacji */}</RouterProvider>
+      <RouterProvider router={router}></RouterProvider>
     </ThemeProvider>
   </React.StrictMode>
 );

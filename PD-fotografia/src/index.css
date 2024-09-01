@@ -11,14 +11,21 @@
 }
 .App {
   /* background-image: url("assets/images/background.jpg"); */
-  background-image: url("assets/images/bg4.png");
-
+  background-image: url("assets/images/bg3.webp");
   background-size: cover;
+  background-repeat: repeat;
 }
 
 #Start {
-  background-image: url("assets/images/Dogs/ciapki.jpg");
-  background-size: auto;
+  /* background-image: url("assets/images/Dogs/ciapki.jpg"); */
+  background-image: url("assets/images/bg3.png");
+
+  background-size: cover;
+}
+.Bg {
+  background-image: url("assets/images/bg3.png");
+
+  background-size: cover;
 }
 .active li {
   color: #5da9e7;

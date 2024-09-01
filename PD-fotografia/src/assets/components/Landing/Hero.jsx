@@ -1,7 +1,6 @@
 import React from "react";
-import Navbar from "../Navbar";
 import Slideshow from "./Slideshow";
-import { Link } from "react-scroll";
+import {Link} from "react-scroll";
 
 import s11 from "../../images/Hero/s1-1.jpg";
 import s12 from "../../images/Hero/s1-2.jpg";
@@ -57,7 +56,6 @@ function Hero() {
           <div className="w-[100%] h-[180px] flex flex-row items-end">
             <div className="w-[70%] h-[150px]">
               <Slideshow slides={slides1} delay="10000" initialDelay="2000" />
-              {/* <img src={Img1} /> */}
             </div>
             <div className="w-[30%] h-[100%] ">
               <Slideshow slides={slides2} delay="10000" initialDelay="6000" />

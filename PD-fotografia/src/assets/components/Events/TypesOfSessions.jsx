@@ -36,11 +36,11 @@ function TypesOfSessions() {
               Fotoralacje z wystaw:
             </h1>
             <p className="tracking-[0px] font-[Lora] text-myGray font-normal text-[17px] leading-[28px]">
-              wykonam zarówno sesje ringowe i ujęcia w plenerze. Koszt ujęć z
-              ringu to 35 zł/szt. Ujęcia w plenerze 45 zł/szt. W przypadku chęci
-              wykonania zdjęć z oceny i w plenerze podczas jednej wystawy,
-              udzielam rabatu :) Zdjęcia do wyboru otrzymasz do 3 dni roboczych
-              od dnia wystawy.
+              wystawa psów to wydarzenie, któremu towarzyszą niezwykłe emocje,
+              zarówno u psa jak i właściciela. Moim zadaniem jako fotografa jest
+              uchwycenie tych niepowtarzalnych oraz najlepszych momentów.
+              Podczas wystawy istnieje możliwość wykonania ujęć z ringu, a także
+              krótkiej sesji w plenerze.
             </p>
           </div>
         </div>
@@ -55,8 +55,10 @@ function TypesOfSessions() {
               Fotoralacje z zawodów:
             </h1>
             <p className="tracking-[0px] font-[Lora] text-myGray font-normal text-[17px] leading-[34px]">
-              koszt pojedynczego ujęcia to 30 zł, możliwość kupienia pakietu
-              swoich zdjęć w cenie 140 zł. Pakiet zakłada 6 zdjęć.
+              Wykonuje fotorelacje z zawodów z udziałem psów i koni, gdzie
+              dynamika, pasja i ogromne emocje spotykają się na każdym kroku.
+              Staram się aby każda fotografia oddawała energię, a także
+              skupienie, które towarzyszą tym chwilom.
             </p>
           </div>
           {/* ZDJĘCIE */}
@@ -79,7 +81,7 @@ function TypesOfSessions() {
               Inne wydarzenia:
             </h1>
             <p className="tracking-[0px] font-[Lora] text-myGray font-normal text-[17px] leading-[34px]">
-              organizujesz jakieś wydarzenie w swojej stajni/ na placu
+              Organizujesz jakieś wydarzenie w swojej stajni/ na placu
               treningowym i chciałbyś mieć profesjonalną relację z jego
               przebiegu, napisz do mnie i ustalimy szczegóły.
             </p>

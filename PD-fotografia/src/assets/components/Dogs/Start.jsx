@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, {useState, useEffect} from "react";
 import Bg from "../../images/Dogs/bg2.jpg";
 import AboutDog from "../../images/Dogs/About.jpg";
 import TypesOfSessions from "./TypesOfSessions";
 import Pakiety from "./Pakiety";
 import Questions from "../../../Questions";
-import Footer from "../Footer";
+import Footer from "../Utils/Footer";
 
 function Start() {
   const [isVisible, setIsVisible] = useState(true);
@@ -12,7 +12,6 @@ function Start() {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      // Adjust the value 200 based on how far you want the user to scroll before the div becomes invisible
       if (currentScrollY > 650) {
         setIsVisible(false);
       } else {
@@ -40,7 +39,7 @@ function Start() {
           </div>
         </div>
       </div>
-      <div className="w-[98%]  relative z-0 mx-auto">
+      <div className="w-[100%]  relative z-0 mx-auto bg-white">
         <div className="max-w-[1000px] mx-auto md:mt-[670px] mt-[330px] z-[10] relative  pt-8">
           {/* Nagłówek fotografia */}
           <h1 className="text-center text-4xl md:text-6xl  md:mt-[50px] tracking-[5px] font-light text-titleGray ">
@@ -56,7 +55,7 @@ function Start() {
             id="About"
             className="mx-auto flex  py-6 flex-col text-lg tracking-wide md:w-[970px] w-[80%] md:mt-12 mt-6"
           >
-            <h1 className=" tracking-[5px] font-light text-titleGray ">
+            <h1 className=" tracking-[5px] font-light  bg-gradient-to-r from-blue-400 to-purple-500 inline-block text-transparent bg-clip-text ">
               Jeśli marzysz o pamiątce na długie lata to trafiłeś w dobre ręce.{" "}
             </h1>
             <p className="mt-6 text-base text-justify tracking-[0px] font-[Lora] text-myGray font-normal text-[17px] leading-[34px]">

@@ -33,7 +33,7 @@ function TypesOfSessions() {
           ></img>
           {/* TEKST */}
           <div className="md:w-[50%] w-[70%] md:px-14 mt-6 md:mt-0 mx-auto">
-            <h1 className="text-2xl  pb-6 tracking-[5px] font-light text-titleGray text-center md:text-left ">
+            <h1 className="text-2xl  pb-6 tracking-[5px] font-normal text-titleGray text-center md:text-left ">
               Sesja plenerowa
             </h1>
             <p className="tracking-[0px] font-[Lora] text-myGray font-normal text-[17px] leading-[34px]">

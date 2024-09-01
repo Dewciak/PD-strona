@@ -1,14 +1,13 @@
-import React from "react";
+import { useEffect, useState } from "react";
 
 export default function FeaturedImageGallery({
   images,
   activeImage,
   onImageClick,
 }) {
-  const [active, setActive] = React.useState(activeImage);
+  const [active, setActive] = useState(activeImage);
 
-  // Update the active state when the activeImage prop changes
-  React.useEffect(() => {
+  useEffect(() => {
     setActive(activeImage);
   }, [activeImage]);
 
@@ -21,7 +20,7 @@ export default function FeaturedImageGallery({
           alt=""
         />
       </div>
-      <div className="grid grid-cols-5 gap-4">
+      <div className="grid grid-cols-5 grid-rows-2 gap-4">
         {images.map(({ imageLink }, index) => (
           <div key={index}>
             <img
@@ -29,6 +28,7 @@ export default function FeaturedImageGallery({
               src={imageLink}
               className="h-20 max-w-full cursor-pointer  rounded-lg object-cover object-center"
               alt="gallery-image"
+              loading="lazy"
             />
           </div>
         ))}

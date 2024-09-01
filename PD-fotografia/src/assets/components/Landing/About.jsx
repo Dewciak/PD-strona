@@ -1,22 +1,20 @@
-import React, { useEffect } from "react";
-import AboutImage from "../../images/About-img.jpg";
-import Animals from "../../images/animals.png";
+import React, {useEffect} from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Link } from "react-scroll";
+import {Link} from "react-scroll";
 
-import Dog1 from "../../images/AboutMe/dog1.jpg";
-import Dog2 from "../../images/AboutMe/dog2.jpg";
+import Dog1 from "../../images/AboutMe/dog1.webp";
 import Dog3 from "../../images/AboutMe/dog3.jpg";
 import horse1 from "../../images/AboutMe/horse1.jpg";
 import horse2 from "../../images/AboutMe/horse2.jpg";
+import AboutImage from "../../images/About-img.webp";
 
 function About() {
   return (
     <>
       <div
         id="About"
-        className="max-w-[1050px] h-auto  mx-auto md:pt-24 mt-10 overflow-hidden bg-red-500  shadow-[#0000000d]"
+        className="max-w-[1050px] h-auto  mx-auto md:pt-24 mt-10 overflow-hidden  shadow-[#0000000d]"
       >
         <div className="w-full text-center ">
           <h1 className="md:text-5xl text-4xl mt-10 md:mt-0 tracking-[5px] font-light">
@@ -52,6 +50,7 @@ function About() {
             <img
               src={AboutImage}
               className=" md:w-[500px] mx-auto w-[90%] rounded-xl"
+              loading="lazy"
             ></img>
           </div>
         </div>
@@ -64,11 +63,27 @@ function About() {
             :)
           </h1>
           <div className="w-[300px] h-14 mx-auto mt-2 flex flex-row justify-center items-center gap-x-2">
-            <img src={Dog1} className="w-[20%] rounded-[50%]"></img>
-            <img src={Dog2} className="w-[20%] rounded-[50%]"></img>
-            <img src={Dog3} className="w-[20%] rounded-[50%]"></img>
-            <img src={horse1} className="w-[20%] rounded-[50%]"></img>
-            <img src={horse2} className="w-[20%] rounded-[50%]"></img>
+            <img
+              src={Dog1}
+              loading="lazy"
+              className="w-[20%] rounded-[50%]"
+            ></img>
+
+            <img
+              src={Dog3}
+              loading="lazy"
+              className="w-[20%] rounded-[50%]"
+            ></img>
+            <img
+              src={horse1}
+              loading="lazy"
+              className="w-[20%] rounded-[50%]"
+            ></img>
+            <img
+              src={horse2}
+              loading="lazy"
+              className="w-[20%] rounded-[50%]"
+            ></img>
           </div>
         </div>
       </div>

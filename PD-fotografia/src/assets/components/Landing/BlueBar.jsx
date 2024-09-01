@@ -1,5 +1,5 @@
 import React from "react";
-import Dog from "../../images/BlueBarDog.jpg";
+import Dog from "../../images/BlueBarDog.webp";
 
 function BlueBar() {
   return (
@@ -24,7 +24,7 @@ function BlueBar() {
             </p>
           </div>
           <div className="md:w-[37%] w-[90%] h-full my-4 md:my-0">
-            <img src={Dog}></img>
+            <img src={Dog} loading="lazy"></img>
           </div>
         </div>
       </div>

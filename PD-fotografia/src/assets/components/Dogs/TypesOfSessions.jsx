@@ -1,9 +1,9 @@
 import React from "react";
 
-import Dog1 from "../../images/Dogs/plener1.jpg";
-import Dog3 from "../../images/Dogs/trening1.jpg";
-import Dog2 from "../../images/Dogs/eksterier1.jpg";
-import Dog4 from "../../images/Dogs/miot1.jpg";
+import Dog1 from "../../images/Dogs/plenerowe.webp";
+import Dog3 from "../../images/Dogs/treningowa.webp";
+import Dog2 from "../../images/Dogs/eksterier.webp";
+import Dog4 from "../../images/Dogs/mioty.webp";
 
 import AOS from "aos";
 import "aos/dist/aos.css";

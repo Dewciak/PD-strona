@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from "react";
-import Bg from "../../images/Dogs/bg2.jpg";
-import AboutDog from "../../images/Dogs/About.jpg";
+
+import AboutDog from "../../images/Dogs/About.webp";
+import Bg from "../../images/Dogs/background.webp";
+
 import TypesOfSessions from "./TypesOfSessions";
 import Pakiety from "./Pakiety";
 import Questions from "../../../Questions";
@@ -39,7 +41,7 @@ function Start() {
           </div>
         </div>
       </div>
-      <div className="w-[100%]  relative z-0 mx-auto bg-white">
+      <div className="w-[100%]  relative z-0 mx-auto">
         <div className="max-w-[1000px] mx-auto md:mt-[670px] mt-[330px] z-[10] relative  pt-8">
           {/* Nagłówek fotografia */}
           <h1 className="text-center text-4xl md:text-6xl  md:mt-[50px] tracking-[5px] font-light text-titleGray ">

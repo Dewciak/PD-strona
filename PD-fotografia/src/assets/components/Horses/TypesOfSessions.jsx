@@ -1,9 +1,9 @@
 import React from "react";
 
-import horse1 from "../../images/Horses/plenerowa.jpg";
-import horse3 from "../../images/Horses/sprzedazowa.jpg";
-import horse4 from "../../images/Horses/czarnetlo.jpg";
-import horse2 from "../../images/Dogs/miot1.jpg";
+import horse1 from "../../images/Horses/plenerowa.webp";
+import horse3 from "../../images/Horses/sprzedazowa.webp";
+import horse4 from "../../images/Horses/czarnetlo.webp";
+import horse2 from "../../images/Dogs/mioty.webp";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -84,7 +84,7 @@ function TypesOfSessions() {
           ></img>
           <div className="md:w-[50%] w-[70%] md:px-14 mt-6 md:mt-0 mx-auto">
             <h1 className="text-2xl  py-6 tracking-[5px] font-light text-titleGray text-center md:text-left ">
-              Sesja sprzedażowa / sesja ogiera
+              Sesja sprzedażowa lub ogiera
             </h1>
             <p className="tracking-[0px] font-[Lora] text-myGray font-normal text-[17px] leading-[34px]">
               Z przyjemnością oferuję Ci profesjonalną sesję zdjęciową, która

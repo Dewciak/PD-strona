@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
-import Horse from "../../images/offer-horse.jpg";
-import Dog from "../../images/offer-dog2.jpg";
-import Event from "../../images/offer-event.jpg";
-import { Link } from "react-scroll";
-import { Link as RouterLink } from "react-router-dom";
+import React, {useEffect} from "react";
+import Horse from "../../images/offercard-horse.webp";
+import Dog from "../../images/offercard-dog.webp";
+import Event from "../../images/offercard-event.webp";
+import {Link} from "react-scroll";
+import {Link as RouterLink} from "react-router-dom";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -26,7 +26,12 @@ function Offer() {
           }}
         >
           <div className="relative w-[300px] h-auto hover:scale-105 transition duration-300">
-            <img src={Horse} alt="Horse" className="w-full h-auto " />
+            <img
+              src={Horse}
+              alt="Horse"
+              loading="lazy"
+              className="w-full h-auto "
+            />
             <h1 className="absolute tracking-[5px] font-light inset-0 flex justify-center items-start pt-16 text-white text-4xl z-10 cursor-pointer">
               Konie
             </h1>
@@ -39,7 +44,12 @@ function Offer() {
           }}
         >
           <div className="relative w-[300px] h-auto hover:scale-105 transition duration-300">
-            <img src={Dog} alt="dog" className="w-full h-auto " />
+            <img
+              src={Dog}
+              alt="dog"
+              loading="lazy"
+              className="w-full h-auto "
+            />
             <h1 className="absolute  tracking-[5px] font-light inset-0 flex justify-center items-start pt-16 text-white text-4xl  z-10 cursor-pointer">
               Psy
             </h1>
@@ -52,7 +62,12 @@ function Offer() {
           }}
         >
           <div className="relative w-[300px] h-auto hover:scale-105 transition duration-300">
-            <img src={Event} alt="wydarzenia" className="w-full h-auto " />
+            <img
+              src={Event}
+              alt="wydarzenia"
+              loading="lazy"
+              className="w-full h-auto "
+            />
             <h1 className="absolute inset-0  tracking-[5px] font-light flex justify-center items-start pt-16 text-white text-4xl  z-10 cursor-pointer">
               Wydarzenia
             </h1>

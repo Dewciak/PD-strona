@@ -1,8 +1,8 @@
 import React from "react";
 
-import horse1 from "../../images/Events/wystawy.jpg";
-import horse2 from "../../images/Events/zawody.jpg";
-import horse3 from "../../images/Events/inne.jpg";
+import horse1 from "../../images/Events/wystawy.webp";
+import horse2 from "../../images/Events/zawody.webp";
+import horse3 from "../../images/Events/inne.webp";
 
 import AOS from "aos";
 import "aos/dist/aos.css";

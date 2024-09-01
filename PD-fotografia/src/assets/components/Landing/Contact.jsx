@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import Fb from "../../images/fb.png";
 import Ig from "../../images/ig.png";
 import Mail from "../../images/mail.png";
 import Mess from "../../images/messenger.png";
 import AccordionCustomIcon from "./AccordionCustomIcon";
-import { Link } from "react-scroll";
-import { Link as RouterLink } from "react-router-dom";
+import {Link} from "react-scroll";
+import {Link as RouterLink} from "react-router-dom";
 
 function Contact() {
   const [isChecked, setIsChecked] = useState(false);
@@ -116,7 +116,7 @@ function Contact() {
             <ul>
               <a href="https://www.facebook.com/patrycjadawidfotografia?locale=pl_PL">
                 <li className="flex flex-row py-2 items-center space-x-2 text-md ">
-                  <img src={Fb} width={40}></img>
+                  <img src={Fb} width={40} loading="lazy"></img>
                   <p className="tracking-[5px] font-normal text-titleGray">
                     Patrycja Dawid Fotografia
                   </p>
@@ -124,7 +124,7 @@ function Contact() {
               </a>
               <a href="https://m.me/patrycjadawidfotografia">
                 <li className="flex flex-row py-2 items-center space-x-2 text-md">
-                  <img src={Mess} width={40}></img>
+                  <img src={Mess} width={40} loading="lazy"></img>
                   <p className="tracking-[5px] font-normal text-titleGray">
                     Patrycja Dawid Fotografia
                   </p>
@@ -132,7 +132,7 @@ function Contact() {
               </a>
               <a href="https://www.instagram.com/patrycjadfotografia/">
                 <li className="flex flex-row py-2 items-center space-x-2 text-md">
-                  <img src={Ig} width={40}></img>
+                  <img src={Ig} width={40} loading="lazy"></img>
                   <p className="tracking-[5px] font-normal text-titleGray">
                     patrycjadfotografia
                   </p>
@@ -140,7 +140,7 @@ function Contact() {
               </a>
               <a href="mailto:wiktorskid@wp.pl">
                 <li className="flex flex-row py-2 items-center space-x-2 text-md">
-                  <img src={Mail} width={40}></img>
+                  <img src={Mail} width={40} loading="lazy"></img>
                   <p className="tracking-[5px] font-normal text-titleGray">
                     patrycjad20@gmail.com
                   </p>

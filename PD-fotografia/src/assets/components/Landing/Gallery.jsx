@@ -9,13 +9,14 @@ const Gallery = ({
   dogs,
   horses,
   events,
+  setImageIndex,
 }) => {
   const sessionTypesButtons = [dogs, horses, events];
   const [showImages, setShowImages] = useState(false);
 
   useEffect(() => {
     setShowImages(false);
-    const timer = setTimeout(() => setShowImages(true), 350); // krótki opóźnienie na animację
+    const timer = setTimeout(() => setShowImages(true), 350);
     return () => clearTimeout(timer);
   }, [sessionType]);
 
@@ -25,12 +26,12 @@ const Gallery = ({
         setSessionType={setSessionType}
         sessionTypesButtons={sessionTypesButtons}
       />
-      <div className="w-full py-2 overflow-x-scroll">
-        <div className="grid w-[1500px] grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-start justify-center gap-4">
+      <div className="w-full px-2 py-2 overflow-x-scroll">
+        <div className="grid  w-[400%] mb-4 mx-auto md:w-[1500px] grid-cols-4 md:grid-cols-2 lg:grid-cols-4 items-start justify-center gap-4">
           {sessionType.id.map((pic, key) => (
             <img
               onClick={() => {
-                setShowDialog(true), setBigPic(pic);
+                setShowDialog(true), setImageIndex(key);
               }}
               src={pic}
               className={`w-full ${

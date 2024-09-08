@@ -4,7 +4,7 @@ import {Link} from "react-scroll";
 import Gallery from "./Gallery";
 import GalleryDialog from "./GalleryDialog";
 
-import dog1 from "../../images/Gallery/Dogs/1.jpg";
+import dog1 from "../../images/Gallery/Dogs/1.webp";
 import dog2 from "../../images/Gallery/Dogs/2.jpg";
 import dog3 from "../../images/Gallery/Dogs/3.jpg";
 import dog4 from "../../images/Gallery/Dogs/4.jpg";
@@ -41,7 +41,8 @@ function Portfolio() {
 
   const [showDialog, setShowDialog] = useState(false);
   const [sessionType, setSessionType] = useState(dogs);
-  const [bigPic, setBigPic] = useState();
+  const [imageIndex, setImageIndex] = useState(0);
+
   return (
     <div
       id="Portfolio"
@@ -58,17 +59,17 @@ function Portfolio() {
         sessionType={sessionType}
         setSessionType={setSessionType}
         setShowDialog={setShowDialog}
-        setBigPic={setBigPic}
         dogs={dogs}
         horses={horses}
         events={events}
+        setImageIndex={setImageIndex}
       />
       {showDialog === true ? (
         <GalleryDialog
           sessionType={sessionType}
-          setBigPic={setBigPic}
           setShowDialog={setShowDialog}
-          bigPic={bigPic}
+          imageIndex={imageIndex}
+          setImageIndex={setImageIndex}
         />
       ) : (
         ""

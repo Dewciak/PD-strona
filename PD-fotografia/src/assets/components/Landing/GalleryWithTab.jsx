@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { Modal, Button } from "react-bootstrap";
-import { AiOutlineClose } from "react-icons/ai";
+import React, {useState} from "react";
+import {Modal, Button} from "react-bootstrap";
+import {AiOutlineClose} from "react-icons/ai";
 import {
   Tabs,
   TabsHeader,
@@ -15,9 +15,6 @@ import dog3 from "../../images/Gallery/Dogs/3.jpg";
 import dog4 from "../../images/Gallery/Dogs/4.jpg";
 import dog5 from "../../images/Gallery/Dogs/5.jpg";
 import dog6 from "../../images/Gallery/Dogs/6.jpg";
-// import dog7 from "../../images/Gallery/Dogs/6.jpg";
-// import dog8 from "../../images/Gallery/Dogs/6.jpg";
-// import dog9 from "../../images/Gallery/Dogs/6.jpg";
 
 import horse1 from "../../images/Gallery/Horses/1.jpg";
 import horse2 from "../../images/Gallery/Horses/2.jpg";
@@ -42,12 +39,12 @@ export function GalleryWithTab() {
       label: "Psy",
       value: "html",
       images: [
-        { imageLink: dog1 },
-        { imageLink: dog2 },
-        { imageLink: dog3 },
-        { imageLink: dog4 },
-        { imageLink: dog5 },
-        { imageLink: dog6 },
+        {imageLink: dog1},
+        {imageLink: dog2},
+        {imageLink: dog3},
+        {imageLink: dog4},
+        {imageLink: dog5},
+        {imageLink: dog6},
         // { imageLink: dog7 },
         // { imageLink: dog8 },
         // { imageLink: dog9 },
@@ -57,44 +54,44 @@ export function GalleryWithTab() {
       label: "Konie",
       value: "react",
       images: [
-        { imageLink: horse1 },
-        { imageLink: horse2 },
-        { imageLink: horse3 },
-        { imageLink: horse4 },
-        { imageLink: horse5 },
-        { imageLink: horse6 },
+        {imageLink: horse1},
+        {imageLink: horse2},
+        {imageLink: horse3},
+        {imageLink: horse4},
+        {imageLink: horse5},
+        {imageLink: horse6},
       ],
     },
     {
       label: "Wydarzenia",
       value: "vue",
       images: [
-        { imageLink: event1 },
-        { imageLink: event2 },
-        { imageLink: event3 },
-        { imageLink: event4 },
-        { imageLink: event5 },
-        { imageLink: event6 },
+        {imageLink: event1},
+        {imageLink: event2},
+        {imageLink: event3},
+        {imageLink: event4},
+        {imageLink: event5},
+        {imageLink: event6},
       ],
     },
   ];
   const handleClose = () => setShowModal(false);
-  const [activeImage, setActiveImage] = useState(null); 
+  const [activeImage, setActiveImage] = useState(null);
 
   const handleShow = (value, clickedImageLink) => {
     const images = data.find((item) => item.value === value).images;
     const filteredImages = images.filter(
-      ({ imageLink }) => imageLink !== clickedImageLink
+      ({imageLink}) => imageLink !== clickedImageLink
     );
     setSelectedImages(filteredImages);
-    setActiveImage(clickedImageLink); 
+    setActiveImage(clickedImageLink);
     setShowModal(true);
   };
 
   const handleImageClick = (imageLink) => {
     const updatedSelectedImages = [
       ...selectedImages.filter((image) => image.imageLink !== imageLink),
-      { imageLink: activeImage },
+      {imageLink: activeImage},
     ];
     setSelectedImages(updatedSelectedImages);
     setActiveImage(imageLink);
@@ -104,20 +101,20 @@ export function GalleryWithTab() {
     <>
       <Tabs value="html">
         <TabsHeader className="max-w-[95%] mx-auto flex justify-center tracking-[5px] font-light bg-gray-100 items-center z-[1]">
-          {data.map(({ label, value }) => (
+          {data.map(({label, value}) => (
             <Tab key={value} value={value}>
               {label}
             </Tab>
           ))}
         </TabsHeader>
         <TabsBody className="grid grid-cols-1 gap-4">
-          {data.map(({ value, images }) => (
+          {data.map(({value, images}) => (
             <TabPanel
               className="grid grid-cols-1  gap-4 md:grid-cols-3 mt-6"
               key={value}
               value={value}
             >
-              {images?.map(({ imageLink }, index) => (
+              {images?.map(({imageLink}, index) => (
                 <div key={index} onClick={() => handleShow(value, imageLink)}>
                   <img
                     className="h-60 w-full max-w-full rounded-lg object-cover object-center hover:scale-105 duration-300 cursor-pointer"

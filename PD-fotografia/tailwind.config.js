@@ -20,6 +20,16 @@ module.exports = withMT({
         myGray: "rgba(58,58,58,0.96)",
         titleGray: "rgb(45,45,45)",
       },
+      keyframes: {
+        fadeIn: {
+          "0%": {opacity: "0"},
+          "50%": {opacity: "0.5"},
+          "100%": {opacity: "1"},
+        },
+      },
+      animation: {
+        fadeIn: "fadeIn 0.3s ease-in-out",
+      },
     },
   },
   plugins: [],

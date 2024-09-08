@@ -32,7 +32,7 @@ function Offer() {
               loading="lazy"
               className="w-full h-auto "
             />
-            <h1 className="absolute tracking-[5px] font-light inset-0 flex justify-center items-start pt-16 text-white text-4xl z-10 cursor-pointer">
+            <h1 className="absolute tracking-[5px] font-light inset-0 flex justify-center items-start pt-16 text-white text-4xl z-4 cursor-pointer">
               Konie
             </h1>
           </div>
@@ -50,7 +50,7 @@ function Offer() {
               loading="lazy"
               className="w-full h-auto "
             />
-            <h1 className="absolute  tracking-[5px] font-light inset-0 flex justify-center items-start pt-16 text-white text-4xl  z-10 cursor-pointer">
+            <h1 className="absolute  tracking-[5px] font-light inset-0 flex justify-center items-start pt-16 text-white text-4xl  z-4 cursor-pointer">
               Psy
             </h1>
           </div>
@@ -68,7 +68,7 @@ function Offer() {
               loading="lazy"
               className="w-full h-auto "
             />
-            <h1 className="absolute inset-0  tracking-[5px] font-light flex justify-center items-start pt-16 text-white text-4xl  z-10 cursor-pointer">
+            <h1 className="absolute inset-0  tracking-[5px] font-light flex justify-center items-start pt-16 text-white text-4xl  z-4 cursor-pointer">
               Wydarzenia
             </h1>
           </div>
@@ -77,7 +77,7 @@ function Offer() {
       <div className=" mx-auto h-auto py-8 mt-20">
         <h2
           data-aos="slide-up"
-          className="mx-auto max-w-[900px] text-center px-6    tracking-[0px] font-[Lora] text-gray-700 font-normal text-[20px] leading-[34px] pb-4 overflow-visible z-10 "
+          className="mx-auto max-w-[900px] text-center px-6    tracking-[0px] font-[Lora] text-gray-700 font-normal text-[20px] leading-[34px] pb-4 overflow-visible z-4 "
         >
           Jeśli sesja jaka Cię interesuje nie znajduję się w tej zakładce,
           <br></br>

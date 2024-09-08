@@ -1,6 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "~@fortawesome/fontawesome-free/scss/all.scss";
+
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 
 * {
@@ -21,11 +23,11 @@
   background-image: url("assets/images/bg3.webp");
   background-size: cover;
 }
-.Bg {
+/* .Bg {
   background-image: url("assets/images/bg3.png");
 
   background-size: cover;
-}
+} */
 .active li {
   color: #5da9e7;
 }

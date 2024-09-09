@@ -37,12 +37,13 @@ function About() {
               data-aos="slide-right"
               className="px-6 text-justify tracking-[0px] font-[Lora] text-myGray font-normal text-[17px] leading-[34px]"
             >
-              Cześć, nazywam sie Patrycja Dawid. Swoją pasję do fotografii
-              odkryłam w 2014 roku dorastając w otoczeniu zwierząt, które zawsze
-              były moimi najlepszymi modelami. Dzięki temu łatwo jest mi
-              uchwycić ich naturalne piękno i charakter. W wolnych chwilach
-              najbardziej lubię zapuszczać się w długie tereny na końskim
-              grzbiecie i spacerować po lesie.
+              Cześć, nazywam się Patrycja Dawid. Swoją pasję do fotografii
+              odkryłam w&nbsp;2014 roku dorastając w&nbsp;otoczeniu zwierząt,
+              które zawsze były moimi najlepszymi modelami. Dzięki temu łatwo
+              jest mi&nbsp;uchwycić ich naturalne piękno i&nbsp;charakter.
+              W&nbsp;wolnych chwilach najbardziej lubię zapuszczać się
+              w&nbsp;długie tereny na końskim grzbiecie i&nbsp;spacerować
+              po&nbsp;lesie.
             </p>
           </div>
           {/* zdjęcie about */}

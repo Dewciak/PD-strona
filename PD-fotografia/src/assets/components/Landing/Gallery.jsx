@@ -5,7 +5,6 @@ const Gallery = ({
   sessionType,
   setSessionType,
   setShowDialog,
-  setBigPic,
   dogs,
   horses,
   events,
@@ -13,8 +12,13 @@ const Gallery = ({
 }) => {
   const sessionTypesButtons = [dogs, horses, events];
   const [showImages, setShowImages] = useState(false);
-
+  const [columns, setColumns] = useState("lg:grid-cols-15 md:w-[5200px]");
   useEffect(() => {
+    if (sessionType.name === "Psy") setColumns("lg:grid-cols-15 md:w-[5200px]");
+    if (sessionType.name === "Konie")
+      setColumns("lg:grid-cols-12 md:w-[4200px]");
+    if (sessionType.name === "Wydarzenia")
+      setColumns("lg:grid-cols-10 md:w-[3500px]");
     setShowImages(false);
     const timer = setTimeout(() => setShowImages(true), 350);
     return () => clearTimeout(timer);
@@ -27,7 +31,9 @@ const Gallery = ({
         sessionTypesButtons={sessionTypesButtons}
       />
       <div className="w-full px-2 py-2 overflow-x-scroll">
-        <div className="grid  w-[400%] mb-4 mx-auto md:w-[1500px] grid-cols-4 md:grid-cols-2 lg:grid-cols-4 items-start justify-center gap-4">
+        <div
+          className={`grid   mb-4 mx-auto md:grid-cols-2 ${columns} items-start justify-center gap-4`}
+        >
           {sessionType.id.map((pic, key) => (
             <img
               onClick={() => {

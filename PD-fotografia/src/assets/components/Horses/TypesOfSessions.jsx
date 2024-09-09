@@ -61,10 +61,10 @@ function TypesOfSessions() {
               Sesja treningowa
             </h1>
             <p className="tracking-[0px] font-[Lora] text-myGray font-normal text-[17px] leading-[34px]">
-              Jeśli chcesz mieć pamiątkę z treningu, jest to oferta skeirowana
-              idelanie dla Ciebie.
+              Jeśli chcesz mieć pamiątkę z treningu, jest to oferta skierowana
+              idealnie dla Ciebie.
               <br /> Podczas tego rodzaju sesji jestem dla Was dostępna przez
-              cały trening łąpiąc najlepsze momenty.
+              cały trening łapiąc najlepsze momenty.
             </p>
           </div>
           {/* ZDJĘCIE */}
@@ -84,7 +84,7 @@ function TypesOfSessions() {
           ></img>
           <div className="md:w-[50%] w-[70%] md:px-14 mt-6 md:mt-0 mx-auto">
             <h1 className="text-2xl  py-6 tracking-[5px] font-light text-titleGray text-center md:text-left ">
-              Sesja sprzedażowa lub ogiera
+              Sesja sprzedażowa lub prezentacja ogiera
             </h1>
             <p className="tracking-[0px] font-[Lora] text-myGray font-normal text-[17px] leading-[34px]">
               Z przyjemnością oferuję Ci profesjonalną sesję zdjęciową, która

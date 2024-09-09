@@ -86,7 +86,7 @@ function TypesOfSessions() {
               Sesja treningowa
             </h1>
             <p className="tracking-[0px] font-[Lora] text-myGray font-normal text-[17px] leading-[34px]">
-              sesja zdjęciowa z treningu psa to doskonała okazja do uwiecznienia
+              Sesja zdjęciowa z treningu psa to doskonała okazja do uwiecznienia
               Waszych postępów i zaangażowania w treningu. Oglądanie zdjęć z
               treningu może pomóc Ci zauważyć i docenić osiągnięcia Twojego psa
               i dodatkowo zmotywuje Was do dalszego rozwoju.

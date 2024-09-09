@@ -36,7 +36,7 @@ function TypesOfSessions() {
               Fotoralacje z wystaw:
             </h1>
             <p className="tracking-[0px] font-[Lora] text-myGray font-normal text-[17px] leading-[28px]">
-              wystawa psów to wydarzenie, któremu towarzyszą niezwykłe emocje,
+              Wystawa psów to wydarzenie, któremu towarzyszą niezwykłe emocje,
               zarówno u psa jak i właściciela. Moim zadaniem jako fotografa jest
               uchwycenie tych niepowtarzalnych oraz najlepszych momentów.
               Podczas wystawy istnieje możliwość wykonania ujęć z ringu, a także

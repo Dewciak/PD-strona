@@ -4,7 +4,7 @@ import Dog from "../../images/BlueBarDog.webp";
 function BlueBar() {
   return (
     <div>
-      <div className="w-screen bg-[#DFF0FA] md:my-10  py-[0px] mt-12 md:mt-0 ">
+      <div className="w-screen bg-[#eef5f9] md:my-10  py-[0px] mt-12 md:mt-0 ">
         <div className="max-w-[900px] flex-col flex mx-auto md:flex-row  justify-center items-center py-[30px]">
           <div className="flex flex-col px-4 md:items-start  items-start justify-start h-full mx-auto md:w-[60%] ">
             <p className="text-start  md:text-2xl text-[24px] pb-6   tracking-[2px] leading-10 font-normal  bg-gradient-to-r from-blue-400 to-purple-500 inline-block text-transparent bg-clip-text ">

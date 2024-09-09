@@ -15,6 +15,7 @@ module.exports = withMT({
       borderImage: (theme) => ({
         "gradient-border": "linear-gradient(to right, #63b3ed, #9333ea)",
       }),
+
       colors: {
         myBlue: "",
         myGray: "rgba(58,58,58,0.96)",
@@ -29,6 +30,11 @@ module.exports = withMT({
       },
       animation: {
         fadeIn: "fadeIn 0.3s ease-in-out",
+      },
+      gridTemplateColumns: {
+        16: "repeat(16, minmax(0, 1fr))",
+        17: "repeat(17, minmax(0, 1fr))",
+        15: "repeat(15, minmax(0, 1fr))",
       },
     },
   },

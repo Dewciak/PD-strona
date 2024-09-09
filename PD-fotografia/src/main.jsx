@@ -4,7 +4,6 @@ import "./index.css";
 import {ThemeProvider} from "@material-tailwind/react";
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 
-// Lazy-loaded components
 const Home = React.lazy(() => import("./Home.jsx"));
 const Dogs = React.lazy(() => import("./Dogs.jsx"));
 const Horses = React.lazy(() => import("./Horses.jsx"));
@@ -15,9 +14,6 @@ const PageNotFound = React.lazy(() =>
 const PolicyPrivacy = React.lazy(() =>
   import("./assets/components/Utils/PolicyPrivacy.jsx")
 );
-const Credits = React.lazy(() =>
-  import("./assets/components/Utils/Credits.jsx")
-);
 const Regulations = React.lazy(() =>
   import("./assets/components/Utils/Regulations.jsx")
 );
@@ -25,53 +21,25 @@ const Regulations = React.lazy(() =>
 // Router setup
 const router = createBrowserRouter([
   {
-    // path: "/PD-strona",
-    path: "/",
+    path: "/PD-strona",
+    // path: "/",
     element: <Home />,
-    errorElement: (
-      <Suspense fallback={<div>Loading...</div>}>
-        <PageNotFound />
-      </Suspense>
-    ),
+    errorElement: <PageNotFound />,
   },
   {
     path: "/oferta-psy",
-    element: (
-      <Suspense fallback={<div>Loading...</div>}>
-        <Dogs />
-      </Suspense>
-    ),
-    errorElement: (
-      <Suspense fallback={<div>Loading...</div>}>
-        <PageNotFound />
-      </Suspense>
-    ),
+    element: <Dogs />,
+    errorElement: <PageNotFound />,
   },
   {
     path: "/oferta-konie",
-    element: (
-      <Suspense fallback={<div>Loading...</div>}>
-        <Horses />
-      </Suspense>
-    ),
-    errorElement: (
-      <Suspense fallback={<div>Loading...</div>}>
-        <PageNotFound />
-      </Suspense>
-    ),
+    element: <Horses />,
+    errorElement: <PageNotFound />,
   },
   {
     path: "/oferta-wydarzenia",
-    element: (
-      <Suspense fallback={<div>Loading...</div>}>
-        <Events />
-      </Suspense>
-    ),
-    errorElement: (
-      <Suspense fallback={<div>Loading...</div>}>
-        <PageNotFound />
-      </Suspense>
-    ),
+    element: <Events />,
+    errorElement: <PageNotFound />,
   },
   {
     path: "/Polityka-Prywatności",
@@ -88,24 +56,10 @@ const router = createBrowserRouter([
   },
   {
     path: "/Regulamin-Sesji",
-    element: (
-      <Suspense fallback={<div>Loading...</div>}>
-        <Regulations />
-      </Suspense>
-    ),
-    errorElement: (
-      <Suspense fallback={<div>Loading...</div>}>
-        <PageNotFound />
-      </Suspense>
-    ),
+    element: <Regulations />,
+    errorElement: <PageNotFound />,
   },
   {
-    path: "/Źródła",
-    element: (
-      <Suspense fallback={<div>Loading...</div>}>
-        <Credits />
-      </Suspense>
-    ),
     errorElement: (
       <Suspense fallback={<div>Loading...</div>}>
         <PageNotFound />

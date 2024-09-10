@@ -18,7 +18,7 @@ function Offer() {
         Oferta
       </h1>
       {/* <h2 className="text-center  text-lg pb-0 trakcing-[2px] text-gray-500 tracking-[3px] font-[Lora] font-light"></h2> */}
-      <div className="flex flex-col md:flex-row gap-y-8 gap-x-8 mt-14 mx-auto">
+      <div className="flex flex-col lg:flex-row gap-y-8 gap-x-8 mt-14 mx-auto">
         <RouterLink
           to="/oferta-konie"
           onClick={() => {

@@ -11,6 +11,32 @@ import AboutDog from "../../images/Dogs/About.webp";
 import Bg from "../../images/Dogs/background.webp";
 
 function Start() {
+  const questionsText = {
+    header1: "W jakiej formie otrzymam zdjęcia?",
+    text1: `Oferuję różne opcje dostawy zdjęć, w tym pliki cyfrowe wysokiej
+            jakości oraz wydruki w formie odbitek, zdjęć na płótnie czy albumów
+            fotograficznych. Możemy omówić Twoje preferencje i dostosować ofertę
+            do Twoich potrzeb.`,
+    header2: "Jak przygotować mojego pupila do sesji?",
+    text2:
+      "Przed sesją zdjęciową ważne jest, aby psy były odpowiednio przygotowane. Warto aby pies był wyczyszczony, bez błota na łapach, na sesje zabierz ulubione smaczki oraz zabawkę. Jeśli Twój pupil ma nadmiar energii możesz przed zdjęciami zabrać go na spacer 😊",
+    header3: "Czy dostępne są sesje zdjęciowe w studio oraz na zewnątrz?",
+    text3:
+      "Preferuje sesje w plenerze, ale kiedy pogoda nie dopisuje mam też małe przenośne studio, które głownie sprawdza się do fotografii szczeniąt.",
+    header4: "Dodatkowe informacje",
+    text4: `
+              Do 10 dni roboczych od wykonania sesji zdjęciowej dostaniesz ode mnie galerię zdjęć do wyboru.
+
+              Pamiętaj, że ostateczny wybór zdjęć należy do Ciebie.
+              
+              Do ceny każdej sesji doliczam również koszty dojazdu.
+              
+              Wybrane ujęcia otrzymasz w dwóch formatach - oryginalnym do druku oraz pomniejszonym do publikacji w social mediach 
+              
+              Jeśli potrzebujesz faktury za zdjęcia, nie ma problemu - wystawiam
+              faktury bez VAT.`,
+  };
+
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
@@ -124,7 +150,7 @@ function Start() {
         <Pakiety />
       </Suspense>
       <Suspense fallback={<div>Loading questions...</div>}>
-        <Questions />
+        <Questions prop={questionsText} />
       </Suspense>
       <Suspense fallback={<div>Loading footer...</div>}>
         <Footer />

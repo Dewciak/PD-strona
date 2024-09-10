@@ -12,13 +12,12 @@ const Gallery = ({
 }) => {
   const sessionTypesButtons = [dogs, horses, events];
   const [showImages, setShowImages] = useState(false);
-  const [columns, setColumns] = useState("lg:grid-cols-15 md:w-[5200px]");
+  const [columns, setColumns] = useState("grid-cols-16 w-[5600px]");
   useEffect(() => {
-    if (sessionType.name === "Psy") setColumns("lg:grid-cols-15 md:w-[5200px]");
-    if (sessionType.name === "Konie")
-      setColumns("lg:grid-cols-12 md:w-[4200px]");
+    if (sessionType.name === "Psy") setColumns("grid-cols-16 w-[5600px]");
+    if (sessionType.name === "Konie") setColumns("grid-cols-12 w-[4200px]");
     if (sessionType.name === "Wydarzenia")
-      setColumns("lg:grid-cols-10 md:w-[3500px]");
+      setColumns("grid-cols-10 w-[3500px]");
     setShowImages(false);
     const timer = setTimeout(() => setShowImages(true), 350);
     return () => clearTimeout(timer);
@@ -30,9 +29,10 @@ const Gallery = ({
         setSessionType={setSessionType}
         sessionTypesButtons={sessionTypesButtons}
       />
+
       <div className="w-full px-2 py-2 overflow-x-scroll">
         <div
-          className={`grid   mb-4 mx-auto md:grid-cols-2 ${columns} items-start justify-center gap-4`}
+          className={`grid mb-4 mx-auto  ${columns} items-start justify-center gap-4`}
         >
           {sessionType.id.map((pic, key) => (
             <img

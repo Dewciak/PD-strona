@@ -5,7 +5,7 @@ import {
   AccordionBody,
 } from "@material-tailwind/react";
 
-function Icon({ id, open }) {
+function Icon({id, open}) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -26,7 +26,9 @@ function Icon({ id, open }) {
   );
 }
 
-export function Questions() {
+export function Questions({
+  prop: {header1, text1, header2, text2, header3, text3, header4, text4},
+}) {
   const [open, setOpen] = React.useState(0);
 
   const handleOpen = (value) => setOpen(open === value ? 0 : value);
@@ -42,13 +44,10 @@ export function Questions() {
             className="font-Montserrat tracking-[5px] font-light text-titleGray "
             onClick={() => handleOpen(1)}
           >
-            W jakiej formie są zdjęcia?
+            {header1}
           </AccordionHeader>
           <AccordionBody className="font-Montserrat tracking-[0px] font-[Lora] text-myGray font-normal text-[17px] leading-[34px]">
-            Oferuję różne opcje dostawy zdjęć, w tym pliki cyfrowe wysokiej
-            jakości oraz wydruki w formie odbitek, zdjęć na płótnie czy albumów
-            fotograficznych. Możemy omówić Twoje preferencje i dostosować ofertę
-            do Twoich potrzeb.
+            {text1}
           </AccordionBody>
         </Accordion>
         <Accordion open={open === 2} icon={<Icon id={2} open={open} />}>
@@ -56,51 +55,37 @@ export function Questions() {
             className="font-Montserrat tracking-[5px] font-light text-titleGray"
             onClick={() => handleOpen(2)}
           >
-            Jak przygotować mojego pupila do sesji?
+            {header2}
           </AccordionHeader>
           <AccordionBody className="font-Montserrat tracking-[0px] font-[Lora] text-myGray font-normal text-[17px] leading-[34px]">
-            Przed sesją zdjęciową ważne jest, aby konie i psy były odpowiednio
-            przygotowane. Wskazówki obejmują czyszczenie i pielęgnację sierści,
-            wypoczęcie zwierzęcia, przygotowanie odpowiednich rekwizytów oraz
-            przygotowanie miejsca, w którym odbędzie się sesja.
+            {text2}
           </AccordionBody>
         </Accordion>
-        <Accordion open={open === 3} icon={<Icon id={3} open={open} />}>
-          <AccordionHeader
-            className="font-Montserrat tracking-[5px] font-light text-titleGray"
-            onClick={() => handleOpen(3)}
-          >
-            Czy dostępne są sesje zdjęciowe w studio oraz na zewnątrz?
-          </AccordionHeader>
-          <AccordionBody className="font-Montserrat tracking-[0px] font-[Lora] text-myGray font-normal text-[17px] leading-[34px]">
-            Tak, oferuję zarówno sesje w studio, które są idealne do uzyskania
-            czystych i profesjonalnych portretów, jak i sesje na zewnątrz, które
-            pozwalają na uchwycenie naturalnej radości i energii zwierząt w
-            otwartym powietrzu.
-          </AccordionBody>
-        </Accordion>
+        {header3 ? (
+          <Accordion open={open === 3} icon={<Icon id={3} open={open} />}>
+            <AccordionHeader
+              className="font-Montserrat tracking-[5px] font-light text-titleGray"
+              onClick={() => handleOpen(3)}
+            >
+              {header3}
+            </AccordionHeader>
+            <AccordionBody className="font-Montserrat tracking-[0px] font-[Lora] text-myGray font-normal text-[17px] leading-[34px]">
+              {text3}
+            </AccordionBody>
+          </Accordion>
+        ) : (
+          ""
+        )}
         <Accordion open={open === 4} icon={<Icon id={4} open={open} />}>
           <AccordionHeader
             className="font-Montserrat tracking-[5px] font-light text-titleGray"
             onClick={() => handleOpen(4)}
           >
-            Dodatkowe informacje
+            {header4}
           </AccordionHeader>
           <AccordionBody className="flex flex-col">
-            <p className="font-Montserrat tracking-[0px] font-[Lora] text-myGray font-normal text-[17px] leading-[34px]">
-              <br />
-              Do 10 dni roboczych od wykonania sesji zdjęciowej dostaniesz ode
-              mnie galerię zdjęć do wyboru. <br />
-              <br /> Pamiętaj, że ostateczny wybór zdjęć należy do Ciebie.{" "}
-              <br />
-              <br /> Do ceny każdej sesji doliczam również koszty dojazdu.{" "}
-              <br />
-              <br />
-              Wybrane ujęcia otrzymasz w dwóch formatach - oryginalnym do druku
-              oraz pomniejszonym do publikacji w social mediach <br />
-              <br />
-              Jeśli potrzebujesz faktury za zdjęcia, nie ma problemu - wystawiam
-              faktury bez VAT.
+            <p className="font-Montserrat whitespace-pre-line tracking-[0px] font-[Lora] text-myGray font-normal text-[17px] leading-[34px]">
+              {text4}
             </p>
           </AccordionBody>
         </Accordion>

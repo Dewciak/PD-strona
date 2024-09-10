@@ -9,6 +9,25 @@ import Footer from "../Utils/Footer";
 function Start() {
   const [isVisible, setIsVisible] = useState(true);
 
+  const questionsText = {
+    header1: "W jakiej formie otrzymam zdjęcia?",
+    text1: `Oferuję różne opcje dostawy zdjęć, w tym pliki cyfrowe wysokiej
+            jakości oraz wydruki w formie odbitek, zdjęć na płótnie czy albumów
+            fotograficznych. Możemy omówić Twoje preferencje i dostosować ofertę
+            do Twoich potrzeb.`,
+    header2: "Jak przygotować mojego konia do sesji?",
+    text2:
+      "Przed sesją zdjęciową ważne jest, aby konie były odpowiednio przygotowane. Najważniejsze jest dokładne wyczyszczenie sierści, usunięcie wszystkich zaklejek i wyczesanie grzywy",
+    header4: "Dodatkowe informacje",
+    text4: `
+              Do 3 dni roboczych od wydarzenia dostaniesz ode mnie galerię zdjęć do wyboru.
+               
+              Pamiętaj, że ostateczny wybór zdjęć należy do Ciebie.
+              
+              Jeśli potrzebujesz faktury za zdjęcia, nie ma problemu - wystawiam
+              faktury bez VAT.`,
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
@@ -114,7 +133,7 @@ function Start() {
       </div>
       <TypesOfSessions />
       <Pakiety />
-      <Questions />
+      <Questions prop={questionsText} />
       <Footer />
     </div>
   );

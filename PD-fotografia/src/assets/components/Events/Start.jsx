@@ -9,6 +9,28 @@ import Footer from "../Utils/Footer";
 function Start() {
   const [isVisible, setIsVisible] = useState(true);
 
+  const questionsText = {
+    header1: "Czy trzeba zapisywać się na zdjęcia przed wydarzeniem?",
+    text1:
+      "Nie trzeba, ale zapisanie się daje Ci gwarancję, że Was uchwycę. Nie robię zdjęć wszystkim uczestnikom danego wydarzenia.",
+    header2: "W jakiej formie otrzymam zdjęcia?",
+    text2:
+      "Zdjęcia przesyłam w dwóch formatach, pomniejszony do internetu oraz oryginalny do druku.",
+    header4: "Dodatkowe informacje",
+    text4: `
+              Do 10 dni roboczych od wykonania sesji zdjęciowej dostaniesz ode mnie galerię zdjęć do wyboru.
+               
+              Pamiętaj, że ostateczny wybór zdjęć należy do Ciebie.
+              
+              Do ceny każdej sesji doliczam również koszty dojazdu.
+              
+              Wybrane ujęcia otrzymasz w dwóch formatach - oryginalnym do druku
+              oraz pomniejszonym do publikacji w social mediach 
+              
+              Jeśli potrzebujesz faktury za zdjęcia, nie ma problemu - wystawiam
+              faktury bez VAT.`,
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
@@ -109,7 +131,7 @@ function Start() {
       </div>
       <TypesOfSessions />
       <Pakiety />
-      <Questions />
+      <Questions prop={questionsText} />
       <Footer />
     </div>
   );

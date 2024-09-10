@@ -2,17 +2,17 @@ import React from "react";
 import Slideshow from "./Slideshow";
 import {Link} from "react-scroll";
 
-import s11 from "../../images/Hero/s1-1.jpg";
-import s12 from "../../images/Hero/s1-2.jpg";
+import s11 from "../../images/Hero/s1-1.webp";
+import s12 from "../../images/Hero/s1-2.webp";
 
-import s21 from "../../images/Hero/s2-1.jpg";
-import s22 from "../../images/Hero/s2-2.jpg";
+import s21 from "../../images/Hero/s2-1.webp";
+import s22 from "../../images/Hero/s2-2.webp";
 
-import s31 from "../../images/Hero/s3-1.jpg";
-import s32 from "../../images/Hero/s3-2.jpg";
+import s31 from "../../images/Hero/s3-1.webp";
+import s32 from "../../images/Hero/s3-2.webp";
 
-import s41 from "../../images/Hero/s4-1.jpg";
-import s42 from "../../images/Hero/s4-2.jpg";
+import s41 from "../../images/Hero/s4-1.webp";
+import s42 from "../../images/Hero/s4-2.webp";
 
 function Hero() {
   const slides1 = [s11, s12];

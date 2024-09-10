@@ -33,10 +33,10 @@ export function UnderlineTabs() {
     {
       label: "Sprzedażowa",
       value: "Treningowa",
-      desc: "5 zdjęć - 300zł",
-      desc2: `Mozliwość dokupienia pojedynczego ujecia w cenie 40 zł`,
-      desc3: `8 zdjęć - 400 zł`,
-      desc4: `Mozliwość dokupienia pojedynczego ujecia w cenie 35 zł`,
+      desc: "3 zdjęć - 250zł",
+      desc2: `Mozliwość dokupienia pojedynczego ujecia w cenie 45 zł`,
+      desc3: `5 zdjęć - 320 zł`,
+      desc4: `Mozliwość dokupienia pojedynczego ujecia w cenie 40 zł`,
     },
     {
       label: "Portretowa",
@@ -60,7 +60,7 @@ export function UnderlineTabs() {
             "w-[90%] mt-1 mx-auto bg-transparent border-b-2 border-gray-600 shadow-none rounded-none ",
         }}
       >
-        {data.map(({ label, value }) => (
+        {data.map(({label, value}) => (
           <Tab
             key={value}
             value={value}
@@ -78,15 +78,15 @@ export function UnderlineTabs() {
       <TabsBody
         className="flex flex-row"
         animate={{
-          initial: { y: 250 },
-          mount: { y: 0 },
-          unmount: { y: 250 },
+          initial: {y: 250},
+          mount: {y: 0},
+          unmount: {y: 250},
         }}
       >
         {/* ############### PAKIET 1 ############### */}
 
         {data.map(
-          ({ value, desc, desc2, desc3, desc4, desc5, desc6, amount }) => (
+          ({value, desc, desc2, desc3, desc4, desc5, desc6, amount}) => (
             <TabPanel
               key={value}
               value={value}

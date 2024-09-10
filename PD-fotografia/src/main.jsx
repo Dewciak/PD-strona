@@ -3,11 +3,11 @@ import React, {Suspense} from "react";
 import "./index.css";
 import {ThemeProvider} from "@material-tailwind/react";
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import Dogs from "./Dogs.jsx";
+import Horses from "./Horses.jsx";
+import Events from "./Events.jsx";
+import Home from "./Home.jsx";
 
-const Home = React.lazy(() => import("./Home.jsx"));
-const Dogs = React.lazy(() => import("./Dogs.jsx"));
-const Horses = React.lazy(() => import("./Horses.jsx"));
-const Events = React.lazy(() => import("./Events.jsx"));
 const PageNotFound = React.lazy(() =>
   import("./assets/components/Utils/PageNotFound.jsx")
 );

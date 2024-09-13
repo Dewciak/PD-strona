@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import About from "../../images/Events/About.webp";
-import Bg from "../../images/Horses/background.webp";
+import Bg from "../../images/Events/background.webp";
 import TypesOfSessions from "./TypesOfSessions";
 import Pakiety from "./Pakiety";
 import Questions from "../../../Questions";
@@ -13,19 +13,15 @@ function Start() {
     header1: "Czy trzeba zapisywać się na zdjęcia przed wydarzeniem?",
     text1:
       "Nie trzeba, ale zapisanie się daje Ci gwarancję, że Was uchwycę. Nie robię zdjęć wszystkim uczestnikom danego wydarzenia.",
+
     header2: "W jakiej formie otrzymam zdjęcia?",
     text2:
       "Zdjęcia przesyłam w dwóch formatach, pomniejszony do internetu oraz oryginalny do druku.",
     header4: "Dodatkowe informacje",
     text4: `
-              Do 10 dni roboczych od wykonania sesji zdjęciowej dostaniesz ode mnie galerię zdjęć do wyboru.
+              Do 3 dni roboczych od wydarzenia dostaniesz ode mnie galerię zdjęć do wyboru.
                
               Pamiętaj, że ostateczny wybór zdjęć należy do Ciebie.
-              
-              Do ceny każdej sesji doliczam również koszty dojazdu.
-              
-              Wybrane ujęcia otrzymasz w dwóch formatach - oryginalnym do druku
-              oraz pomniejszonym do publikacji w social mediach 
               
               Jeśli potrzebujesz faktury za zdjęcia, nie ma problemu - wystawiam
               faktury bez VAT.`,
@@ -51,7 +47,7 @@ function Start() {
       {/* Zdjęcie góra czarne */}
       <div className="bg-black h-auto relative">
         <div
-          className={`fixed w-[100%] top-[50px] z-[-1] md:left-1/2 md:transform md:-translate-x-1/2 ${
+          className={`fixed w-[100%] top-[80px] z-[-1] md:left-1/2 md:transform md:-translate-x-1/2 ${
             isVisible ? "" : "opacity-0"
           }`}
         >
@@ -65,9 +61,9 @@ function Start() {
         </div>
       </div>
       <div className="w-[100%] relative z-0 mx-auto">
-        <div className="max-w-[1000px] mx-auto md:mt-[590px] mt-[330px] z-[10] relative pt-8">
+        <div className="max-w-[1000px] mx-auto md:mt-[610px] mt-[330px] z-[10] relative pt-8">
           {/* Nagłówek fotografia */}
-          <h1 className="text-center text-4xl md:text-6xl md:mt-[20px] tracking-[5px] font-light text-titleGray">
+          <h1 className="text-center text-4xl md:text-6xl md:mt-[0px] tracking-[5px] font-light text-titleGray">
             Reportaże z Wydarzeń
           </h1>
 
@@ -84,8 +80,8 @@ function Start() {
               Od zawodów i pokazów po wystawy i szkolenia. Staram się uchwycić
               najlepsze momenty podczas Waszych wspólnych startów, oraz oddać
               towarzyszące Wam emocje. Na moich social mediach regularnie
-              publikuje daty imprez na jakich pojawię się z aparatem, dlatego
-              zachęcam do śledzenia postów na bieżąco.
+              publikuje daty imprez na jakich pojawię się z&nbsp;aparatem,
+              dlatego zachęcam do śledzenia postów na bieżąco.
             </p>
           </div>
           {/* Main dolny tekst ze zdjęciem */}
@@ -97,7 +93,7 @@ function Start() {
               </h1>
               <p className="md:px-6 px-4 text-justify tracking-[0px] font-[Lora] text-myGray font-normal text-[17px] leading-[34px]">
                 <span className="text-blue-400 font-semibold tracking-[0px] font-[Lora] text-[17px] leading-[34px]">
-                  Uchwycenie akcji-
+                  Uchwycenie akcji
                 </span>{" "}
                 zawody z udziałem zwierząt to często szereg dynamicznych
                 sytuacji. Potrafię szybko reagować dzięki czemu mogę uchwycić
@@ -105,14 +101,14 @@ function Start() {
                 <br />
                 <br />
                 <span className="text-blue-400 font-semibold tracking-[0px] font-[Lora] text-[17px] leading-[34px]">
-                  Indywidualne Podejście-
+                  Indywidualne Podejście
                 </span>{" "}
                 każde zlecenie traktuję indywidualnie. Staram się zrozumieć
                 Wasze oczekiwania i uchwycić najlepsze momenty Waszych zmagań.
                 <br />
                 <br />
                 <span className="text-blue-400 font-semibold tracking-[0px] font-[Lora] text-[17px] leading-[34px]">
-                  Dyspozycyjność-
+                  Dyspozycyjność
                 </span>{" "}
                 wybierając mnie do wykonania Waszej fotorelacji, zyskujecie
                 pewność, że na pewno otrzymacie fotorelację, której oczekujecie.

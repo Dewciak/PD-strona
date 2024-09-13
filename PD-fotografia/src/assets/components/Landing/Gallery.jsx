@@ -18,9 +18,7 @@ const Gallery = ({
     if (sessionType.name === "Konie") setColumns("grid-cols-12 w-[4200px]");
     if (sessionType.name === "Wydarzenia")
       setColumns("grid-cols-10 w-[3500px]");
-    setShowImages(false);
-    const timer = setTimeout(() => setShowImages(true), 350);
-    return () => clearTimeout(timer);
+    setShowImages(true);
   }, [sessionType]);
 
   return (

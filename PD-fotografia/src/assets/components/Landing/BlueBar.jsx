@@ -20,7 +20,7 @@ function BlueBar() {
               • Twój czworonożny przyjaciel zostanie uwieczniony w najlepszy
               możliwy sposób
               <br />
-              <br />• Ukażę na fotografiach piękną więź, jaka was łączy
+              <br />• Ukażę na fotografiach piękną więź jaka was łączy
               <br />
               <br />• Zdjęcia są wysokiej rozdzielczości idealne do wydruków,
               foto książek i innych niekomercyjnych zastosowań.

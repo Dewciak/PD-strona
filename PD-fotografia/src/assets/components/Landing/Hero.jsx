@@ -33,7 +33,7 @@ function Hero() {
           <p className="mt-2 py-4 md:py-0 tracking-[0px] font-[Lora] text-myGray font-normal text-[17px] leading-[34px]">
             Zajmuję się fotografią psów i koni. Pokazanie ich atutów oraz
             charakteru to coś co definiuje moje zdjęcia. Zapewnij sobie świetną
-            pamiątke ze swoim pupilem!
+            pamiątkę ze swoim pupilem!
           </p>
           <Link
             activeClass="active"

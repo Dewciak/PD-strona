@@ -58,14 +58,14 @@ function Start() {
       {/* Zdjęcie góra czarne */}
       <div className="bg-black h-auto relative">
         <div
-          className={`fixed w-[100%] top-0 z-[-1] md:left-1/2 md:transform md:-translate-x-1/2 ${
+          className={`fixed w-[100%] top-[80px] z-[-1] md:left-1/2 md:transform md:-translate-x-1/2 ${
             isVisible ? "" : "opacity-0"
           }`}
         >
           <Suspense fallback={<div>Loading background...</div>}>
             <div className="w-[100%] bg-black">
               <img
-                className="md:mt-[0px] mt-[100px] md:max-w-[1280px] mx-auto"
+                className="md:mt-[0px] mt-[100px] md:max-w-[800px] mx-auto"
                 src={Bg}
                 alt="Background"
               />
@@ -74,9 +74,9 @@ function Start() {
         </div>
       </div>
       <div className="w-[100%] relative z-0 mx-auto">
-        <div className="max-w-[1000px] mx-auto md:mt-[670px] mt-[330px] z-[10] relative pt-8">
+        <div className="max-w-[1000px] mx-auto md:mt-[610px] mt-[330px] z-[10] relative pt-8">
           {/* Nagłówek fotografia */}
-          <h1 className="text-center text-4xl md:text-6xl md:mt-[50px] tracking-[5px] font-light text-titleGray">
+          <h1 className="text-center text-4xl md:text-6xl md:mt-[0px] tracking-[5px] font-light text-titleGray">
             Fotografia Psów
           </h1>
           {/* Nagłówek P tag */}
@@ -96,7 +96,7 @@ function Start() {
               Podczas tworzenia zdjęć każdy szczegół jest dla mnie ważny,
               dodatkowo moje doświadczenie w fotografii zwierząt sprawi, że
               Twoje pupile przed obiektywem będą czuły się swobodnie, co
-              przełoży się na naturalne i ujmujące kadry.
+              przełoży się na naturalne i&nbsp;ujmujące kadry.
             </p>
           </div>
           {/* Main dolny tekst ze zdjęciem */}
@@ -110,10 +110,11 @@ function Start() {
                   Indywidualne podejście
                 </span>{" "}
                 wiem że każdy pies jest wyjątkowy, dlatego też nasza sesja
-                zostanie dostosowana do jego charakteru, temperamentu i
-                ulubionych zajęć. Niezależnie od tego, czy Twój pies jest
-                energicznym psem sportowym czy też spokojnym i wylegującym się
-                futrzakiem, nasz fotograf będzie umiał uchwycić jego osobowość.
+                zostanie dostosowana do jego charakteru, temperamentu
+                i&nbsp;ulubionych zajęć. Niezależnie od tego, czy Twój pies jest
+                energicznym psem sportowym czy też spokojnym i&nbsp;wylegującym
+                się futrzakiem, uchwycenie jego osobowości nie będzie stanowiło
+                dla mnie problemu
                 <br></br>
                 <br></br>
                 <span className="text-blue-400 font-semibold tracking-[0px] font-[Lora] text-[17px] leading-[34px]">

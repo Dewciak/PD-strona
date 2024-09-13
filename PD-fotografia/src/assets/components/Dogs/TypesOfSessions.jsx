@@ -61,7 +61,7 @@ function TypesOfSessions() {
             </h1>
             <p className="tracking-[0px] font-[Lora] text-myGray font-normal text-[17px] leading-[34px]">
               Jest to idealny wybór jeśli potrzebujesz zapowiedzi miotu, reklamy
-              reproduktora czy po prostu chcesz podkreślić atuty Twojego psa
+              reproduktora czy po prostu chcesz podkreślić atuty Twojego psa.
               <br></br>Sesja trwa do czasu uzyskania najlepszych ujęć z
               uwzględnieniem zmęczenia psiego modela :)
             </p>

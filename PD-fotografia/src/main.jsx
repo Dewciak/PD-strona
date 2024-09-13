@@ -21,8 +21,8 @@ const Regulations = React.lazy(() =>
 // Router setup
 const router = createBrowserRouter([
   {
-    path: "/PD-strona",
-    // path: "/",
+    // path: "/PD-strona",
+    path: "/",
     element: <Home />,
     errorElement: <PageNotFound />,
   },

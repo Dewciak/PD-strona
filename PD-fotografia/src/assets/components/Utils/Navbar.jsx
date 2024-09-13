@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import {useState, useEffect} from "react";
 import Logo from "../../images/nav-logo.png";
 import {IoMenu} from "react-icons/io5";
 import {AiOutlineClose, AiOutlineMenu} from "react-icons/ai";
@@ -12,7 +12,7 @@ function Navbar({sections}) {
   };
 
   useEffect(() => {
-    const navLinks = document.querySelectorAll("ul li a"); // Adjusted to select <a> elements within <li>
+    const navLinks = document.querySelectorAll("ul li a");
     window.onscroll = () => {
       sections.forEach((sec) => {
         let top = window.scrollY;
@@ -54,7 +54,7 @@ function Navbar({sections}) {
           <ul className="z-10 text-black  m-4 md:flex flex-row gap-x-16 items-center cursor-pointer">
             <Link
               activeClass="active"
-              to="/About"
+              to="About"
               spy={true}
               smooth={true}
               offset={-70}
@@ -67,7 +67,7 @@ function Navbar({sections}) {
             </Link>
             <Link
               activeClass="active"
-              to="/Portfolio"
+              to="Portfolio"
               spy={true}
               smooth={true}
               offset={-70}
@@ -80,7 +80,7 @@ function Navbar({sections}) {
             </Link>
             <Link
               activeClass="active"
-              to="/Offer"
+              to="Offer"
               spy={true}
               smooth={true}
               offset={-70}
@@ -93,7 +93,7 @@ function Navbar({sections}) {
             </Link>
             <Link
               activeClass="active"
-              to="/Contact"
+              to="Contact"
               spy={true}
               smooth={true}
               offset={-70}
@@ -107,7 +107,7 @@ function Navbar({sections}) {
           </ul>
         </div>
         <div className="md:hidden w-20 mx-4 h-auto object-scale-dow ml-auto">
-          <img src={Logo} className="" />
+          <img src={Logo} />
         </div>
       </div>
       <div className="w-[100%] bg-white hidden fixed mx-auto h-8 md:flex flex-row py-10 justify-center items-center  top-0 left-[50%] translate-x-[-50%] z-[10]">

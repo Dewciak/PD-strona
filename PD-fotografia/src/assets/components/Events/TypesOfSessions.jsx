@@ -33,14 +33,14 @@ function TypesOfSessions() {
           {/* TEKST */}
           <div className="md:w-[50%] w-[70%] md:px-14 mt-6 md:mt-0 mx-auto">
             <h1 className="text-2xl  pb-6 tracking-[5px] font-light text-titleGray text-center md:text-left ">
-              Fotoralacje z wystaw:
+              Fotoralacje z wystaw
             </h1>
             <p className="tracking-[0px] font-[Lora] text-myGray font-normal text-[17px] leading-[28px]">
               Wystawa psów to wydarzenie, któremu towarzyszą niezwykłe emocje,
-              zarówno u psa jak i właściciela. Moim zadaniem jako fotografa jest
-              uchwycenie tych niepowtarzalnych oraz najlepszych momentów.
-              Podczas wystawy istnieje możliwość wykonania ujęć z ringu, a także
-              krótkiej sesji w plenerze.
+              zarówno u psa jak i&nbsp;właściciela. Moim zadaniem jako fotografa
+              jest uchwycenie tych niepowtarzalnych oraz najlepszych momentów.
+              Podczas wystawy istnieje możliwość wykonania ujęć z&nbsp;ringu, a
+              także krótkiej sesji w plenerze.
             </p>
           </div>
         </div>
@@ -52,7 +52,7 @@ function TypesOfSessions() {
           {/* TEKST */}
           <div className="md:w-[50%] w-[70%] md:px-14 mt-6 md:mt-0 mx-auto">
             <h1 className="text-2xl text-center md:text-left  py-6 tracking-[5px] font-light text-titleGray">
-              Fotoralacje z zawodów:
+              Fotoralacje z zawodów
             </h1>
             <p className="tracking-[0px] font-[Lora] text-myGray font-normal text-[17px] leading-[34px]">
               Wykonuje fotorelacje z zawodów z udziałem psów i koni, gdzie
@@ -78,7 +78,7 @@ function TypesOfSessions() {
           ></img>
           <div className="md:w-[50%] w-[70%] md:px-14 mt-6 md:mt-0 mx-auto">
             <h1 className="text-2xl  py-6 tracking-[5px] font-light text-titleGray text-center md:text-left ">
-              Inne wydarzenia:
+              Inne wydarzenia
             </h1>
             <p className="tracking-[0px] font-[Lora] text-myGray font-normal text-[17px] leading-[34px]">
               Organizujesz jakieś wydarzenie w swojej stajni/ na placu

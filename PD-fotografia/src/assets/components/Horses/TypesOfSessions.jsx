@@ -3,7 +3,7 @@ import React from "react";
 import horse1 from "../../images/Horses/plenerowa.webp";
 import horse3 from "../../images/Horses/sprzedazowa.webp";
 import horse4 from "../../images/Horses/czarnetlo.webp";
-import horse2 from "../../images/Dogs/mioty.webp";
+import horse2 from "../../images/Horses/treningowa.webp";
 
 import AOS from "aos";
 import "aos/dist/aos.css";

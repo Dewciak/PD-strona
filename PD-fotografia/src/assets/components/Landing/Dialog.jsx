@@ -1,4 +1,4 @@
-import {useState, useEffect} from "react";
+import {useState, useEffect, useCallback} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faLessThan, faGreaterThan} from "@fortawesome/free-solid-svg-icons";
 
@@ -23,19 +23,20 @@ const GalleryDialog = ({
       return index - 1;
     });
   }
-  function handleKeyDown(event) {
-    if (event.key === "ArrowRight") {
-      showNextImage();
-    } else if (event.key === "ArrowLeft") {
-      showPrevImage();
-    }
-  }
+  const handleKeyDown = useCallback(
+    (event) => {
+      if (event.key === "ArrowRight") {
+        showNextImage();
+      } else if (event.key === "ArrowLeft") {
+        showPrevImage();
+      }
+    },
+    [showNextImage, showPrevImage]
+  );
   useEffect(() => {
-    window.addEventListener("keydown", handleKeyDown, true);
-    console.log("listener");
+    window.addEventListener("keydown", handleKeyDown);
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
-      console.log("istner usutnięty");
     };
   }, []);
 

@@ -80,8 +80,8 @@ function Start() {
               Od zawodów i pokazów po wystawy i szkolenia. Staram się uchwycić
               najlepsze momenty podczas Waszych wspólnych startów, oraz oddać
               towarzyszące Wam emocje. Na moich social mediach regularnie
-              publikuje daty imprez na jakich pojawię się z&nbsp;aparatem,
-              dlatego zachęcam do śledzenia postów na bieżąco.
+              publikuje daty imprez na jakich pojawię się z aparatem, dlatego
+              zachęcam do śledzenia postów na bieżąco.
             </p>
           </div>
           {/* Main dolny tekst ze zdjęciem */}

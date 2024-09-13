@@ -112,22 +112,24 @@ export function UnderlineTabs() {
               </div>
 
               {/* drugi pakiet */}
-              <div className="md:w-[355px] h-[470px] w-[100%] px-6 mx-auto bg-white shadow-md shadow-[#00000035] rounded-[20px] flex flex-col justify-center items-center md:hover:scale-105 duration-500 cursor-default">
-                <h1 className="pt-20 pb-14 mt-4 text-center text-3xl tracking-[5px] font-light text-titleGray">
-                  Pakiet 2
-                </h1>
-                <div className="text-center  font-semibold text-2xl ">
-                  {desc3}
+              {descCount >= 3 && (
+                <div className="md:w-[355px] h-[470px] w-[100%] px-6 mx-auto bg-white shadow-md shadow-[#00000035] rounded-[20px] flex flex-col justify-center items-center md:hover:scale-105 duration-500 cursor-default">
+                  <h1 className="pt-20 pb-14 mt-4 text-center text-3xl tracking-[5px] font-light text-titleGray">
+                    Pakiet 2
+                  </h1>
+                  <div className="text-center  font-semibold text-2xl ">
+                    {desc3}
+                  </div>
+                  <div className="py-10 text-sm text-gray-500 text-center">
+                    {desc4}
+                  </div>
+                  <a href="https://m.me/patrycjadawidfotografia" target="blank">
+                    <button className="mx-auto py-1 px-10 mb-16 text-lg tracking-[4px] font-medium text-titleGray bg-[#F9DFFA] rounded-[50px]">
+                      Umów się
+                    </button>
+                  </a>
                 </div>
-                <div className="py-10 text-sm text-gray-500 text-center">
-                  {desc4}
-                </div>
-                <a href="https://m.me/patrycjadawidfotografia" target="blank">
-                  <button className="mx-auto py-1 px-10 mb-16 text-lg tracking-[4px] font-medium text-titleGray bg-[#F9DFFA] rounded-[50px]">
-                    Umów się
-                  </button>
-                </a>
-              </div>
+              )}
               {/* trzeci pakiet */}
               {descCount >= 5 && (
                 <div className="md:w-[355px] h-[470px] w-[100%] px-6 bg-white  mx-auto shadow-md shadow-[#00000035] rounded-[20px] flex flex-col justify-center items-center md:hover:scale-105 duration-500 cursor-default">

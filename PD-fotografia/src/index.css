@@ -14,12 +14,14 @@
   background-image: url("assets/images/bg3.webp");
   background-size: cover;
   background-repeat: repeat;
+  z-index: "-2";
 }
 
-#Start {
+.Bg {
   /* background-image: url("assets/images/Dogs/ciapki.jpg"); */
   background-image: url("assets/images/bg3.webp");
   background-size: cover;
+  background-repeat: repeat;
 }
 /* .Bg {
   background-image: url("assets/images/bg3.png");
@@ -38,6 +40,33 @@ li::after {
   margin-top: 5px; /* Adjust the space above the border as needed */
   transition: 0.3s;
 }
+
 .active li::after {
   width: 100%; /* This makes the border span the full width of the li element */
+}
+
+@media (max-width: 600px) {
+  .App {
+    /* background-image: url("assets/images/background.jpg"); */
+    background-image: url("assets/images/bg-mobile.webp");
+  }
+}
+
+/* Stylizowanie horyzontalnego scrolla */
+.horizontal-scroll-container {
+  overflow-x: scroll; /* Pojawia się horyzontalny scroll */
+}
+
+/* Stylizowanie poziomego paska przewijania */
+.horizontal-scroll-container::-webkit-scrollbar {
+  height: 9px; /* Szerokość (wysokość) poziomego scrolla */
+}
+
+.horizontal-scroll-container::-webkit-scrollbar-thumb {
+  background-color: rgb(142, 142, 142); /* Kolor przewijaka */
+  border-radius: 6px;
+}
+
+.horizontal-scroll-container::-webkit-scrollbar-track {
+  background: #fdfafa; /* Kolor tła paska przewijania */
 }

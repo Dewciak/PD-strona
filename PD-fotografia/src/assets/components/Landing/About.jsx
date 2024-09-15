@@ -35,7 +35,7 @@ function About() {
 
             <p
               data-aos="slide-right"
-              className="px-6 text-justify tracking-[0px] font-[Lora] text-myGray font-normal text-[17px] leading-[34px]"
+              className="px-6 text-left tracking-[0px] font-[Lora] text-myGray font-normal text-[17px] leading-[34px]"
             >
               Cześć, nazywam się Patrycja Dawid. Swoją pasję do fotografii
               odkryłam w&nbsp;2014 roku dorastając w&nbsp;otoczeniu zwierząt,

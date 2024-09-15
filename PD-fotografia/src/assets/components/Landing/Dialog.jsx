@@ -42,7 +42,7 @@ const GalleryDialog = ({
 
   return (
     <div
-      className="flex absolute flex-col items-start bg-red-500 
+      className="flex absolute flex-col items-start 
         top-0 left-0  w-full h-full "
     >
       <div

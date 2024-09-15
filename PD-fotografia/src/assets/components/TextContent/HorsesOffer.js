@@ -43,7 +43,7 @@ export const sessionsContent = {
   image3: Horse3,
   image4: Horse4,
   header1: "Sesja plenerowa",
-  text1: `Podczas tej sesji mogę wykonać zarówno zdjęcia samego konia jak i uchwycić Was wspólnie.
+  text1: `Podczas tej sesji mogę wykonać zarówno zdjęcia samego konia jak i\u00A0uchwycić Was wspólnie.
               
               Zazwyczaj zdjęcia zajmują nam około 1-1,5 h. To oferta dla osób, które chcą mieć pamiątkę na długie lata.
 
@@ -117,14 +117,8 @@ export const questionsContent = {
 
   text4: `
               Do 10 dni roboczych od wykonania sesji zdjęciowej dostaniesz ode mnie galerię zdjęć do wyboru.
-               
               Pamiętaj, że ostateczny wybór zdjęć należy do Ciebie.
-              
               Do ceny każdej sesji doliczam również koszty dojazdu.
-              
-              Wybrane ujęcia otrzymasz w dwóch formatach - oryginalnym do druku
-              oraz pomniejszonym do publikacji w social mediach 
-              
-              Jeśli potrzebujesz faktury za zdjęcia, nie ma problemu - wystawiam
-              faktury bez VAT.`,
+              Wybrane ujęcia otrzymasz w dwóch formatach - oryginalnym do druku oraz pomniejszonym do publikacji w social mediach 
+              Jeśli potrzebujesz faktury za zdjęcia, nie ma problemu - wystawiam faktury bez VAT.`,
 };

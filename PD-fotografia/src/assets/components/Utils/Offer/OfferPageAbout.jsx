@@ -15,7 +15,7 @@ function OfferPageAbout({
   },
 }) {
   return (
-    <div id="Start" className="mx-auto">
+    <div className="mx-auto">
       <div className="w-[100%] relative z-0 mx-auto">
         <div className="max-w-[1000px] mx-auto md:mt-[610px] mt-[330px] z-[10] relative pt-8">
           {/* Nagłówek fotografia */}
@@ -39,7 +39,7 @@ function OfferPageAbout({
             </p>
           </div>
           {/* Main dolny tekst ze zdjęciem */}
-          <div className="w-full flex md:flex-row flex-col mt-10">
+          <div className="w-full flex md:flex-row flex-col-reverse mt-10">
             <div className="md:w-[60%] px-4 mx-auto">
               <h1 className="pb-8 md:pt-4 md:text-2xl text-3xl text-center md:text-start tracking-[5px] font-light text-titleGray">
                 {aboutHeader0}
@@ -64,7 +64,7 @@ function OfferPageAbout({
               </p>
             </div>
             <img
-              className="md:w-[40%] w-[80%] mx-auto mt-16 md:mt-0 rounded-[15px] px-2"
+              className="md:w-[40%] w-[80%] mx-auto md:mt-0 rounded-[15px] px-2"
               src={aboutImage}
               alt="About Dog"
             />

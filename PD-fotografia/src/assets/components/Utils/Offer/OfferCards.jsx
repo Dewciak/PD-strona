@@ -18,7 +18,7 @@ export function OfferCards({props: data}) {
   return (
     <div
       id="Packages"
-      className="max-w-[1150px] h-[1800px] sm:h-auto  mx-auto md:mt-32 pt-20 z-1 relative  "
+      className="max-w-[1150px]  sm:h-auto  mx-auto md:mt-32 pt-20 z-1 relative  "
     >
       <h1 className="text-5xl  text-center tracking-[5px] font-light text-titleGray">
         Pakiety
@@ -28,10 +28,10 @@ export function OfferCards({props: data}) {
       </p>
       <Tabs value={activeTab}>
         <TabsHeader
-          className=" border-b max-w-[100%] md:max-w-[80%] mx-auto border-blue-gray-50 bg-transparent py-1 rounded-[12px] z-[1]  bg-gradient-to-r from-blue-100 to-[#EBDFFA]"
+          className="horizontal-scroll-container border-b max-w-[97%] md:max-w-[80%] mx-auto border-blue-gray-50 bg-transparent py-2 rounded-[12px] z-[1]  bg-gradient-to-r from-blue-100 to-[#EBDFFA]"
           indicatorProps={{
             className:
-              "w-[90%] mt-1 mx-auto bg-transparent border-b-2 border-gray-600 shadow-none rounded-none ",
+              "w-[90%] mt-1 mx-auto bg-transparent  shadow-none rounded-none ",
           }}
         >
           {data.map(({label, value}) => (

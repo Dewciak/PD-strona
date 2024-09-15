@@ -15,8 +15,8 @@ export const headerContent = {
               towarzyszące Wam emocje. Na moich social mediach regularnie
               publikuje daty imprez na jakich pojawię się z aparatem,
               dlatego zachęcam do śledzenia postów na bieżąco.`,
-  aboutHeader0: `Dlaczego warto wybrać mnie do stworzenia fotorelacji z Waszych
-                zmagań?`,
+  // aboutHeader0: `Dlaczego warto wybrać mnie do stworzenia fotorelacji z Waszych
+  //               zmagań?`,
 
   aboutHeader1: "Uchwycenie akcji",
   aboutText1: `zawody z udziałem zwierząt to często szereg dynamicznych
@@ -45,12 +45,12 @@ export const sessionsContent = {
 
   header2: "Fotoralacje z zawodów",
 
-  text2: `Wykonuje fotorelacje z zawodów z udziałem psów i\u00A0koni, gdzie dynamika, pasja i\u00A0ogromne emocje spotykają się na każdym kroku.
+  text2: `Wykonuje fotorelacje z zawodów z\u00A0udziałem psów i\u00A0koni, gdzie dynamika, pasja i\u00A0ogromne emocje spotykają się na każdym kroku.
           Staram się aby każda fotografia oddawała energię, a\u00A0także skupienie, które towarzyszą tym chwilom.`,
 
   header3: "Inne wydarzenia",
 
-  text3: `Organizujesz jakieś wydarzenie w swojej stajni lub na placu treningowym i chciałbyś mieć profesjonalną relację z jego przebiegu? Napisz do mnie i ustalimy szczegóły.`,
+  text3: `Organizujesz jakieś wydarzenie w\u00A0swojej stajni lub na placu treningowym i chciałbyś mieć profesjonalną relację z jego przebiegu? Napisz do mnie i ustalimy szczegóły.`,
 };
 
 export const cardsContent = [
@@ -89,9 +89,7 @@ export const questionsContent = {
   header4: "Dodatkowe informacje",
   text4: `
               Do 3 dni roboczych od wydarzenia dostaniesz ode mnie galerię zdjęć do wyboru.
-               
               Pamiętaj, że ostateczny wybór zdjęć należy do Ciebie.
-              
               Jeśli potrzebujesz faktury za zdjęcia, nie ma problemu - wystawiam
               faktury bez VAT.`,
 };

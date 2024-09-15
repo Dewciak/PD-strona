@@ -18,14 +18,16 @@ import {aosInnit} from "./assets/Hooks/aosInnit";
 function Dogs() {
   aosInnit();
   return (
-    <div id="Dogs" className="overflow-hidden md:overflow-visible">
+    <div className="overflow-hidden md:overflow-visible">
       <Navbar />
       <ScrollToTop />
       <OfferPageHeader backgroundImage={Bg} />
-      <OfferPageAbout props={headerContent} />
-      <TypesOfSessions props={sessionsContent} />
-      <OfferCards props={cardsContent} />
-      <Questions props={questionsContent} />
+      <div id="Dogs" className="Bg">
+        <OfferPageAbout props={headerContent} />
+        <TypesOfSessions props={sessionsContent} />
+        <OfferCards props={cardsContent} />
+        <Questions props={questionsContent} />
+      </div>
       <Footer />
     </div>
   );

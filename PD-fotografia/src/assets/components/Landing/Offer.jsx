@@ -74,10 +74,10 @@ function Offer() {
           </div>
         </RouterLink>
       </div>
-      <div className=" mx-auto h-auto py-8 mt-20">
+      <div className=" mx-auto h-auto py-8 md:mt-20 mt-4">
         <h2
           data-aos="slide-up"
-          className="mx-auto max-w-[900px] text-center px-6    tracking-[0px] font-[Lora] text-gray-700 font-normal text-[20px] leading-[34px] pb-4 overflow-visible z-4 "
+          className="mx-auto max-w-[900px] text-center px-6 tracking-[0px] font-[Lora] text-gray-700 font-normal text-[20px] leading-[34px] py-8 overflow-visible z-4 "
         >
           Jeśli sesja jaka Cię interesuje nie znajduję się w tej zakładce,
           <br></br>

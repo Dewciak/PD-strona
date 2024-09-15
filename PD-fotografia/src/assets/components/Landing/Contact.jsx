@@ -9,19 +9,19 @@ import {Link as RouterLink} from "react-router-dom";
 
 function Contact() {
   const [isChecked, setIsChecked] = useState(false);
-  const [showHiddenText, setShowHiddenText] = useState(false); // Step 1: New state for hidden text visibility
+  const [showHiddenText, setShowHiddenText] = useState(false);
 
   const handleCheckboxChange = (event) => {
     setIsChecked(event.target.checked);
     if (event.target.checked) {
-      setShowHiddenText(false); // Hide the hidden text when checkbox is checked
+      setShowHiddenText(false);
     }
   };
 
   const handleSubmitClick = (event) => {
     if (!isChecked) {
-      setShowHiddenText(true); // Show the hidden text when submit button is clicked and checkbox is unchecked
-      event.preventDefault(); // Prevent form submission
+      setShowHiddenText(true);
+      event.preventDefault();
     }
   };
 
@@ -29,7 +29,7 @@ function Contact() {
     <div>
       <div
         id="Contact"
-        className="max-w-[850px] flex justify-center flex-col items-center mx-auto mb-0 md:mb-10 md:pt-6 pt-6 pb-4"
+        className="max-w-[850px] flex justify-center flex-col items-center mx-auto mb-0 md:mb-10 md:pt-6 pt-0 pb-4"
       >
         <h1 className="text-5xl md:text-6xl text-center tracking-[5px] font-light text-titleGray">
           Skontaktuj
@@ -112,12 +112,12 @@ function Contact() {
               </div>
             </form>
           </div>
-          <div className="md:w-[50%] md:ml-10 h-full md:mb-6 flex justify-center mx-auto md:pt-20 ">
+          <div className="md:w-[50%] px-4 md:ml-10 h-full md:mb-6 flex justify-center mx-auto md:pt-20 ">
             <ul>
               <a href="https://www.facebook.com/patrycjadawidfotografia?locale=pl_PL">
                 <li className="flex flex-row py-2 items-center space-x-2 text-md ">
                   <img src={Fb} width={40} loading="lazy"></img>
-                  <p className="tracking-[5px] font-normal text-titleGray">
+                  <p className="tracking-[3px] font-normal text-titleGray">
                     Patrycja Dawid Fotografia
                   </p>
                 </li>
@@ -125,7 +125,7 @@ function Contact() {
               <a href="https://m.me/patrycjadawidfotografia">
                 <li className="flex flex-row py-2 items-center space-x-2 text-md">
                   <img src={Mess} width={40} loading="lazy"></img>
-                  <p className="tracking-[5px] font-normal text-titleGray">
+                  <p className="tracking-[3px] font-normal text-titleGray">
                     Patrycja Dawid Fotografia
                   </p>
                 </li>
@@ -133,7 +133,7 @@ function Contact() {
               <a href="https://www.instagram.com/patrycjadfotografia/">
                 <li className="flex flex-row py-2 items-center space-x-2 text-md">
                   <img src={Ig} width={40} loading="lazy"></img>
-                  <p className="tracking-[5px] font-normal text-titleGray">
+                  <p className="tracking-[3px] font-normal text-titleGray">
                     patrycjadfotografia
                   </p>
                 </li>
@@ -141,7 +141,7 @@ function Contact() {
               <a href="mailto:wiktorskid@wp.pl">
                 <li className="flex flex-row py-2 items-center space-x-2 text-md">
                   <img src={Mail} width={40} loading="lazy"></img>
-                  <p className="tracking-[5px] font-normal text-titleGray">
+                  <p className="tracking-[3px] font-normal text-titleGray">
                     patrycjad20@gmail.com
                   </p>
                 </li>

@@ -28,7 +28,7 @@ const Gallery = ({
         sessionTypesButtons={sessionTypesButtons}
       />
 
-      <div className="w-full px-2 py-2 overflow-x-scroll">
+      <div className="horizontal-scroll-container w-[95%] mx-auto px-2 py-2 overflow-x-scroll">
         <div
           className={`grid mb-4 mx-auto  ${columns} items-start justify-center gap-4`}
         >
@@ -41,7 +41,7 @@ const Gallery = ({
               className={`w-full ${
                 showImages ? "animate-fadeIn" : "opacity-0"
               } duration-500 object-cover object-center h-60 rounded-xl hover:scale-105 cursor-pointer`}
-              loading="lazy"
+              // loading="lazy"
               key={key}
             />
           ))}

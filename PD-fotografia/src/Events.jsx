@@ -5,7 +5,7 @@ import OfferPageAbout from "./assets/components/Utils/Offer/OfferPageAbout";
 import TypesOfSessions from "./assets/components/Utils/Offer/TypesOfSessions";
 import Questions from "./Questions";
 import Footer from "./assets/components/Utils/Footer";
-import Bg from "./assets/images/Horses/background.webp";
+import Bg from "./assets/images/Events/background.webp";
 import {OfferCards} from "./assets/components/Utils/Offer/OfferCards";
 import {
   headerContent,

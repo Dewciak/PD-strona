@@ -7,7 +7,7 @@ import Horse4 from "../../images/Horses/czarnetlo.webp";
 export const headerContent = {
   aboutImage: About,
   mainHeader: "Fotografia Koni",
-  mainHeaderDescription: `Czy jeździectwo jest Twoją pasją i chcesz uwiecznić
+  mainHeaderDescription: `Czy jeździectwo jest Twoją pasją i\u00A0chcesz uwiecznić
             niezapomniane chwile spędzone z Twoim końskim przyjacielem?`,
 
   secondHeader: `Zapraszam Cię na sesje jeździeckie, gdzie stworzymy piękne

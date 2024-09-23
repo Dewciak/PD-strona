@@ -7,17 +7,9 @@ import Dogs from "./Dogs.jsx";
 import Horses from "./Horses.jsx";
 import Events from "./Events.jsx";
 import Home from "./Home.jsx";
-
-const PageNotFound = React.lazy(() =>
-  import("./assets/components/Utils/PageNotFound.jsx")
-);
-const PolicyPrivacy = React.lazy(() =>
-  import("./assets/components/Utils/PolicyPrivacy.jsx")
-);
-const Regulations = React.lazy(() =>
-  import("./assets/components/Utils/Regulations.jsx")
-);
-
+import PolicyPrivacy from "./assets/components/Utils/PolicyPrivacy.jsx";
+import Regulations from "./assets/components/Utils/Regulations.jsx";
+import PageNotFound from "./assets/components/Utils/PageNotFound.jsx";
 // Router setup
 const router = createBrowserRouter([
   {
@@ -43,16 +35,8 @@ const router = createBrowserRouter([
   },
   {
     path: "/Polityka-Prywatności",
-    element: (
-      <Suspense fallback={<div>Loading...</div>}>
-        <PolicyPrivacy />
-      </Suspense>
-    ),
-    errorElement: (
-      <Suspense fallback={<div>Loading...</div>}>
-        <PageNotFound />
-      </Suspense>
-    ),
+    element: <PolicyPrivacy />,
+    errorElement: <PageNotFound />,
   },
   {
     path: "/Regulamin-Sesji",
@@ -60,11 +44,7 @@ const router = createBrowserRouter([
     errorElement: <PageNotFound />,
   },
   {
-    errorElement: (
-      <Suspense fallback={<div>Loading...</div>}>
-        <PageNotFound />
-      </Suspense>
-    ),
+    errorElement: <PageNotFound />,
   },
 ]);
 

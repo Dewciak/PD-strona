@@ -52,7 +52,7 @@ function Contact() {
                 <input
                   type="hidden"
                   name="access_key"
-                  value="YOUR_ACCESS_KEY_HERE"
+                  value="5731e935-f338-41a7-9570-165fae0ceacc"
                 ></input>
                 <input
                   type="email"
@@ -86,7 +86,7 @@ function Contact() {
                     onChange={handleCheckboxChange}
                   ></input>
                   <p className="text-xs text-gray-400 tracking-[3px] font-light ">
-                    Oświadczam iż przeczytałem{" "}
+                    Oświadczam iż przeczytałem/am we
                     <RouterLink
                       // to="/PD-strona"
                       to="Polityka-Prywatności"

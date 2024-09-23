@@ -34,7 +34,7 @@ function OfferPageAbout({
             <h1 className="tracking-[5px] font-light bg-gradient-to-r from-blue-400 to-purple-500 inline-block text-transparent bg-clip-text">
               {secondHeader}
             </h1>
-            <p className="mt-6 text-base text-justify tracking-[0px] font-[Lora] text-myGray font-normal text-[17px] leading-[34px]">
+            <p className="mt-6 text-base text-left tracking-[0px] font-[Lora] text-myGray font-normal text-[17px] leading-[34px]">
               {secondHeaderDescription}
             </p>
           </div>
@@ -44,7 +44,7 @@ function OfferPageAbout({
               <h1 className="pb-8 md:pt-4 md:text-2xl text-3xl text-center md:text-start tracking-[5px] font-light text-titleGray">
                 {aboutHeader0}
               </h1>
-              <p className="md:px-6 px-4 text-justify tracking-[0px] font-[Lora] text-myGray font-normal text-[17px] leading-[34px]">
+              <p className="md:px-6 px-4 text-left tracking-[0px] font-[Lora] text-myGray font-normal text-[17px] leading-[34px]">
                 <span className="text-blue-400 font-semibold tracking-[0px] font-[Lora] text-[17px] leading-[34px]">
                   {aboutHeader1}
                 </span>{" "}

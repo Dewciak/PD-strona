@@ -17,8 +17,8 @@ export const headerContent = {
   aboutHeader1: "Indywidualne podejście ",
   aboutText1: `wiem że każdy pies jest wyjątkowy, dlatego też nasza sesja
                 zostanie dostosowana do jego charakteru, temperamentu
-                i&nbsp;ulubionych zajęć. Niezależnie od tego, czy Twój pies jest
-                energicznym psem sportowym czy też spokojnym i&nbsp;wylegującym
+                ulubionych zajęć. Niezależnie od tego, czy Twój pies jest
+                energicznym psem sportowym czy też spokojnym wylegującym
                 się futrzakiem, uchwycenie jego osobowości nie będzie stanowiło
                 dla mnie problemu`,
   aboutHeader2: "Bezpieczeństwo",
@@ -36,19 +36,17 @@ export const sessionsContent = {
   image3: Dog3,
   image4: Dog4,
   header1: "Sesja plenerowa",
-  text1: `Podczas tej sesji mogę wykonać zarówno zdjęcia samego psa jak i uchwycić Wasze wspólne chwile.
+  text1: `Podczas tej sesji mogę wykonać zarówno zdjęcia samego psa jak i\u00A0uchwycić Wasze wspólne chwile.
               Zazwyczaj zdjęcia zajmują nam około 1-1,5 h. To oferta dla osób, które chcą mieć pamiątkę na długie lata pod postacią zdjęć ukazujących osobowość i charakter swojego psa.
               Podczas sesji wspólnie wybieramy miejsce gdzie będziemy fotografować, tak by Twój pupil czuł się komfortowo.`,
   header2: "Sesja eksterierowa",
   text2: `Jest to idealny wybór jeśli potrzebujesz zapowiedzi miotu, reklamy reproduktora czy po prostu chcesz podkreślić atuty Twojego psa.
   Sesja trwa do czasu uzyskania najlepszych ujęć z\u00A0uwzględnieniem zmęczenia psiego modela :)`,
   header3: "Sesja treningowa",
-  text3: `Sesja zdjęciowa z treningu psa to doskonała okazja do uwiecznienia Waszych postępów i zaangażowania w\u00A0treningu. 
-  Oglądanie zdjęć z treningu może pomóc Ci zauważyć i\u00A0docenić osiągnięcia Twojego psa i\u00A0dodatkowo zmotywuje Was do dalszego rozwoju.`,
+  text3: `Sesja zdjęciowa z treningu psa to doskonała okazja do uwiecznienia Waszych postępów i zaangażowania w\u00A0treningu. Oglądanie zdjęć z treningu może pomóc Ci zauważyć i\u00A0docenić osiągnięcia Twojego psa i\u00A0dodatkowo zmotywuje Was do dalszego rozwoju.`,
   header4: "Sesja miotów",
-  text4: `Jeśli w Twojej hodowli urodziły się szczenięta warto zrobić im sesje zdjęciową. 
-              Zdjęcia możemy wykonać zarówno w domu jak i\u00A0ogrodzie. 
-              Dostępne mam odpowiednie akcesoria oraz niewielkie przenośne studio, które zabieram ze sobą kiedy nie możemy robić zdjęć na zewnątrz :)`,
+  text4: `Jeśli w Twojej hodowli urodziły się szczenięta warto zrobić im sesje zdjęciową. Zdjęcia możemy wykonać zarówno w domu jak i\u00A0ogrodzie. 
+              Dostępne mam odpowiednie akcesoria oraz niewielkie przenośne studio, które zabieram ze sobą kiedy nie możemy robić zdjęć na zewnątrz\u00A0:)`,
 };
 
 export const cardsContent = [

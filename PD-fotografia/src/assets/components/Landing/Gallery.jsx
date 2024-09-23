@@ -41,7 +41,7 @@ const Gallery = ({
               className={`w-full ${
                 showImages ? "animate-fadeIn" : "opacity-0"
               } duration-500 object-cover object-center h-60 rounded-xl hover:scale-105 cursor-pointer`}
-              // loading="lazy"
+              loading="lazy"
               key={key}
             />
           ))}

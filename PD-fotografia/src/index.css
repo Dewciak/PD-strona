@@ -9,6 +9,7 @@
   font-family: Montserrat;
   font-weight: 500;
 }
+
 .App {
   /* background-image: url("assets/images/background.jpg"); */
   background-image: url("assets/images/bg3.webp");
@@ -47,8 +48,13 @@ li::after {
 
 @media (max-width: 600px) {
   .App {
-    /* background-image: url("assets/images/background.jpg"); */
-    background-image: url("assets/images/bg-mobile.webp");
+    background-image: url("assets/images/bg-mobile2.webp");
+  }
+  .Bg {
+    /* background-image: url("assets/images/Dogs/ciapki.jpg"); */
+    background-image: url("assets/images/bg-mobile2.webp");
+    background-size: cover;
+    background-repeat: repeat;
   }
 }
 
@@ -64,7 +70,7 @@ li::after {
 
 .horizontal-scroll-container::-webkit-scrollbar-thumb {
   background-color: rgb(142, 142, 142); /* Kolor przewijaka */
-  border-radius: 6px;
+  border-radius: 50px;
 }
 
 .horizontal-scroll-container::-webkit-scrollbar-track {

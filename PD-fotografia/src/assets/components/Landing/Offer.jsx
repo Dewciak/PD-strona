@@ -79,7 +79,7 @@ function Offer() {
           data-aos="slide-up"
           className="mx-auto max-w-[900px] text-center px-6 tracking-[0px] font-[Lora] text-gray-700 font-normal text-[20px] leading-[34px] py-8 overflow-visible z-4 "
         >
-          Jeśli sesja jaka Cię interesuje nie znajduję się w tej zakładce,
+          Jeśli sesja jaka Cię interesuje nie znajduje się w tej zakładce,
           <br></br>
           napisz do mnie, a na pewno razem coś wymyślimy :)
         </h2>

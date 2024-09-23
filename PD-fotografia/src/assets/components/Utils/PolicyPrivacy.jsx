@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "./NavbarLink";
 
 import Footer from "./Footer";
-import { Link as RouterLink } from "react-router-dom";
+import {Link as RouterLink} from "react-router-dom";
 
 function PolicyPrivacy() {
   return (
@@ -24,7 +24,7 @@ function PolicyPrivacy() {
             1. Polityka prywatności określa, jak zbierane, przetwarzane i
             przechowywane są dane osobowe Użytkowników niezbędne do świadczenia
             usług drogą elektroniczną za pośrednictwem serwisu internetowego
-            patrycjadawid.com
+            patrycjdfotografia.pl
             <br />
             <br />
             2. Serwis zbiera tylko dane osobowe niezbędne do świadczenia i
@@ -64,8 +64,8 @@ function PolicyPrivacy() {
           <h1 class="text-2xl font-bold text-center">§.2 Hosting</h1>
           <br />
           <p>
-            Serwis jest hostowany na serwerach operatora ……….., a domena
-            utrzymywana na ……. .
+            Serwis oraz domena jest hostowany na serwerach operatora
+            hostinger.com.
           </p>
           <br />
           <h1 class="text-2xl font-bold text-center">

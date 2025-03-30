@@ -1,19 +1,17 @@
-import ReactDOM from "react-dom/client";
-import React, {Suspense} from "react";
-import "./index.css";
 import {ThemeProvider} from "@material-tailwind/react";
+import React from "react";
+import ReactDOM from "react-dom/client";
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import Dogs from "./Dogs.jsx";
-import Horses from "./Horses.jsx";
 import Events from "./Events.jsx";
 import Home from "./Home.jsx";
+import Horses from "./Horses.jsx";
+import PageNotFound from "./assets/components/Utils/PageNotFound.jsx";
 import PolicyPrivacy from "./assets/components/Utils/PolicyPrivacy.jsx";
 import Regulations from "./assets/components/Utils/Regulations.jsx";
-import PageNotFound from "./assets/components/Utils/PageNotFound.jsx";
-// Router setup
+import "./index.css";
 const router = createBrowserRouter([
   {
-    // path: "/PD-strona",
     path: "/",
     element: <Home />,
     errorElement: <PageNotFound />,
@@ -48,7 +46,6 @@ const router = createBrowserRouter([
   },
 ]);
 
-// Render the application
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ThemeProvider>

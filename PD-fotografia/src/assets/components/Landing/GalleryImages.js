@@ -28,7 +28,6 @@ import dog27 from "../../images/Gallery/Dogs/27.webp";
 import dog28 from "../../images/Gallery/Dogs/28.webp";
 import dog29 from "../../images/Gallery/Dogs/29.webp";
 import dog30 from "../../images/Gallery/Dogs/30.webp";
-// import dog31 from "../../images/Gallery/Dogs/31.webp";
 import dog31 from "../../images/Gallery/Dogs/32.webp";
 import dog32 from "../../images/Gallery/Dogs/33.webp";
 

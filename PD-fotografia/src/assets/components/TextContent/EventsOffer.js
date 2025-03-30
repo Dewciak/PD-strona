@@ -10,7 +10,7 @@ export const headerContent = {
 
   secondHeader: `Moja pasja do zwierząt prowadzi mnie w podróż przez wyjątkowe
               wydarzenia, na których głównym tematem są psy i konie.`,
-  secondHeaderDescription: `Od zawodów i pokazów po wystawy i szkolenia. Staram się uchwycić
+  secondHeaderDescription: `Od zawodów i pokazów po wystawy i\u00A0szkolenia. Staram się uchwycić
               najlepsze momenty podczas Waszych wspólnych startów, oraz oddać
               towarzyszące Wam emocje. Na moich social mediach regularnie
               publikuje daty imprez na jakich pojawię się z aparatem,
@@ -39,9 +39,9 @@ export const sessionsContent = {
   image3: Event3,
   image4: Event3,
   header1: "Fotoralacje z wystaw",
-  text1: `Wystawa psów to wydarzenie, któremu towarzyszą niezwykłe emocje, zarówno u psa jak i właściciela. 
+  text1: `Wystawa psów to wydarzenie, któremu towarzyszą niezwykłe emocje, zarówno u psa jak i\u00A0właściciela. 
   Moim zadaniem jako fotografa jest uchwycenie tych niepowtarzalnych oraz najlepszych momentów.
-  Podczas wystawy istnieje możliwość wykonania ujęć z&nbsp;ringu, a także krótkiej sesji w plenerze.`,
+  Podczas wystawy istnieje możliwość wykonania ujęć z\u00A0ringu, a także krótkiej sesji w plenerze.`,
 
   header2: "Fotoralacje z zawodów",
 

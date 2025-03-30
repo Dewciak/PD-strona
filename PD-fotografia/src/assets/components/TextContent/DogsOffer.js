@@ -43,7 +43,7 @@ export const sessionsContent = {
   text2: `Jest to idealny wybór jeśli potrzebujesz zapowiedzi miotu, reklamy reproduktora czy po prostu chcesz podkreślić atuty Twojego psa.
   Sesja trwa do czasu uzyskania najlepszych ujęć z\u00A0uwzględnieniem zmęczenia psiego modela :)`,
   header3: "Sesja treningowa",
-  text3: `Sesja zdjęciowa z treningu psa to doskonała okazja do uwiecznienia Waszych postępów i zaangażowania w\u00A0treningu. Oglądanie zdjęć z treningu może pomóc Ci zauważyć i\u00A0docenić osiągnięcia Twojego psa i\u00A0dodatkowo zmotywuje Was do dalszego rozwoju.`,
+  text3: `Sesja zdjęciowa z treningu psa to doskonała okazja do uwiecznienia Waszych postępów i zaangażowania w\u00A0treningu. Oglądanie zdjęć z\u00A0treningu może pomóc Ci zauważyć i\u00A0docenić osiągnięcia Twojego psa i\u00A0dodatkowo zmotywuje Was do dalszego rozwoju.`,
   header4: "Sesja miotów",
   text4: `Jeśli w Twojej hodowli urodziły się szczenięta warto zrobić im sesje zdjęciową. Zdjęcia możemy wykonać zarówno w domu jak i\u00A0ogrodzie. 
               Dostępne mam odpowiednie akcesoria oraz niewielkie przenośne studio, które zabieram ze sobą kiedy nie możemy robić zdjęć na zewnątrz\u00A0:)`,

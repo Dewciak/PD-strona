@@ -26,7 +26,7 @@ export const headerContent = {
   aboutHeader2: "Pasja i zrozumienie jego natury",
   aboutText2: `uchwycenie piękna i charakteru Waszego konia
                 w aparacie wymaga nie tylko umiejętności technicznych, ale
-                również wyczucia, pasji i zrozumienia jego natury. Każde
+                również wyczucia, pasji\u00A0i\u00A0zrozumienia jego natury. Każde
                 zdjęcie, które tworzę, jest efektem długich lat obserwowania
                 końskich zachowań, a także darzenia ich ogromnym
                 szacunkiem.`,
@@ -34,7 +34,7 @@ export const headerContent = {
   aboutHeader3: "Przedstawienie koni w naturalny sposób",
   aboutText3: `jest to dla mnie szczególnie ważne aby podkreślić ich piękno bez
                 zbędnego retuszu. Dlatego też staram się fotografować je
-                w naturalnym środowisku, gdzie mogą pokazać w&nbsp;pełni
+                w naturalnym środowisku, gdzie mogą pokazać w\u00A0pełni
                 swój charakter.`,
 };
 export const sessionsContent = {

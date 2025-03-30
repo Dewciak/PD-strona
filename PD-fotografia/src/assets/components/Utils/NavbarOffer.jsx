@@ -28,8 +28,8 @@ function Navbar() {
         <div
           className={
             nav
-              ? "w-[60%] fixed left-0 top-0 h-screen bg-blue-100 flex justify-center items-center ease-in-out duration-500 z-[5]"
-              : "fixed left-[-60%] w-[60%] top-0 h-screen bg-blue-200 flex justify-center items-center ease-in-out duration-500 z-[5]"
+              ? "w-[60%] fixed left-0 top-0 h-screen bg-[#d5f1fa] flex justify-center items-center ease-in-out duration-500 z-[5]"
+              : "fixed left-[-60%] w-[60%] top-0 h-screen bg-[#d5f1fa] flex justify-center items-center ease-in-out duration-500 z-[5]"
           }
         >
           <ul className="z-10 text-black m-4 md:flex flex-row gap-x-16 items-center cursor-pointer">

@@ -11,7 +11,6 @@
 }
 
 .App {
-  /* background-image: url("assets/images/background.jpg"); */
   background-image: url("assets/images/bg3.webp");
   background-size: cover;
   background-repeat: repeat;
@@ -19,31 +18,26 @@
 }
 
 .Bg {
-  /* background-image: url("assets/images/Dogs/ciapki.jpg"); */
   background-image: url("assets/images/bg3.webp");
   background-size: cover;
   background-repeat: repeat;
 }
-/* .Bg {
-  background-image: url("assets/images/bg3.png");
 
-  background-size: cover;
-} */
 .active li {
   color: #5da9e7;
 }
 
 li::after {
   width: 0%;
-  content: ""; /* This is necessary for the pseudo-element to be generated */
-  display: block; /* This makes the pseudo-element behave like a block-level element */
-  border-bottom: 2.5px solid #5da9e7; /* Adjust the width and color as needed */
-  margin-top: 5px; /* Adjust the space above the border as needed */
+  content: "";
+  display: block;
+  border-bottom: 2.5px solid #5da9e7;
+  margin-top: 5px;
   transition: 0.3s;
 }
 
 .active li::after {
-  width: 100%; /* This makes the border span the full width of the li element */
+  width: 100%;
 }
 
 @media (max-width: 600px) {
@@ -51,28 +45,25 @@ li::after {
     background-image: url("assets/images/bg-mobile2.webp");
   }
   .Bg {
-    /* background-image: url("assets/images/Dogs/ciapki.jpg"); */
     background-image: url("assets/images/bg-mobile2.webp");
     background-size: cover;
     background-repeat: repeat;
   }
 }
 
-/* Stylizowanie horyzontalnego scrolla */
 .horizontal-scroll-container {
-  overflow-x: scroll; /* Pojawia się horyzontalny scroll */
+  overflow-x: auto;
 }
 
-/* Stylizowanie poziomego paska przewijania */
 .horizontal-scroll-container::-webkit-scrollbar {
-  height: 9px; /* Szerokość (wysokość) poziomego scrolla */
+  height: 9px;
 }
 
 .horizontal-scroll-container::-webkit-scrollbar-thumb {
-  background-color: rgb(142, 142, 142); /* Kolor przewijaka */
+  background-color: rgb(142, 142, 142);
   border-radius: 50px;
 }
 
 .horizontal-scroll-container::-webkit-scrollbar-track {
-  background: #fdfafa; /* Kolor tła paska przewijania */
+  background: #fdfafa;
 }

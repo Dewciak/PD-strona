@@ -1,8 +1,7 @@
 import React, {useState} from "react";
-import {Link} from "react-scroll";
-import Gallery from "./Gallery";
 import GalleryDialog from "./Dialog";
-import {dogs, horses, events} from "./GalleryImages";
+import Gallery from "./Gallery";
+import {dogs, events, horses} from "./GalleryImages";
 function Portfolio() {
   const [showDialog, setShowDialog] = useState(false);
   const [sessionType, setSessionType] = useState(dogs);

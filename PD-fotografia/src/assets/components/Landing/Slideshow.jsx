@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, {useState, useEffect, useRef} from "react";
 
-const Slideshow = ({ slides, delay = 0, initialDelay = 0 }) => {
+const Slideshow = ({slides, delay = 0, initialDelay = 0, width, height}) => {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
   const intervalRef = useRef(null);
   const timeoutRef = useRef(null);
@@ -10,9 +10,7 @@ const Slideshow = ({ slides, delay = 0, initialDelay = 0 }) => {
       timeoutRef.current = setTimeout(() => {
         intervalRef.current = setInterval(() => {
           if (document.visibilityState === "visible") {
-            setCurrentSlideIndex(
-              (prevIndex) => (prevIndex + 1) % slides.length
-            );
+            setCurrentSlideIndex((prevIndex) => (prevIndex + 1) % slides.length);
           }
         }, delay);
       }, initialDelay);
@@ -38,7 +36,7 @@ const Slideshow = ({ slides, delay = 0, initialDelay = 0 }) => {
   }, [slides, delay, initialDelay]);
 
   return (
-    <div className="relative w-full h-full flex justify-center items-center">
+    <div className={`relative flex justify-center items-center w-[${width}]  h-[${height}]`}>
       {slides.map((slide, index) => (
         <img
           key={index}

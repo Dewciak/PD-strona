@@ -24,7 +24,7 @@ function Contact() {
   };
 
   return (
-    <section id='Contact' className='max-w-[850px] flex flex-col items-center mx-auto md:mb-10 md:pt-6 pt-0 pb-4'>
+    <section id='contact' className='max-w-[850px] flex flex-col items-center mx-auto md:mb-10 md:pt-6 pt-0 pb-4'>
       <header className='text-center'>
         <h1 className='text-5xl md:text-6xl tracking-[5px] font-light text-titleGray'>Skontaktuj</h1>
         <h2 className='text-2xl tracking-[5px] font-light bg-gradient-to-r from-blue-400 to-purple-400 text-transparent bg-clip-text md:mt-0'>

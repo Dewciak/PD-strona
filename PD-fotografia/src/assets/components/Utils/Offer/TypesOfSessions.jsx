@@ -4,7 +4,7 @@ function TypesOfSessions({
   props: {image1, image2, image3, image4, header1, text1, header2, text2, header3, text3, header4, text4},
 }) {
   return (
-    <div id='Sessions' className='max-w-[1100px] flex flex-col justify-center items-center mx-auto relative '>
+    <div id='sesje' className='max-w-[1100px] flex flex-col justify-center items-center mx-auto relative '>
       {/* HEADER */}
       <h1 className='text-center py-16 text-4xl tracking-[5px] font-light text-titleGray'>Rodzaje sesji</h1>
       <div className='w-full flex flex-col justify-center items-center mx-auto md:space-y-28 space-y-6'>

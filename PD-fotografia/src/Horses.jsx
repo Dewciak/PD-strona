@@ -14,9 +14,26 @@ import ScrollToTop from "./assets/components/Utils/ScrollToTop";
 import {aosInnit} from "./assets/Hooks/aosInnit";
 import Bg from "./assets/images/Horses/background.webp";
 import Questions from "./Questions";
+import {useEffect} from "react";
 
 function Horses() {
   aosInnit();
+
+  useEffect(() => {
+    const hash = window.location.hash.substring(1);
+    if (hash) {
+      const element = document.getElementById(hash);
+      if (element) {
+        setTimeout(() => {
+          window.scrollTo({
+            top: element.offsetTop - 70,
+            behavior: "smooth",
+          });
+        }, 100);
+      }
+    }
+  }, []);
+
   return (
     <div className=' overflow-hidden md:overflow-visible'>
       <Navbar />

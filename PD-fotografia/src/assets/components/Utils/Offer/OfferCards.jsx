@@ -9,7 +9,7 @@ export function OfferCards({props: data}) {
 
   const descCount = Object.keys(currentTabData).filter((key) => key.startsWith("desc")).length;
   return (
-    <section id='Packages' className='max-w-[1150px]  sm:h-auto  mx-auto md:mt-32 pt-20 z-1 relative  '>
+    <section id='pakiety' className='max-w-[1150px]  sm:h-auto  mx-auto md:mt-32 pt-20 z-1 relative  '>
       <h2 className='text-5xl  text-center tracking-[5px] font-light text-titleGray'>Pakiety</h2>
       <h3 className='text-center text-gray-500 text-semibold pt-2  pb-[50px] text-3xl tracking-[5px] font-light '>
         sesja

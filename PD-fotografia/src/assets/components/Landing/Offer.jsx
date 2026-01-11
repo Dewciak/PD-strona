@@ -14,7 +14,7 @@ const offers = [
 
 function Offer() {
   return (
-    <section id='Offer' className='max-w-[1050px] justify-center mx-auto flex flex-col md:mt-[60px] md:pt-0 mt-[50px]'>
+    <section id='offer' className='max-w-[1050px] justify-center mx-auto flex flex-col md:mt-[60px] md:pt-0 mt-[50px]'>
       <h2 className='text-center md:text-6xl text-6xl pb-4 mx-auto tracking-[5px] font-light text-titleGray'>Oferta</h2>
       <div className='flex flex-col lg:flex-row gap-y-8 gap-x-8 mt-14 mx-auto'>
         {offers.map((offer, index) => (

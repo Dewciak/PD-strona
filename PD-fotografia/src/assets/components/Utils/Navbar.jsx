@@ -1,16 +1,15 @@
 import {useState, useEffect} from "react";
 import {IoMenu} from "react-icons/io5";
 import {AiOutlineClose} from "react-icons/ai";
-import {Link} from "react-scroll";
 import {Link as RouterLink} from "react-router-dom";
 import Logo from "../../images/nav-logo.png";
 
 // Navigation items
 const navItems = [
-  {id: "About", label: "O mnie"},
-  {id: "Portfolio", label: "Portfolio"},
-  {id: "Offer", label: "Oferta"},
-  {id: "Contact", label: "Kontakt"},
+  {id: "about", label: "O mnie"},
+  {id: "portfolio", label: "Portfolio"},
+  {id: "offer", label: "Oferta"},
+  {id: "contact", label: "Kontakt"},
 ];
 
 function Navbar({sections}) {
@@ -22,7 +21,7 @@ function Navbar({sections}) {
 
   // Handle scroll-based active link highlighting
   useEffect(() => {
-    const navLinks = document.querySelectorAll("ul li a");
+    const navLinks = document.querySelectorAll("ul li[data-id]");
 
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
@@ -35,7 +34,7 @@ function Navbar({sections}) {
         if (scrollPosition >= sectionOffset && scrollPosition < sectionOffset + sectionHeight) {
           navLinks.forEach((link) => {
             link.classList.remove("active");
-            if (link.getAttribute("href") === `#${sectionId}`) {
+            if (link.getAttribute("data-id") === sectionId) {
               link.classList.add("active");
             }
           });
@@ -47,9 +46,39 @@ function Navbar({sections}) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [sections]);
 
-  const NavItem = ({item, mobile = false, onClick = null}) => (
-    <Link activeClass='active' to={item.id} spy={true} smooth={true} offset={-70} duration={500} onClick={onClick}>
+  // Handle initial scroll to hash on page load
+  useEffect(() => {
+    const hash = window.location.hash.substring(1);
+    if (hash) {
+      const element = document.getElementById(hash);
+      if (element) {
+        setTimeout(() => {
+          window.scrollTo({
+            top: element.offsetTop - 70,
+            behavior: "smooth",
+          });
+        }, 100);
+      }
+    }
+  }, []);
+
+  const NavItem = ({item, mobile = false, onClick = null}) => {
+    const handleClick = () => {
+      const element = document.getElementById(item.id);
+      if (element) {
+        window.scrollTo({
+          top: element.offsetTop - 70,
+          behavior: "smooth",
+        });
+        window.location.hash = item.id;
+      }
+      if (onClick) onClick();
+    };
+
+    return (
       <li
+        data-id={item.id}
+        onClick={handleClick}
         className={
           mobile
             ? "text-2xl p-4 font-light tracking-[5px] text-titleGray"
@@ -58,8 +87,8 @@ function Navbar({sections}) {
       >
         {item.label}
       </li>
-    </Link>
-  );
+    );
+  };
 
   return (
     <div className='w-full h-auto bg-transparent'>

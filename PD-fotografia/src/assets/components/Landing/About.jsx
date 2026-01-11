@@ -10,7 +10,7 @@ import horse2 from "../../images/AboutMe/horse2.jpg";
 function About() {
   const myAnimals = [Dog1, Dog2, horse1, horse2];
   return (
-    <section id='About' className='max-w-[1050px] h-auto  mx-auto md:pt-24 mt-10 overflow-hidden  shadow-[#0000000d]'>
+    <section id='about' className='max-w-[1050px] h-auto  mx-auto md:pt-24 mt-10 overflow-hidden  shadow-[#0000000d]'>
       <div className='w-full text-center '>
         <h1 className='md:text-5xl text-4xl mt-10 md:mt-0 tracking-[5px] font-light'>Profesjonalna</h1>
         <h2 className='md:text-xl text-xl md:py-4 py-2 mb-4 tracking-[5px] font-light text-gray-500  text-[17px] leading-[34px] '>

@@ -3,6 +3,10 @@
 @tailwind utilities;
 @import "~@fortawesome/fontawesome-free/scss/all.scss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   letter-spacing: 2.3px;
   color: rgb(38, 50, 56);

@@ -25,7 +25,7 @@ function OfferPageAbout({
             {mainHeaderDescription}
           </h3>
           <section
-            id='About'
+            id='o-mnie'
             className='mx-auto flex py-6 flex-col text-lg tracking-wide md:w-[970px] w-[80%] md:mt-12 mt-6'
           >
             <h2 className='tracking-[5px] font-light bg-gradient-to-r from-blue-400 to-purple-500 inline-block text-transparent bg-clip-text'>

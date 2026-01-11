@@ -8,9 +8,9 @@ import Logo from "../../images/nav-logo.png";
 
 // Navigation items
 const NAV_ITEMS = [
-  {id: "About", label: "O sesji", mobileTo: "Portfolio"},
-  {id: "Sessions", label: "Rodzaje sesji", mobileTo: "Offer"},
-  {id: "Packages", label: "Pakiety", mobileTo: "Contact"},
+  {id: "o-mnie", label: "O sesji", mobileTo: "o-mnie"},
+  {id: "sesje", label: "Rodzaje sesji", mobileTo: "sesje"},
+  {id: "pakiety", label: "Pakiety", mobileTo: "pakiety"},
   {id: "FAQ", label: "FAQ", mobileHide: true},
 ];
 
@@ -26,7 +26,7 @@ function Navbar() {
     <RouterLink
       to='/'
       onClick={() => {
-        window.scrollTo(0, 0);
+        window.scrollTo({ top: 0, behavior: "smooth" });
         if (mobile) toggleMobileMenu();
       }}
       className='flex flex-row items-center justify-start space-x-1'
@@ -53,7 +53,10 @@ function Navbar() {
       smooth={true}
       offset={-70}
       duration={500}
-      onClick={mobile ? toggleMobileMenu : undefined}
+      onClick={() => {
+        window.location.hash = item.id;
+        if (mobile) toggleMobileMenu();
+      }}
     >
       <li
         className={

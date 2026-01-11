@@ -14,16 +14,32 @@ import {
   questionsContent,
 } from "./assets/components/TextContent/EventsOffer";
 import {aosInnit} from "./assets/Hooks/aosInnit";
+import {useEffect} from "react";
 
 function Events() {
   aosInnit();
 
+  useEffect(() => {
+    const hash = window.location.hash.substring(1);
+    if (hash) {
+      const element = document.getElementById(hash);
+      if (element) {
+        setTimeout(() => {
+          window.scrollTo({
+            top: element.offsetTop - 70,
+            behavior: "smooth",
+          });
+        }, 100);
+      }
+    }
+  }, []);
+
   return (
-    <div className=" overflow-hidden md:overflow-visible">
+    <div className=' overflow-hidden md:overflow-visible'>
       <Navbar />
       <ScrollToTop />
       <OfferPageHeader backgroundImage={Bg} />
-      <div className="Bg">
+      <div className='Bg'>
         <OfferPageAbout props={headerContent} />
         <TypesOfSessions props={sessionsContent} />
         <OfferCards props={cardsContent} />

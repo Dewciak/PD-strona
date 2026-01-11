@@ -59,12 +59,12 @@ function HeroRightSide() {
   return (
     <div className='  w-[100%] max-w-[480px] px-4 md:w-[50%] md:max-w-[480px] h-[400px]  md:ml-auto mx-auto'>
       <div className='w-[100%] h-[180px] flex flex-row items-end'>
-        <Slideshow slides={slides[0]} delay='10000' initialDelay='2000' width={"70%"} height={"150px"} />
-        <Slideshow slides={slides[1]} delay='10000' initialDelay='6000' width={"30%"} height={"100%"} />
+        <Slideshow slides={slides[0]} delay={10000} initialDelay={2000} width={"70%"} height={"150px"} />
+        <Slideshow slides={slides[1]} delay={10000} initialDelay={6000} width={"30%"} height={"100%"} />
       </div>
       <div className='w-[100%] h-[180px]  flex flex-row'>
-        <Slideshow slides={slides[2]} delay='10000' initialDelay='8000' width={"135px"} height={"180px"} />
-        <Slideshow slides={slides[3]} delay='10000' initialDelay='4000' width={"70%"} height={"150px"} />
+        <Slideshow slides={slides[2]} delay={10000} initialDelay={8000} width={"135px"} height={"180px"} />
+        <Slideshow slides={slides[3]} delay={10000} initialDelay={4000} width={"70%"} height={"150px"} />
       </div>
     </div>
   );

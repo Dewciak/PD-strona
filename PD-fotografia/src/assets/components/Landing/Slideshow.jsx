@@ -12,8 +12,8 @@ const Slideshow = ({slides, delay = 0, initialDelay = 0, width, height}) => {
           if (document.visibilityState === "visible") {
             setCurrentSlideIndex((prevIndex) => (prevIndex + 1) % slides.length);
           }
-        }, delay);
-      }, initialDelay);
+        }, Number(delay));
+      }, Number(initialDelay));
     };
 
     const handleVisibilityChange = () => {
@@ -36,7 +36,7 @@ const Slideshow = ({slides, delay = 0, initialDelay = 0, width, height}) => {
   }, [slides, delay, initialDelay]);
 
   return (
-    <div className={`relative flex justify-center items-center w-[${width}]  h-[${height}]`}>
+    <div className='relative flex justify-center items-center' style={{width, height}}>
       {slides.map((slide, index) => (
         <img
           key={index}

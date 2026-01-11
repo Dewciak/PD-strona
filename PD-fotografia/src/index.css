@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import "~@fortawesome/fontawesome-free/scss/all.scss";
 
 html {
   scroll-behavior: smooth;

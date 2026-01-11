@@ -26,7 +26,7 @@ function Navbar() {
     <RouterLink
       to='/'
       onClick={() => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
+        window.scrollTo({top: 0, behavior: "smooth"});
         if (mobile) toggleMobileMenu();
       }}
       className='flex flex-row items-center justify-start space-x-1'

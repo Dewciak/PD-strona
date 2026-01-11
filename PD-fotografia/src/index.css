@@ -71,3 +71,36 @@ li::after {
 .horizontal-scroll-container::-webkit-scrollbar-track {
   background: #fdfafa;
 }
+
+.calendar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.day {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.is-free {
+  background-color: green;
+  color: white;
+}
+
+.is-occupied {
+  background-color: red;
+  color: white;
+}

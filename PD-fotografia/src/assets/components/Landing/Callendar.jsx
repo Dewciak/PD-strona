@@ -1,28 +1,9 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import {DayPicker} from "react-day-picker";
-import {parse} from "date-fns";
-import {pl} from "date-fns/locale"; // Poprawny import zamiast require
+import {pl} from "date-fns/locale";
 import "react-day-picker/dist/style.css";
 
-const BookingCalendar = () => {
-  const [bookedDates, setBookedDates] = useState([]);
-
-  useEffect(() => {
-    // Adres Twojego API
-    fetch(
-      "http://wordpress-wcc8484kcwwsww40ko00ccwc.49.12.2.146.sslip.io/wp-json/wp/v2/posts?categories=7&per_page=100"
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        const dates = data
-          .map((post) => post.acf?.kalendarz) // ACF Name to 'kalendarz'
-          .filter(Boolean)
-          .map((dateStr) => parse(dateStr, "yyyyMMdd", new Date()));
-        setBookedDates(dates);
-      })
-      .catch((err) => console.error("Błąd pobierania:", err));
-  }, []);
-
+const Callendar = ({bookedDates, selectedDate, onSelectDate}) => {
   // Stylizacja zajętych dni
   const modifiers = {booked: bookedDates};
   const modifiersStyles = {
@@ -37,11 +18,13 @@ const BookingCalendar = () => {
   return (
     <div className='calendar-card'>
       <DayPicker
-        mode='multiple'
-        selected={bookedDates}
+        mode='single'
+        selected={selectedDate}
+        onSelect={onSelectDate}
+        disabled={bookedDates}
         modifiers={modifiers}
         modifiersStyles={modifiersStyles}
-        locale={pl} // Użycie zaimportowanego locale
+        locale={pl}
       />
 
       <div className='legend'>
@@ -80,4 +63,4 @@ const BookingCalendar = () => {
   );
 };
 
-export default BookingCalendar;
+export default Callendar;

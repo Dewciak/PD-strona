@@ -1,5 +1,6 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import {Link as RouterLink} from "react-router-dom";
+import {parse} from "date-fns";
 
 import Callendar from "./Callendar";
 import Socials from "./Socials";
@@ -7,6 +8,23 @@ import Socials from "./Socials";
 function Contact() {
   const [isChecked, setIsChecked] = useState(false);
   const [showHiddenText, setShowHiddenText] = useState(false);
+  const [bookedDates, setBookedDates] = useState([]);
+  const [selectedDate, setSelectedDate] = useState(null);
+
+  useEffect(() => {
+    fetch(
+      "http://wordpress-wcc8484kcwwsww40ko00ccwc.49.12.2.146.sslip.io/wp-json/wp/v2/posts?categories=7&per_page=100"
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        const dates = data
+          .map((post) => post.acf?.kalendarz)
+          .filter(Boolean)
+          .map((dateStr) => parse(dateStr, "yyyyMMdd", new Date()));
+        setBookedDates(dates);
+      })
+      .catch((err) => console.error("Błąd pobierania:", err));
+  }, []);
 
   const handleCheckboxChange = (event) => {
     setIsChecked(event.target.checked);
@@ -22,6 +40,10 @@ function Contact() {
     }
   };
 
+  const handleDateSelect = (date) => {
+    setSelectedDate(date);
+  };
+
   return (
     <section id='contact' className='max-w-[850px]  flex flex-col items-center mx-auto md:mb-10 md:pt-6 pt-0 pb-4'>
       <header className='text-center'>
@@ -34,7 +56,8 @@ function Contact() {
         <section className='md:w-[45%] w-[70%] flex flex-col  '>
           {/* <h2 className='text-left text-xl py-3  font-light text-titleGray'>Zapytaj o termin!</h2> */}
           <form action='https://api.web3forms.com/submit' method='POST' className='flex flex-col items-center mt-2'>
-            <input type='hidden' name='access_key' value='5731e935-f338-41a7-9570-165fae0ceacc' />
+            {/* <input type='hidden' name='access_key' value='5731e935-f338-41a7-9570-165fae0ceacc' /> */}
+            <input type='hidden' name='access_key' value='64cc9455-2d9f-4697-9cc2-1dcc08ecdaa8' />
             <div className='md:min-w-[355px] min-w-[295px] flex flex-col '>
               <label>
                 <span className='sr-only'>Adres email</span>
@@ -49,12 +72,17 @@ function Contact() {
               <label>
                 <span className='sr-only'>Wiadomość</span>
                 <textarea
-                  name='message'
+                  name='Wiadomość'
                   required
                   placeholder='Tutaj możesz wpisać jaki termin cię interesuje'
                   className='w-full mt-2 pb-[100px] rounded-md bg-[#F1F1F1] shadow-md py-2 px-4 ] font-light text-titleGray'
                 ></textarea>
               </label>
+              <input
+                type='hidden'
+                name='Wybrana data przez klienta'
+                value={selectedDate ? selectedDate.toISOString().split("T")[0] : ""}
+              />
               <button
                 type='submit'
                 onClick={handleSubmitClick}
@@ -83,7 +111,7 @@ function Contact() {
           </form>
         </section>
         <div className='w-[fit-content] ml-6   items-end flex flex-col'>
-          <Callendar />
+          <Callendar bookedDates={bookedDates} selectedDate={selectedDate} onSelectDate={handleDateSelect} />
         </div>
       </div>
     </section>

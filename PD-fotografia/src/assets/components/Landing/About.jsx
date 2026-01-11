@@ -1,13 +1,12 @@
 import "aos/dist/aos.css";
 import React from "react";
 
-import AboutImage from "../../images/About-img.webp";
 import Dog1 from "../../images/AboutMe/dog1.webp";
 import Dog2 from "../../images/AboutMe/dog3.jpg";
 import horse1 from "../../images/AboutMe/horse1.jpg";
 import horse2 from "../../images/AboutMe/horse2.jpg";
 
-function About() {
+function About({aboutImage}) {
   const myAnimals = [Dog1, Dog2, horse1, horse2];
   return (
     <section id='about' className='max-w-[1050px] h-auto  mx-auto md:pt-24 mt-10 overflow-hidden  shadow-[#0000000d]'>
@@ -38,7 +37,7 @@ function About() {
         </div>
 
         <div data-aos='slide-left' className='md:ml-auto mx-auto '>
-          <img src={AboutImage} className=' md:w-[500px] mx-auto w-[90%] rounded-xl' loading='lazy'></img>
+          <img src={aboutImage} className=' md:w-[500px] mx-auto w-[90%] rounded-xl' loading='lazy'></img>
         </div>
       </div>
       <div className='w-full flex flex-col mx-auto text-center mt-8'>

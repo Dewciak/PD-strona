@@ -1,7 +1,6 @@
 import React from "react";
-import Dog from "../../images/BlueBarDog.webp";
 
-function BlueBar() {
+function BlueBar({blueBarImage}) {
   return (
     <section id='BlueBar' className='w-screen bg-[#eef5f9] md:my-10  py-[0px] mt-12 md:mt-0 '>
       <div className='max-w-[900px] flex-col flex mx-auto md:flex-row  justify-center items-center py-[30px]'>
@@ -21,7 +20,7 @@ function BlueBar() {
           </p>
         </div>
         <div className='md:w-[37%] w-[90%] h-full my-4 md:my-0'>
-          <img src={Dog} loading='lazy'></img>
+          <img src={blueBarImage} loading='lazy'></img>
         </div>
       </div>
     </section>

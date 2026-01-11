@@ -2,17 +2,13 @@ import React from "react";
 import {Link as RouterLink} from "react-router-dom";
 import "aos/dist/aos.css";
 
-import Dog from "../../images/offercard-dog.webp";
-import Event from "../../images/offercard-event.webp";
-import Horse from "../../images/offercard-horse.webp";
+function Offer({offerImages}) {
+  const offers = [
+    {path: "/oferta-konie", image: offerImages[2] || "", alt: "Konie", title: "Konie"},
+    {path: "/oferta-psy", image: offerImages[1] || "", alt: "Psy", title: "Psy"},
+    {path: "/oferta-wydarzenia", image: offerImages[0] || "", alt: "Wydarzenia", title: "Wydarzenia"},
+  ];
 
-const offers = [
-  {path: "/oferta-konie", image: Horse, alt: "Konie", title: "Konie"},
-  {path: "/oferta-psy", image: Dog, alt: "Psy", title: "Psy"},
-  {path: "/oferta-wydarzenia", image: Event, alt: "Wydarzenia", title: "Wydarzenia"},
-];
-
-function Offer() {
   return (
     <section id='offer' className='max-w-[1050px] justify-center mx-auto flex flex-col md:mt-[60px] md:pt-0 mt-[50px]'>
       <h2 className='text-center md:text-6xl text-6xl pb-4 mx-auto tracking-[5px] font-light text-titleGray'>Oferta</h2>

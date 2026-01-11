@@ -45,15 +45,15 @@ function Contact() {
   };
 
   return (
-    <section id='contact' className='max-w-[850px]  flex flex-col items-center mx-auto md:mb-10 md:pt-6 pt-0 pb-4'>
+    <section id='contact' className='max-w-[850px] px-4 flex flex-col items-center mx-auto md:mb-10 md:pt-6 pt-0 pb-4'>
       <header className='text-center'>
         <h1 className='text-5xl md:text-6xl tracking-[5px] font-light text-titleGray'>Skontaktuj</h1>
         <h2 className='text-2xl tracking-[5px] font-light text-[#56C0FD] md:mt-0'>się ze mną!</h2>
       </header>
       <Socials />
 
-      <div className='w-full flex flex-col md:flex-row mt-6  justify-between  items-start  '>
-        <section className='md:w-[45%] w-[70%] flex flex-col  '>
+      <div className='w-full flex flex-col-reverse md:flex-row mt-6 justify-between md:items-start items-center'>
+        <section className='md:w-[45%] w-full flex flex-col  '>
           {/* <h2 className='text-left text-xl py-3  font-light text-titleGray'>Zapytaj o termin!</h2> */}
           <form action='https://api.web3forms.com/submit' method='POST' className='flex flex-col items-center mt-2'>
             {/* <input type='hidden' name='access_key' value='5731e935-f338-41a7-9570-165fae0ceacc' /> */}
@@ -74,8 +74,8 @@ function Contact() {
                 <textarea
                   name='Wiadomość'
                   required
-                  placeholder='Tutaj możesz wpisać jaki termin cię interesuje'
-                  className='w-full mt-2 pb-[100px] rounded-md bg-[#F1F1F1] shadow-md py-2 px-4 ] font-light text-titleGray'
+                  placeholder='Wiadomość'
+                  className='w-full mt-2 md:pb-[100px] pb-16 rounded-md bg-[#F1F1F1] shadow-md py-2 px-4 ] font-light text-titleGray'
                 ></textarea>
               </label>
               <input
@@ -110,7 +110,10 @@ function Contact() {
             </div>
           </form>
         </section>
-        <div className='w-[fit-content] ml-6   items-end flex flex-col'>
+        <div className='w-[fit-content] md:ml-6 ml-0 md:items-end flex flex-col mb-10 md:mb-0 items-center md:flex-col-reverse'>
+          <span className=' text-center max-w-[310px] md:mr-4  md:mt-4 pb-6 md:pb-0'>
+            Kliknij i wybierz jaki termin Cie interesuje!
+          </span>
           <Callendar bookedDates={bookedDates} selectedDate={selectedDate} onSelectDate={handleDateSelect} />
         </div>
       </div>

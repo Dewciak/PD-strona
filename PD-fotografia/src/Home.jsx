@@ -14,16 +14,16 @@ function App() {
   let sections = document.querySelectorAll("section");
   aosInnit();
   return (
-    <div className="App overflow-hidden scroll-smooth">
+    <div className='App overflow-hidden scroll-smooth'>
       <Navbar sections={sections} />
       <ScrollToTop />
-      <Hero className="Section" id="Hero" />
+      <Hero className='Section' id='Hero' />
       <About />
-      <Portfolio className="Section" id="Portfolio" />
+      <Portfolio className='Section' id='Portfolio' />
       <BlueBar />
       <AccordionCustomIcon />
-      <Offer className="Section" id="Offer" />
-      <Contact className="Section" id="Contact" />
+      <Offer className='Section' id='Offer' />
+      <Contact className='Section' id='Contact' />
       <Footer />
     </div>
   );

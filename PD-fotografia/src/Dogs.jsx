@@ -24,7 +24,7 @@ function Dogs() {
     const fetchDogsImages = async () => {
       console.log("--- Start pobierania Dogs Images ---");
       try {
-        const domain = "http://wordpress-wcc8484kcwwsww40ko00ccwc.49.12.2.146.sslip.io";
+        const domain = "https://pati.wiktordawid.pl/";
         const response = await fetch(`${domain}/wp-json/wp/v2/posts?categories=19&per_page=6`);
         if (!response.ok) throw new Error("Błąd API: " + response.status);
 

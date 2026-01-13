@@ -32,197 +32,89 @@ function App() {
   }, []);
 
   useEffect(() => {
-    const fetchHeroImages = async () => {
-      console.log("--- Start pobierania Hero (_embed) ---");
+    const fetchAllImages = async () => {
+      console.log("--- Start pobierania wszystkich obrazów ---");
       try {
-        const domain = "http://wordpress-wcc8484kcwwsww40ko00ccwc.49.12.2.146.sslip.io";
-
-        // Pobieramy posty z kategorii 11 bez _embed
-        const response = await fetch(`${domain}/wp-json/wp/v2/posts?categories=11&per_page=20`);
+        const domain = "https://pati.wiktordawid.pl/";
+        const response = await fetch(`${domain}/wp-json/wp/v2/posts?categories=3,4,5,11,12,13,14&per_page=100&_embed`);
         if (!response.ok) throw new Error("Błąd API: " + response.status);
 
         const posts = await response.json();
 
-        // Dla każdego posta, jeśli ma featured_media, pobierz media
-        const imagePromises = posts.map(async (post) => {
-          if (!post.featured_media) return null;
-          try {
-            const mediaResponse = await fetch(`${domain}/wp-json/wp/v2/media/${post.featured_media}`);
-            if (!mediaResponse.ok) return null;
-            const media = await mediaResponse.json();
-            return {
-              title: post.title.rendered.toLowerCase().replace(/[\s-]/g, ""),
-              url: media.source_url || media.media_details?.sizes?.full?.source_url,
-            };
-          } catch (err) {
-            console.error("Błąd pobierania media dla posta:", post.title.rendered, err);
-            return null;
-          }
-        });
-
-        const imageData = (await Promise.all(imagePromises)).filter((img) => img && img.url);
-
-        console.log("imageData po map i filter:", imageData);
-
-        console.log("imageData po map i filter:", imageData);
-
-        // Sortowanie (żeby s11 było przed s12)
-        const sorted = imageData.sort((a, b) => a.title.localeCompare(b.title, undefined, {numeric: true}));
-
-        // Budujemy pary dla Slideshow (max 4 pary)
-        const heroSlidesFormatted = [];
-        for (let i = 0; i < sorted.length && heroSlidesFormatted.length < 4; i += 2) {
-          const firstImg = sorted[i].url;
-          const secondImg = sorted[i + 1]?.url || sorted[i].url; // Fallback do tego samego zdjęcia jeśli brak pary
-          heroSlidesFormatted.push([firstImg, secondImg]);
-        }
-
-        console.log("Finalne pary dla Hero:", heroSlidesFormatted);
-        setHeroSlides(heroSlidesFormatted);
-      } catch (error) {
-        console.error("Błąd ładowania Hero:", error);
-      }
-    };
-
-    fetchHeroImages();
-  }, []);
-
-  useEffect(() => {
-    const fetchPortfolioImages = async () => {
-      console.log("--- Start pobierania Portfolio ---");
-      try {
-        const domain = "http://wordpress-wcc8484kcwwsww40ko00ccwc.49.12.2.146.sslip.io";
-        const categories = [
-          {name: "Psy", id: 3},
-          {name: "Konie", id: 4},
-          {name: "Wydarzenia", id: 5},
-        ];
-
-        const portfolioData = {};
-
-        for (const cat of categories) {
-          const response = await fetch(`${domain}/wp-json/wp/v2/posts?categories=${cat.id}&per_page=20`);
-          if (!response.ok) throw new Error("Błąd API: " + response.status);
-
-          const posts = await response.json();
-
-          const imagePromises = posts.map(async (post) => {
+        // Funkcja pomocnicza do pobierania obrazów z postów
+        const getImagesFromPosts = async (filteredPosts, sort = false) => {
+          const imagePromises = filteredPosts.map(async (post) => {
             if (!post.featured_media) return null;
             try {
-              const mediaResponse = await fetch(`${domain}/wp-json/wp/v2/media/${post.featured_media}`);
-              if (!mediaResponse.ok) return null;
-              const media = await mediaResponse.json();
-              return media.source_url || media.media_details?.sizes?.full?.source_url;
+              const media =
+                post._embedded?.["wp:featuredmedia"]?.[0] ||
+                (await fetch(`${domain}/wp-json/wp/v2/media/${post.featured_media}`).then((r) => r.json()));
+              return {
+                title: post.title.rendered.toLowerCase().replace(/[\s-]/g, ""),
+                url: media.source_url || media.media_details?.sizes?.full?.source_url,
+              };
             } catch (err) {
               console.error("Błąd pobierania media dla posta:", post.title.rendered, err);
               return null;
             }
           });
 
-          const images = (await Promise.all(imagePromises)).filter((img) => img);
+          const imageData = (await Promise.all(imagePromises)).filter((img) => img && img.url);
+          if (sort) {
+            return imageData.sort((a, b) => a.title.localeCompare(b.title, undefined, {numeric: true}));
+          }
+          return imageData;
+        };
+
+        // Hero (kategoria 11)
+        const heroPosts = posts.filter((p) => p.categories.includes(11));
+        const heroImageData = await getImagesFromPosts(heroPosts, true);
+        const heroSlidesFormatted = [];
+        for (let i = 0; i < heroImageData.length && heroSlidesFormatted.length < 4; i += 2) {
+          const firstImg = heroImageData[i].url;
+          const secondImg = heroImageData[i + 1]?.url || heroImageData[i].url;
+          heroSlidesFormatted.push([firstImg, secondImg]);
+        }
+        setHeroSlides(heroSlidesFormatted);
+
+        // Portfolio (kategorie 3,4,5)
+        const portfolioData = {};
+        const portfolioCats = [
+          {name: "Psy", id: 3},
+          {name: "Konie", id: 4},
+          {name: "Wydarzenia", id: 5},
+        ];
+        for (const cat of portfolioCats) {
+          const catPosts = posts.filter((p) => p.categories.includes(cat.id));
+          const images = (await getImagesFromPosts(catPosts)).map((img) => img.url);
           portfolioData[cat.name] = images;
         }
-
-        console.log("Portfolio data:", portfolioData);
         setPortfolioImages(portfolioData);
+
+        // About (kategoria 12)
+        const aboutPosts = posts.filter((p) => p.categories.includes(12));
+        if (aboutPosts.length > 0) {
+          const aboutImageData = await getImagesFromPosts(aboutPosts);
+          setAboutImage(aboutImageData[0]?.url || "");
+        }
+
+        // BlueBar (kategoria 13)
+        const blueBarPosts = posts.filter((p) => p.categories.includes(13));
+        if (blueBarPosts.length > 0) {
+          const blueBarImageData = await getImagesFromPosts(blueBarPosts);
+          setBlueBarImage(blueBarImageData[0]?.url || "");
+        }
+
+        // Offer (kategoria 14)
+        const offerPosts = posts.filter((p) => p.categories.includes(14));
+        const offerImageData = await getImagesFromPosts(offerPosts, true);
+        setOfferImages(offerImageData.map((img) => img.url));
       } catch (error) {
-        console.error("Błąd ładowania Portfolio:", error);
+        console.error("Błąd ładowania obrazów:", error);
       }
     };
 
-    fetchPortfolioImages();
-  }, []);
-
-  useEffect(() => {
-    const fetchAboutImage = async () => {
-      console.log("--- Start pobierania About Image ---");
-      try {
-        const domain = "http://wordpress-wcc8484kcwwsww40ko00ccwc.49.12.2.146.sslip.io";
-        const response = await fetch(`${domain}/wp-json/wp/v2/posts?categories=12&per_page=1`);
-        if (!response.ok) throw new Error("Błąd API: " + response.status);
-
-        const posts = await response.json();
-        if (posts.length === 0) return;
-
-        const post = posts[0];
-        if (!post.featured_media) return;
-
-        const mediaResponse = await fetch(`${domain}/wp-json/wp/v2/media/${post.featured_media}`);
-        if (!mediaResponse.ok) return;
-        const media = await mediaResponse.json();
-        const imageUrl = media.source_url || media.media_details?.sizes?.full?.source_url;
-
-        console.log("About image:", imageUrl);
-        setAboutImage(imageUrl);
-      } catch (error) {
-        console.error("Błąd ładowania About Image:", error);
-      }
-    };
-
-    fetchAboutImage();
-  }, []);
-
-  useEffect(() => {
-    const fetchBlueBarImage = async () => {
-      console.log("--- Start pobierania BlueBar Image ---");
-      try {
-        const domain = "http://wordpress-wcc8484kcwwsww40ko00ccwc.49.12.2.146.sslip.io";
-        const response = await fetch(`${domain}/wp-json/wp/v2/posts?categories=13&per_page=1`);
-        if (!response.ok) throw new Error("Błąd API: " + response.status);
-
-        const posts = await response.json();
-        if (posts.length === 0) return;
-
-        const post = posts[0];
-        if (!post.featured_media) return;
-
-        const mediaResponse = await fetch(`${domain}/wp-json/wp/v2/media/${post.featured_media}`);
-        if (!mediaResponse.ok) return;
-        const media = await mediaResponse.json();
-        const imageUrl = media.source_url || media.media_details?.sizes?.full?.source_url;
-
-        console.log("BlueBar image:", imageUrl);
-        setBlueBarImage(imageUrl);
-      } catch (error) {
-        console.error("Błąd ładowania BlueBar Image:", error);
-      }
-    };
-
-    fetchBlueBarImage();
-  }, []);
-
-  useEffect(() => {
-    const fetchOfferImages = async () => {
-      console.log("--- Start pobierania Offer Images ---");
-      try {
-        const domain = "http://wordpress-wcc8484kcwwsww40ko00ccwc.49.12.2.146.sslip.io";
-        const response = await fetch(`${domain}/wp-json/wp/v2/posts?categories=14&per_page=3`);
-        if (!response.ok) throw new Error("Błąd API: " + response.status);
-
-        const posts = await response.json();
-
-        const imagePromises = posts.map(async (post) => {
-          if (!post.featured_media) return null;
-          try {
-            const mediaResponse = await fetch(`${domain}/wp-json/wp/v2/media/${post.featured_media}`);
-            if (!mediaResponse.ok) return null;
-            const media = await mediaResponse.json();
-            return media.source_url || media.media_details?.sizes?.full?.source_url;
-          } catch (err) {
-            console.error("Błąd pobierania media dla posta:", post.title.rendered, err);
-            return null;
-          }
-        });
-
-        const images = (await Promise.all(imagePromises)).filter((img) => img);
-        console.log("Offer images:", images);
-        setOfferImages(images);
-      } catch (error) {
-        console.error("Błąd ładowania Offer Images:", error);
-      }
-    };
-
-    fetchOfferImages();
+    fetchAllImages();
   }, []);
 
   return (

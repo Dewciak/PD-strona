@@ -10,7 +10,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/wp-json": {
-        target: "http://wordpress-wcc8484kcwwsww40ko00ccwc.49.12.2.146.sslip.io",
+        target: "https://pati.wiktordawid.pl/",
         changeOrigin: true,
       },
     },

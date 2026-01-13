@@ -5,8 +5,8 @@ import "aos/dist/aos.css";
 function Offer({offerImages}) {
   const offers = [
     {path: "/oferta-konie", image: offerImages[2] || "", alt: "Konie", title: "Konie"},
-    {path: "/oferta-psy", image: offerImages[1] || "", alt: "Psy", title: "Psy"},
-    {path: "/oferta-wydarzenia", image: offerImages[0] || "", alt: "Wydarzenia", title: "Wydarzenia"},
+    {path: "/oferta-psy", image: offerImages[0] || "", alt: "Psy", title: "Psy"},
+    {path: "/oferta-wydarzenia", image: offerImages[1] || "", alt: "Wydarzenia", title: "Wydarzenia"},
   ];
 
   return (

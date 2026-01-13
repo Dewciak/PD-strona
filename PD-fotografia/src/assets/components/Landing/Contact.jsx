@@ -12,9 +12,7 @@ function Contact() {
   const [selectedDate, setSelectedDate] = useState(null);
 
   useEffect(() => {
-    fetch(
-      "http://wordpress-wcc8484kcwwsww40ko00ccwc.49.12.2.146.sslip.io/wp-json/wp/v2/posts?categories=7&per_page=100"
-    )
+    fetch("https://pati.wiktordawid.pl/wp-json/wp/v2/posts?categories=7&per_page=100")
       .then((res) => res.json())
       .then((data) => {
         const dates = data
@@ -56,8 +54,7 @@ function Contact() {
         <section className='md:w-[45%] w-full flex flex-col  '>
           {/* <h2 className='text-left text-xl py-3  font-light text-titleGray'>Zapytaj o termin!</h2> */}
           <form action='https://api.web3forms.com/submit' method='POST' className='flex flex-col items-center mt-2'>
-            {/* <input type='hidden' name='access_key' value='5731e935-f338-41a7-9570-165fae0ceacc' /> */}
-            <input type='hidden' name='access_key' value='64cc9455-2d9f-4697-9cc2-1dcc08ecdaa8' />
+            <input type='hidden' name='access_key' value='5731e935-f338-41a7-9570-165fae0ceacc' />
             <div className='md:min-w-[355px] min-w-[295px] flex flex-col '>
               <label>
                 <span className='sr-only'>Adres email</span>

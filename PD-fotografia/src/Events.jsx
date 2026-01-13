@@ -24,7 +24,7 @@ function Events() {
     const fetchEventsImages = async () => {
       console.log("--- Start pobierania Events Images ---");
       try {
-        const domain = "http://wordpress-wcc8484kcwwsww40ko00ccwc.49.12.2.146.sslip.io";
+        const domain = "https://pati.wiktordawid.pl/";
         const response = await fetch(`${domain}/wp-json/wp/v2/posts?categories=20&per_page=5`);
         if (!response.ok) throw new Error("Błąd API: " + response.status);
 

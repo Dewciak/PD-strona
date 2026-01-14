@@ -17,7 +17,7 @@ const Gallery = ({images, sessionType, setSessionType, setShowDialog, setImageIn
   useEffect(() => {
     // Reset widocznych obrazów przy zmianie kategorii
     setVisibleCount(IMAGES_PER_PAGE);
-    
+
     // Ustaw szerokość na podstawie kategorii (oryginalna logika)
     // Kolumny = połowa obrazów (bo 2 rzędy)
     if (sessionType?.name === "Psy") setColumns("w-[5600px]");

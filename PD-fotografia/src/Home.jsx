@@ -40,10 +40,8 @@ function App() {
       const media = post._embedded?.["wp:featuredmedia"]?.[0];
       if (!media) return null;
       const sizes = media.media_details?.sizes;
-      const url = sizes?.large?.source_url || 
-                  sizes?.medium_large?.source_url || 
-                  sizes?.full?.source_url || 
-                  media.source_url;
+      const url =
+        sizes?.large?.source_url || sizes?.medium_large?.source_url || sizes?.full?.source_url || media.source_url;
       return {
         title: post.title.rendered.toLowerCase().replace(/[\s-]/g, ""),
         url: url,

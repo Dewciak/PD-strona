@@ -31,20 +31,23 @@ function Events() {
 
         const posts = await response.json();
 
-        const imageData = posts.map((post) => {
-          const media = post._embedded?.["wp:featuredmedia"]?.[0];
-          if (!media) return null;
-          // Preferuj mniejsze rozmiary (large ~1024px, medium_large ~768px)
-          const sizes = media.media_details?.sizes;
-          const url = sizes?.large?.source_url || 
-                      sizes?.medium_large?.source_url || 
-                      sizes?.full?.source_url || 
-                      media.source_url;
-          return {
-            title: post.title.rendered.toLowerCase().replace(/[\s-]/g, ""),
-            url: url,
-          };
-        }).filter((img) => img && img.url);
+        const imageData = posts
+          .map((post) => {
+            const media = post._embedded?.["wp:featuredmedia"]?.[0];
+            if (!media) return null;
+            // Preferuj mniejsze rozmiary (large ~1024px, medium_large ~768px)
+            const sizes = media.media_details?.sizes;
+            const url =
+              sizes?.large?.source_url ||
+              sizes?.medium_large?.source_url ||
+              sizes?.full?.source_url ||
+              media.source_url;
+            return {
+              title: post.title.rendered.toLowerCase().replace(/[\s-]/g, ""),
+              url: url,
+            };
+          })
+          .filter((img) => img && img.url);
 
         // Sortowanie po tytule numerycznie
         const sortedImages = imageData.sort((a, b) => a.title.localeCompare(b.title, undefined, {numeric: true}));

@@ -28,6 +28,7 @@ function OfferPageHeader({backgroundImage}) {
             className="md:max-w-[800px] mx-auto"
             src={backgroundImage}
             alt="Background"
+            loading="lazy"
           />
         </div>
       </div>

@@ -64,6 +64,7 @@ function OfferPageAbout({
               className='md:w-[40%] w-[80%] mx-auto md:mt-0 rounded-[15px] px-2'
               src={aboutImage}
               alt='aboutSection'
+              loading='lazy'
             />
           </div>
         </div>

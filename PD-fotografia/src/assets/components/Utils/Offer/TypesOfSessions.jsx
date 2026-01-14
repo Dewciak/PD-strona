@@ -9,7 +9,7 @@ function TypesOfSessions({
       <h1 className='text-center py-16 text-4xl tracking-[5px] font-light text-titleGray'>Rodzaje sesji</h1>
       <div className='w-full flex flex-col justify-center items-center mx-auto md:space-y-28 space-y-6'>
         <div data-aos='fade-left' className='w-full flex md:flex-row flex-col  justify-center items-start'>
-          <img className='md:w-[50%] w-[80%] rounded-[15px] mx-auto' src={image1}></img>
+          <img className='md:w-[50%] w-[80%] rounded-[15px] mx-auto' src={image1} loading='lazy'></img>
           <div className='md:w-[50%] w-[70%] md:px-14 mt-6 md:mt-0 mx-auto'>
             <h2 className='text-2xl  pb-6 tracking-[5px] font-normal text-titleGray text-center md:text-left '>
               {header1}
@@ -28,10 +28,10 @@ function TypesOfSessions({
               {text2}
             </p>
           </div>
-          <img className='md:w-[50%] w-[80%] rounded-[15px] mx-auto mt-6' src={image2}></img>
+          <img className='md:w-[50%] w-[80%] rounded-[15px] mx-auto mt-6' src={image2} loading='lazy'></img>
         </div>
         <div data-aos='fade-left' className='w-full flex md:flex-row flex-col  justify-center items-start'>
-          <img className='md:w-[50%] w-[80%] rounded-[15px] mx-auto mt-6 ' src={image3}></img>
+          <img className='md:w-[50%] w-[80%] rounded-[15px] mx-auto mt-6 ' src={image3} loading='lazy'></img>
           <div className='md:w-[50%] w-[70%] md:px-14 mt-6 md:mt-0 mx-auto'>
             <h2 className='text-2xl  py-6 tracking-[5px] font-light text-titleGray text-center md:text-left '>
               {header3}
@@ -51,7 +51,7 @@ function TypesOfSessions({
                 {text4}
               </p>
             </div>
-            <img className='md:w-[50%] w-[80%] rounded-[15px] mx-auto mt-6' src={image4}></img>
+            <img className='md:w-[50%] w-[80%] rounded-[15px] mx-auto mt-6' src={image4} loading='lazy'></img>
           </div>
         )}
       </div>

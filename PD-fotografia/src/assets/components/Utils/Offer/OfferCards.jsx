@@ -1,6 +1,6 @@
 import {useState} from "react";
-import {Tabs, TabsHeader, TabsBody, Tab, TabPanel} from "@material-tailwind/react";
-import {FaFacebookMessenger} from "react-icons/fa";
+import {Tabs, TabsHeader, TabsBody, Tab, TabPanel} from "../../UI/Tabs";
+import {FaFacebookMessenger} from "../../UI/Icons";
 
 export function OfferCards({props: data}) {
   const [activeTab, setActiveTab] = useState(data[0].value);

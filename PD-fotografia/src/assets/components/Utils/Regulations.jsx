@@ -1,10 +1,12 @@
 import React from "react";
 import Footer from "./Footer";
 import Navbar from "./NavbarLink";
+import BackgroundImage from "../UI/BackgroundImage";
 
 function Regulations() {
   return (
-    <section id='RegulaminSesji' className='Bg flex flex-col w-screen'>
+    <section id='RegulaminSesji' className='flex flex-col w-screen relative'>
+      <BackgroundImage />
       {/*  */}
       <Navbar />
       <div className=' h-[230px] md:mt-10 mt-14 bg-blue-100 flex items-center justify-center'>

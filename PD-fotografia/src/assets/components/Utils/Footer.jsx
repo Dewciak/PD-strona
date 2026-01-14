@@ -1,5 +1,5 @@
 import React from "react";
-import {FaCopyright, FaFacebook, FaFacebookMessenger, FaInstagram} from "react-icons/fa";
+import {FaCopyright, FaFacebook, FaFacebookMessenger, FaInstagram} from "../UI/Icons";
 import {Link as RouterLink} from "react-router-dom";
 
 function Footer() {

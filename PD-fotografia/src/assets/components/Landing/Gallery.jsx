@@ -21,12 +21,12 @@ const Gallery = ({images, sessionType, setSessionType, setShowDialog, setImageIn
   useEffect(() => {
     setVisibleCount(IMAGES_PER_PAGE);
     setShowImages(true);
-    
+
     // Stała szerokość na podstawie kategorii (jak było wcześniej)
     if (sessionType?.name === "Psy") setColumns("w-[5600px]");
     if (sessionType?.name === "Konie") setColumns("w-[4200px]");
     if (sessionType?.name === "Wydarzenia") setColumns("w-[3500px]");
-    
+
     // Scroll do początku przy zmianie kategorii
     if (scrollContainerRef.current) {
       scrollContainerRef.current.scrollLeft = 0;
@@ -38,7 +38,7 @@ const Gallery = ({images, sessionType, setSessionType, setShowDialog, setImageIn
 
   const loadMore = useCallback(() => {
     if (isLoading) return;
-    
+
     setIsLoading(true);
     // Małe opóźnienie dla lepszego UX (pokazanie spinnera)
     setTimeout(() => {
@@ -51,7 +51,7 @@ const Gallery = ({images, sessionType, setSessionType, setShowDialog, setImageIn
   useEffect(() => {
     const sentinel = sentinelRef.current;
     const container = scrollContainerRef.current;
-    
+
     if (!sentinel || !container || !hasMore || isLoading) return;
 
     const observer = new IntersectionObserver(
@@ -76,13 +76,8 @@ const Gallery = ({images, sessionType, setSessionType, setShowDialog, setImageIn
     <div className='max-w-[1200px] flex flex-col'>
       <GalleryButtons setSessionType={setSessionType} sessionTypesButtons={sessionTypesButtons} />
 
-      <div 
-        ref={scrollContainerRef}
-        className='horizontal-scroll-container w-[95%] mx-auto px-2 py-2 overflow-x-scroll'
-      >
-        <div 
-          className={`grid grid-rows-2 grid-flow-col mb-4 items-start justify-start gap-4 ${columns}`}
-        >
+      <div ref={scrollContainerRef} className='horizontal-scroll-container w-[95%] mx-auto px-2 py-2 overflow-x-scroll'>
+        <div className={`grid grid-rows-2 grid-flow-col mb-4 items-start justify-start gap-4 ${columns}`}>
           {visibleImages.map((pic, key) => (
             <img
               onClick={() => {
@@ -98,14 +93,10 @@ const Gallery = ({images, sessionType, setSessionType, setShowDialog, setImageIn
               key={key}
             />
           ))}
-          
+
           {/* Spinner loading na końcu galerii */}
           {hasMore && (
-            <div 
-              ref={sentinelRef} 
-              className='flex items-center justify-center w-[100px] h-60'
-              aria-hidden='true'
-            >
+            <div ref={sentinelRef} className='flex items-center justify-center w-[100px] h-60' aria-hidden='true'>
               {isLoading && (
                 <div className='animate-spin rounded-full h-10 w-10 border-4 border-gray-300 border-t-blue-500'></div>
               )}

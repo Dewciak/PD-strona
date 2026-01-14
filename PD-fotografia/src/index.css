@@ -1,3 +1,5 @@
+@import './assets/fonts/fonts.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -11,19 +13,6 @@ html {
   color: rgb(38, 50, 56);
   font-family: Montserrat;
   font-weight: 500;
-}
-
-.App {
-  background-image: url("assets/images/bg3.webp");
-  background-size: cover;
-  background-repeat: repeat;
-  z-index: "-2";
-}
-
-.Bg {
-  background-image: url("assets/images/bg3.webp");
-  background-size: cover;
-  background-repeat: repeat;
 }
 
 .active li {
@@ -41,17 +30,6 @@ li::after {
 
 .active li::after {
   width: 100%;
-}
-
-@media (max-width: 600px) {
-  .App {
-    background-image: url("assets/images/bg-mobile2.webp");
-  }
-  .Bg {
-    background-image: url("assets/images/bg-mobile2.webp");
-    background-size: cover;
-    background-repeat: repeat;
-  }
 }
 
 .horizontal-scroll-container {

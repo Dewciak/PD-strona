@@ -14,6 +14,7 @@ import {
   questionsContent,
 } from "./assets/components/TextContent/DogsOffer";
 import {aosInnit} from "./assets/Hooks/aosInnit";
+import BackgroundImage from "./assets/components/UI/BackgroundImage";
 import {useEffect, useState} from "react";
 
 function Dogs() {
@@ -77,11 +78,12 @@ function Dogs() {
   };
 
   return (
-    <div className='overflow-hidden md:overflow-visible'>
+    <div className='overflow-hidden md:overflow-visible relative'>
+      <BackgroundImage />
       <Navbar />
       <ScrollToTop />
       <OfferPageHeader backgroundImage={images[1] || Bg} />
-      <div id='Dogs' className='Bg'>
+      <div id='Dogs' className='relative'>
         <OfferPageAbout props={headerContent} />
         <TypesOfSessions props={sessionsContent} />
         <OfferCards props={cardsContent} />

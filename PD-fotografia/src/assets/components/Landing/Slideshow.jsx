@@ -6,6 +6,8 @@ const Slideshow = ({slides, delay = 0, initialDelay = 0, width, height}) => {
   const timeoutRef = useRef(null);
 
   useEffect(() => {
+    if (slides.length <= 1) return;
+
     const startSlideshow = () => {
       timeoutRef.current = setTimeout(() => {
         intervalRef.current = setInterval(() => {
@@ -36,12 +38,13 @@ const Slideshow = ({slides, delay = 0, initialDelay = 0, width, height}) => {
   }, [slides, delay, initialDelay]);
 
   return (
-    <div className='relative flex justify-center items-center' style={{width, height}}>
+    <div className="relative flex justify-center items-center" style={{width, height}}>
       {slides.map((slide, index) => (
         <img
           key={index}
           src={slide}
-          alt={`Slide ${index}`}
+          alt={`Slide ${index + 1}`}
+          loading={index === 0 ? "eager" : "lazy"}
           className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
             index === currentSlideIndex ? "opacity-100" : "opacity-0"
           }`}

@@ -1,4 +1,4 @@
-import {useEffect, useState} from "react";
+import {useState, useEffect} from "react";
 import Navbar from "./assets/components/Utils/Navbar";
 import Hero from "./assets/components/Landing/Hero";
 import ScrollToTop from "./assets/components/Utils/ScrollToTop";
@@ -9,6 +9,7 @@ import AccordionCustomIcon from "./assets/components/Landing/AccordionCustomIcon
 import Offer from "./assets/components/Landing/Offer";
 import Contact from "./assets/components/Landing/Contact";
 import Footer from "./assets/components/Utils/Footer";
+import BackgroundImage from "./assets/components/UI/BackgroundImage";
 import {aosInnit} from "./assets/Hooks/aosInnit";
 
 function App() {
@@ -128,7 +129,8 @@ function App() {
   }, []);
 
   return (
-    <div className='App overflow-hidden scroll-smooth'>
+    <div className='overflow-hidden scroll-smooth relative'>
+      <BackgroundImage priority={true} />
       <Navbar sections={sections} />
       <ScrollToTop />
       <Hero slides={heroSlides} />

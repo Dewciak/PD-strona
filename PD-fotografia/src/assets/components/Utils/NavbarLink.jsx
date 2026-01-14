@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import {Link as RouterLink} from "react-router-dom";
-import {IoMenu} from "react-icons/io5";
-import {AiOutlineClose} from "react-icons/ai";
+import {IoMenu, AiOutlineClose} from "../UI/Icons";
 import Logo from "../../images/nav-logo.png";
 
 const navItems = [

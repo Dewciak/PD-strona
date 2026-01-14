@@ -14,6 +14,7 @@ import ScrollToTop from "./assets/components/Utils/ScrollToTop";
 import {aosInnit} from "./assets/Hooks/aosInnit";
 import Bg from "./assets/images/Horses/background.webp";
 import Questions from "./Questions";
+import BackgroundImage from "./assets/components/UI/BackgroundImage";
 import {useEffect, useState} from "react";
 
 function Horses() {
@@ -92,11 +93,12 @@ function Horses() {
   }, []);
 
   return (
-    <div className=' overflow-hidden md:overflow-visible'>
+    <div className=' overflow-hidden md:overflow-visible relative'>
+      <BackgroundImage />
       <Navbar />
       <ScrollToTop />
       <OfferPageHeader backgroundImage={images[1] || Bg} />
-      <div className='Bg'>
+      <div className='relative'>
         <OfferPageAbout props={headerContent} />
         <TypesOfSessions props={sessionsContent} />
         <OfferCards props={cardsContent} />

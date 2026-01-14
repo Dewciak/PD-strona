@@ -1,5 +1,5 @@
 import React from "react";
-import {Accordion, AccordionHeader, AccordionBody} from "@material-tailwind/react";
+import {Accordion, AccordionHeader, AccordionBody} from "./assets/components/UI/Accordion";
 
 export function Questions({props: {header1, text1, header2, text2, header3, text3, header4, text4}}) {
   const [open, setOpen] = React.useState(0);

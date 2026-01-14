@@ -1,14 +1,5 @@
-// /** @type {import('tailwindcss').Config} */
-// export default {
-//   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
-//   theme: {
-//     extend: {},
-//   },
-//   plugins: [],
-// };
-const withMT = require("@material-tailwind/react/utils/withMT");
-
-module.exports = withMT({
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
     extend: {
@@ -20,6 +11,8 @@ module.exports = withMT({
         myBlue: "",
         myGray: "rgba(58,58,58,0.96)",
         titleGray: "rgb(45,45,45)",
+        "blue-gray-100": "#cfd8dc",
+        "blue-gray-50": "#eceff1",
       },
       keyframes: {
         fadeIn: {
@@ -39,4 +32,4 @@ module.exports = withMT({
     },
   },
   plugins: [],
-});
+};

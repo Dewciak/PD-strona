@@ -1,9 +1,7 @@
 import React, {useState} from "react";
-import {IoMenu} from "react-icons/io5";
-import {AiOutlineClose} from "react-icons/ai";
+import {IoMenu, AiOutlineClose, MdOutlineArrowBackIos} from "../UI/Icons";
 import {Link} from "react-scroll";
 import {Link as RouterLink} from "react-router-dom";
-import {MdOutlineArrowBackIos} from "react-icons/md";
 import Logo from "../../images/nav-logo.png";
 
 // Navigation items

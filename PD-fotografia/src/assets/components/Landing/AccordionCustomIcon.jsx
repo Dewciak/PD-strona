@@ -1,5 +1,5 @@
 import React from "react";
-import {Accordion, AccordionHeader, AccordionBody} from "@material-tailwind/react";
+import {Accordion, AccordionHeader, AccordionBody} from "../UI/Accordion";
 import {useState} from "react";
 
 function Icon({id, open}) {

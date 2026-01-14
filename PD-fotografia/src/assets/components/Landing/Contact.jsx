@@ -96,8 +96,8 @@ function Contact() {
                     {" "}
                     politykę prywatności
                   </RouterLink>
-                  i wyrażam zgodę na przetwarzanie moich danych osobowych w celach kontaktowych przez administratora
-                  strony.
+                  &nbsp;i wyrażam zgodę na przetwarzanie moich danych osobowych w celach kontaktowych przez
+                  administratora strony.
                 </label>
               </div>
 
@@ -109,7 +109,7 @@ function Contact() {
         </section>
         <div className='w-[fit-content] md:ml-6 ml-0 md:items-end flex flex-col mb-10 md:mb-0 items-center md:flex-col-reverse'>
           <span className=' text-center max-w-[310px] md:mr-4  md:mt-4 pb-6 md:pb-0'>
-            Kliknij i wybierz jaki termin Cie interesuje!
+            Kliknij i wybierz jaki termin Cię interesuje!
           </span>
           <Callendar bookedDates={bookedDates} selectedDate={selectedDate} onSelectDate={handleDateSelect} />
         </div>

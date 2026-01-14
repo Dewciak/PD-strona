@@ -1,6 +1,5 @@
 import {useState, useEffect} from "react";
-import {IoMenu} from "react-icons/io5";
-import {AiOutlineClose} from "react-icons/ai";
+import {IoMenu, AiOutlineClose} from "../UI/Icons";
 import {Link as RouterLink} from "react-router-dom";
 import Logo from "../../images/nav-logo.png";
 

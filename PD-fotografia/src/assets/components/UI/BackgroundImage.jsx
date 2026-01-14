@@ -19,7 +19,7 @@ export const BackgroundImage = ({priority = false, className = ""}) => {
   return (
     <img
       src={isMobile ? mobileBg : desktopBg}
-      alt=""
+      alt=''
       fetchPriority={priority ? "high" : "auto"}
       loading={priority ? "eager" : "lazy"}
       className={`fixed inset-0 w-full h-full object-cover -z-10 ${className}`}

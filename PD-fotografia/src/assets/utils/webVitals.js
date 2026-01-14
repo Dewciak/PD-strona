@@ -1,8 +1,8 @@
 // Web Vitals monitoring
-import {getCLS, getFID, getFCP, getLCP, getTTFB} from 'web-vitals';
+import {getCLS, getFID, getFCP, getLCP, getTTFB} from "web-vitals";
 
 export const initWebVitals = () => {
-  if (process.env.NODE_ENV === 'production') {
+  if (process.env.NODE_ENV === "production") {
     getCLS(sendToAnalytics);
     getFID(sendToAnalytics);
     getFCP(sendToAnalytics);
@@ -14,7 +14,7 @@ export const initWebVitals = () => {
 function sendToAnalytics(metric) {
   // Log to console for debugging
   console.log(metric);
-  
+
   // You can send to your analytics service here
   // Example: Google Analytics 4
   // gtag('event', metric.name, {

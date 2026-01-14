@@ -38,7 +38,7 @@ const Slideshow = ({slides, delay = 0, initialDelay = 0, width, height}) => {
   }, [slides, delay, initialDelay]);
 
   return (
-    <div className="relative flex justify-center items-center" style={{width, height}}>
+    <div className='relative flex justify-center items-center' style={{width, height}}>
       {slides.map((slide, index) => (
         <img
           key={index}

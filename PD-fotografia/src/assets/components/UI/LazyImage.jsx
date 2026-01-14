@@ -15,10 +15,8 @@ const LazyImage = ({src, alt, className = "", loading = "lazy", width, height, .
         height: height || "auto",
       }}
     >
-      {!isLoaded && (
-        <div className="absolute inset-0 bg-gray-200" />
-      )}
-      
+      {!isLoaded && <div className='absolute inset-0 bg-gray-200' />}
+
       <img
         src={src}
         alt={alt}

@@ -14,7 +14,7 @@ export default defineConfig({
           router: ["react-router-dom"],
           animations: ["aos"],
           icons: ["@fortawesome/react-fontawesome", "@fortawesome/free-solid-svg-icons"],
-          utils: ["date-fns", "react-scroll", "react-day-picker"]
+          utils: ["date-fns", "react-scroll", "react-day-picker"],
         },
       },
     },
@@ -23,7 +23,7 @@ export default defineConfig({
       compress: {
         drop_console: true,
         drop_debugger: true,
-        pure_funcs: ['console.log'], // Remove console.logs in production
+        pure_funcs: ["console.log"], // Remove console.logs in production
         unused: true,
       },
       mangle: {
@@ -31,7 +31,7 @@ export default defineConfig({
       },
     },
     // Enable modern build optimizations
-    target: ['es2020', 'edge88', 'firefox78', 'chrome87', 'safari13.1'],
+    target: ["es2020", "edge88", "firefox78", "chrome87", "safari13.1"],
     cssCodeSplit: true,
     sourcemap: false, // Disable sourcemaps in production for smaller files
   },
@@ -45,7 +45,7 @@ export default defineConfig({
   },
   // Optimize dependencies
   optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom'],
-    exclude: ['@fortawesome/fontawesome-svg-core'],
+    include: ["react", "react-dom", "react-router-dom"],
+    exclude: ["@fortawesome/fontawesome-svg-core"],
   },
 });

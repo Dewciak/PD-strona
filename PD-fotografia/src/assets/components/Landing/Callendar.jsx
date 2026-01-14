@@ -3,13 +3,22 @@ import {DayPicker} from "react-day-picker";
 import {pl} from "date-fns/locale";
 import "react-day-picker/dist/style.css";
 
-const Callendar = ({bookedDates, selectedDate, onSelectDate}) => {
-  // Stylizacja zajętych dni
-  const modifiers = {booked: bookedDates};
+const Callendar = ({bookedDates, availableDates, selectedDate, onSelectDate}) => {
+  // Stylizacja zajętych i wolnych dni
+  const modifiers = {
+    booked: bookedDates,
+    available: availableDates
+  };
   const modifiersStyles = {
     booked: {
       color: "white",
       backgroundColor: "#ab47bc",
+      borderRadius: "8px",
+      fontWeight: "bold",
+    },
+    available: {
+      color: "white",
+      backgroundColor: "#56c0fd",
       borderRadius: "8px",
       fontWeight: "bold",
     },
@@ -32,7 +41,10 @@ const Callendar = ({bookedDates, selectedDate, onSelectDate}) => {
           <span className='dot red'></span> Zajęte
         </div>
         <div className='legend-item'>
-          <span className='dot gray'></span> Wolne
+          <span className='dot blue'></span> Wolne
+        </div>
+        <div className='legend-item'>
+          <span className='dot gray'></span> Inne
         </div>
       </div>
 
@@ -49,6 +61,7 @@ const Callendar = ({bookedDates, selectedDate, onSelectDate}) => {
         .legend-item { display: flex; align-items: center; gap: 6px; }
         .dot { width: 10px; height: 10px; border-radius: 50%; }
         .dot.red { background: #ab47bc; }
+        .dot.blue { background: #56c0fd; }
         .dot.gray { background: #f3f4f6; border: 1px solid #d1d5db; }
         /* Resetujemy domyślne zaznaczenie kliknięciem, bo chcemy tylko widok */
         .rdp-day_selected:not(.rdp-day_outside) { background: transparent; color: inherit; }\

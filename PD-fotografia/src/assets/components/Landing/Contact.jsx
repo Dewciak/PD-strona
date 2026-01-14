@@ -9,17 +9,32 @@ function Contact() {
   const [isChecked, setIsChecked] = useState(false);
   const [showHiddenText, setShowHiddenText] = useState(false);
   const [bookedDates, setBookedDates] = useState([]);
+  const [availableDates, setAvailableDates] = useState([]);
   const [selectedDate, setSelectedDate] = useState(null);
 
   useEffect(() => {
-    fetch("https://pati.wiktordawid.pl/wp-json/wp/v2/posts?categories=7&per_page=100")
+    // Dodaj timestamp do omijania cache
+    const timestamp = new Date().getTime();
+    fetch(`https://pati.wiktordawid.pl/wp-json/wp/v2/posts?categories=7&per_page=100&_=${timestamp}`)
       .then((res) => res.json())
       .then((data) => {
-        const dates = data
-          .map((post) => post.acf?.kalendarz)
-          .filter(Boolean)
-          .map((dateStr) => parse(dateStr, "yyyyMMdd", new Date()));
-        setBookedDates(dates);
+        const booked = [];
+        const available = [];
+        
+        data.forEach((post) => {
+          const acf = post.acf;
+          if (acf?.kalendarz) {
+            // Jeśli pole kalendarz jest wypełnione - to zajęty termin
+            booked.push(parse(acf.kalendarz, "yyyyMMdd", new Date()));
+          }
+          if (acf?.wolny_termin) {
+            // Jeśli pole wolny_termin jest wypełnione - to wolny termin
+            available.push(parse(acf.wolny_termin, "yyyyMMdd", new Date()));
+          }
+        });
+        
+        setBookedDates(booked);
+        setAvailableDates(available);
       })
       .catch((err) => console.error("Błąd pobierania:", err));
   }, []);
@@ -111,7 +126,7 @@ function Contact() {
           <span className=' text-center max-w-[310px] md:mr-4  md:mt-4 pb-6 md:pb-0'>
             Kliknij i wybierz jaki termin Cię interesuje!
           </span>
-          <Callendar bookedDates={bookedDates} selectedDate={selectedDate} onSelectDate={handleDateSelect} />
+          <Callendar bookedDates={bookedDates} availableDates={availableDates} selectedDate={selectedDate} onSelectDate={handleDateSelect} />
         </div>
       </div>
     </section>

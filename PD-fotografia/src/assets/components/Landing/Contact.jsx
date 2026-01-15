@@ -20,7 +20,7 @@ function Contact() {
       .then((data) => {
         const booked = [];
         const available = [];
-        
+
         data.forEach((post) => {
           const acf = post.acf;
           if (acf?.kalendarz) {
@@ -32,7 +32,7 @@ function Contact() {
             available.push(parse(acf.wolny_termin, "yyyyMMdd", new Date()));
           }
         });
-        
+
         setBookedDates(booked);
         setAvailableDates(available);
       })
@@ -126,7 +126,12 @@ function Contact() {
           <span className=' text-center max-w-[310px] md:mr-4  md:mt-4 pb-6 md:pb-0'>
             Kliknij i wybierz jaki termin Cię interesuje!
           </span>
-          <Callendar bookedDates={bookedDates} availableDates={availableDates} selectedDate={selectedDate} onSelectDate={handleDateSelect} />
+          <Callendar
+            bookedDates={bookedDates}
+            availableDates={availableDates}
+            selectedDate={selectedDate}
+            onSelectDate={handleDateSelect}
+          />
         </div>
       </div>
     </section>

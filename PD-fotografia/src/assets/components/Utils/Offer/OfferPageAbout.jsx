@@ -16,7 +16,7 @@ function OfferPageAbout({
 }) {
   return (
     <div className='mx-auto'>
-      <div className='w-[100%] relative z-0 mx-auto'>
+      <div className='w-[100%] relative z-10 bg-white mx-auto'>
         <div className='max-w-[1000px] mx-auto md:mt-[610px] mt-[330px] z-[10] relative pt-8'>
           <h1 className='text-center text-4xl md:text-6xl md:mt-[0px] tracking-[5px] font-light text-titleGray'>
             {mainHeader}

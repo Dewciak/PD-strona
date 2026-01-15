@@ -7,7 +7,7 @@ const Callendar = ({bookedDates, availableDates, selectedDate, onSelectDate}) =>
   // Stylizacja zajętych i wolnych dni
   const modifiers = {
     booked: bookedDates,
-    available: availableDates
+    available: availableDates,
   };
   const modifiersStyles = {
     booked: {

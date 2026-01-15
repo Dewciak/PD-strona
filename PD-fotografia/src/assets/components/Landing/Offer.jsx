@@ -17,7 +17,7 @@ function Offer({offerImages}) {
           <RouterLink key={index} to={offer.path} onClick={() => window.scrollTo(0, 0)}>
             <div className='relative w-[300px] h-auto hover:scale-105 transition duration-300'>
               <img src={offer.image} alt={offer.alt} loading='lazy' className='w-full h-auto' />
-              <h1 className='absolute tracking-[5px] font-light inset-0 flex justify-center items-start pt-16 text-white text-4xl z-4 cursor-pointer'>
+              <h1 className='absolute tracking-[5px] font-light inset-0 flex justify-center items-center text-white text-4xl z-10 cursor-pointer'>
                 {offer.title}
               </h1>
             </div>

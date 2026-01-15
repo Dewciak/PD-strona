@@ -3,11 +3,15 @@ name: Deploy to Hostinger
 on:
   push:
     branches:
-      - main # Uruchamiaj tylko przy pushu do głównej gałęzi
-# test2
+      - main
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    # To mówi GitHubowi: "Wszystkie komendy wykonuj wewnątrz tego folderu"
+    defaults:
+      run:
+        working-directory: ./PD-fotografia
 
     steps:
       - name: Checkout code
@@ -25,5 +29,6 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: /PD-fotografia/dist/ # Jeśli używasz Vite, to tutaj są gotowe pliki
-          server-dir: /public_html/ # Scieżka na serwerze Hostinger
+          # Tutaj też musisz wskazać folder budowania wewnątrz podkatalogu
+          local-dir: ./PD-fotografia/dist/
+          server-dir: /public_html/

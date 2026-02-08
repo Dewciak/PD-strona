@@ -23,12 +23,14 @@ jobs:
 
       - name: Deploy to deploy branch
         run: |
-          cp -r PD-fotografia/dist /tmp/dist-deploy
+          mkdir /tmp/deploy
+          cp -r PD-fotografia/dist/* /tmp/deploy/
+          cd /tmp/deploy
+          git init
+          git checkout -b deploy
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git checkout --orphan deploy-temp
-          git rm -rf .
-          cp -r /tmp/dist-deploy/* .
           git add -A
           git commit -m "Deploy $(date +'%Y-%m-%d %H:%M:%S')"
-          git push origin deploy-temp:deploy --force
+          git remote add origin https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git
+          git push origin deploy --force

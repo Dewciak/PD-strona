@@ -8,28 +8,27 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./PD-fotografia
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Install dependencies
+        working-directory: ./PD-fotografia
         run: npm install
 
       - name: Build project
+        working-directory: ./PD-fotografia
         run: npm run build
 
       - name: Deploy to deploy branch
         run: |
-          cd ..
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git checkout --orphan deploy-temp
           git rm -rf .
           cp -r PD-fotografia/dist/* .
+          cp -r PD-fotografia/dist/.[!.]* . 2>/dev/null || true
           git add -A
           git commit -m "Deploy $(date +'%Y-%m-%d %H:%M:%S')"
           git push origin deploy-temp:deploy --force

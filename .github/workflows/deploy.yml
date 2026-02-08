@@ -23,12 +23,13 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Sync files via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - name: Sync files via SFTP
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          # Tutaj też musisz wskazać folder budowania wewnątrz podkatalogu
-          local-dir: ./PD-fotografia/dist/
-          server-dir: /public_html/
+          port: 65002
+          local_path: ./PD-fotografia/dist/*
+          remote_path: /public_html/
+          sftp_only: true

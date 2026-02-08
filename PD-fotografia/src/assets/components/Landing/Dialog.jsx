@@ -42,7 +42,9 @@ const GalleryDialog = ({images = [], setShowDialog, imageIndex, setImageIndex}) 
     if (activeThumbnailRef.current && thumbnailsRef.current) {
       const container = thumbnailsRef.current;
       const thumb = activeThumbnailRef.current;
-      const scrollLeft = thumb.offsetLeft - container.offsetWidth / 2 + thumb.offsetWidth / 2;
+      const thumbRect = thumb.getBoundingClientRect();
+      const containerRect = container.getBoundingClientRect();
+      const scrollLeft = container.scrollLeft + (thumbRect.left - containerRect.left) - (containerRect.width / 2) + (thumbRect.width / 2);
       container.scrollTo({left: scrollLeft, behavior: 'smooth'});
     }
   }, [imageIndex]);

@@ -3,6 +3,8 @@ import {useState, useEffect, useCallback, useRef} from "react";
 const GalleryDialog = ({images = [], setShowDialog, imageIndex, setImageIndex}) => {
   const [imgWidth, setImgWidth] = useState(0);
   const imgRef = useRef(null);
+  const thumbnailsRef = useRef(null);
+  const activeThumbnailRef = useRef(null);
 
   function showNextImage() {
     setImageIndex((index) => {
@@ -35,6 +37,15 @@ const GalleryDialog = ({images = [], setShowDialog, imageIndex, setImageIndex}) 
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, []);
+
+  useEffect(() => {
+    if (activeThumbnailRef.current && thumbnailsRef.current) {
+      const container = thumbnailsRef.current;
+      const thumb = activeThumbnailRef.current;
+      const scrollLeft = thumb.offsetLeft - container.offsetWidth / 2 + thumb.offsetWidth / 2;
+      container.scrollTo({left: scrollLeft, behavior: 'smooth'});
+    }
+  }, [imageIndex]);
 
   const updateImgWidth = useCallback(() => {
     if (imgRef.current) {
@@ -84,6 +95,7 @@ const GalleryDialog = ({images = [], setShowDialog, imageIndex, setImageIndex}) 
         </div>
         {/* Thumbnails */}
         <div
+          ref={thumbnailsRef}
           className='mt-3 overflow-x-auto overflow-y-hidden scrollbar-hide'
           style={{width: imgWidth > 0 ? `${imgWidth}px` : '100%'}}
         >
@@ -93,6 +105,7 @@ const GalleryDialog = ({images = [], setShowDialog, imageIndex, setImageIndex}) 
                 src={pic}
                 loading='lazy'
                 key={key}
+                ref={key === imageIndex ? activeThumbnailRef : null}
                 className={`w-[44px] h-[44px] sm:w-[64px] sm:h-[64px] flex-shrink-0 object-cover object-center cursor-pointer duration-200 hover:scale-110 rounded-md ${
                   key == imageIndex ? "ring-2 ring-white scale-105" : "opacity-50 hover:opacity-100"
                 }`}

@@ -28,7 +28,7 @@ jobs:
           git checkout --orphan deploy-temp
           git rm -rf .
           cp -r PD-fotografia/dist/* .
-          cp -r PD-fotografia/dist/.* . 2>/dev/null || true
+          cp -r PD-fotografia/dist/.[!.]* . 2>/dev/null || true
           git add -A
           git commit -m "Deploy $(date +'%Y-%m-%d %H:%M:%S')"
           git push origin deploy-temp:deploy --force

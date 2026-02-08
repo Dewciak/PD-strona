@@ -23,13 +23,14 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Sync files via SFTP
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          port: 65002
-          local_path: ./PD-fotografia/dist/*
-          remote_path: /public_html/
-          sftp_only: true
+      - name: Deploy via SFTP
+        run: |
+          sudo apt-get update && sudo apt-get install -y lftp
+          lftp -e "
+            set sftp:auto-confirm yes;
+            set net:timeout 30;
+            set net:max-retries 3;
+            set net:reconnect-interval-base 5;
+            mirror -R --verbose --delete ./dist/ /public_html/;
+            quit;
+          " -u "${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }}" sftp://${{ secrets.FTP_SERVER }}:65002

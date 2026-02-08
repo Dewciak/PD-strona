@@ -39,9 +39,9 @@ function Horses() {
             // Preferuj mniejsze rozmiary (large ~1024px, medium_large ~768px)
             const sizes = media.media_details?.sizes;
             const url =
+              sizes?.full?.source_url ||
               sizes?.large?.source_url ||
               sizes?.medium_large?.source_url ||
-              sizes?.full?.source_url ||
               media.source_url;
             return {
               title: post.title.rendered.toLowerCase().replace(/[\s-]/g, ""),

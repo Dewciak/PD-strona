@@ -1,8 +1,9 @@
-import {useState, useEffect, useCallback} from "react";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faLessThan, faGreaterThan} from "@fortawesome/free-solid-svg-icons";
+import {useState, useEffect, useCallback, useRef} from "react";
 
 const GalleryDialog = ({images = [], setShowDialog, imageIndex, setImageIndex}) => {
+  const [imgWidth, setImgWidth] = useState(0);
+  const imgRef = useRef(null);
+
   function showNextImage() {
     setImageIndex((index) => {
       if (index >= images.length - 1) {
@@ -35,6 +36,12 @@ const GalleryDialog = ({images = [], setShowDialog, imageIndex, setImageIndex}) 
     };
   }, []);
 
+  const updateImgWidth = useCallback(() => {
+    if (imgRef.current) {
+      setImgWidth(imgRef.current.clientWidth);
+    }
+  }, []);
+
   return (
     <div
       className='flex absolute flex-col items-start 
@@ -48,54 +55,50 @@ const GalleryDialog = ({images = [], setShowDialog, imageIndex, setImageIndex}) 
           ×
         </button>
       </div>
-      <div className='fixed top-[45%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[45vh] overflow-hidden md:w-1/2 flex items-center justify-center z-[16]'>
-        <div className='max-w-[97%]  md:max-w-[700px]'>
-          <div className='flex flex-col overflow-hidden'>
-            <div className='flex flex-row items-center justify-center'>
-              <div className='flex flex-row '>
-                {images.map((pic, key) => (
-                  <img
-                    src={pic}
-                    loading='lazy'
-                    key={key}
-                    className=' object-cover object-center rounded-3xl cursor-pointer duration-300'
-                    style={{translate: `${-100 * imageIndex}%`}}
-                  />
-                ))}
-              </div>
-            </div>
-            <div className='justify-between py-2  mt-6 overflow-hidden flex flex-row mx-auto '>
-              <button
-                onClick={showPrevImage}
-                className='bg-gray-400 md:px-2 px-2   z-[16] h-[115px] duration-100 text-2xl opacity-50 hover:opacity-70'
-              >
-                <FontAwesomeIcon icon={faLessThan} />
-              </button>
-
-              <div className='flex flex-row justify-between gap-x-2 '>
-                {images.map((pic, key) => (
-                  <img
-                    src={pic}
-                    loading='lazy'
-                    key={key}
-                    className={`w-[10vh] sm:w-[16vh] object-cover object-center cursor-pointer duration-300 hover:scale-105 ${
-                      key == imageIndex ? "border border-white" : ""
-                    }`}
-                    style={{
-                      translate: `${-100 * imageIndex}%`,
-                      boxSizing: "border-box",
-                    }}
-                    onClick={() => setImageIndex(key)}
-                  />
-                ))}
-              </div>
-              <button
-                onClick={showNextImage}
-                className='bg-gray-400 md:px-2 px-2 z-[16] h-[115px] duration-100 text-2xl opacity-50 hover:opacity-70'
-              >
-                <FontAwesomeIcon icon={faGreaterThan} />
-              </button>
-            </div>
+      <div className='fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[94vw] max-w-[1200px] z-[16] flex flex-col items-center'>
+        {/* Main image */}
+        <div className='relative w-full flex items-center justify-center'>
+          <button
+            onClick={(e) => { e.stopPropagation(); showPrevImage(); }}
+            className='absolute left-2 sm:left-4 z-10 bg-white/90 hover:bg-white w-9 h-9 sm:w-11 sm:h-11 rounded-full flex items-center justify-center duration-200 shadow-lg'
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 sm:w-5 sm:h-5 text-gray-700">
+              <polyline points="15 18 9 12 15 6" />
+            </svg>
+          </button>
+          <img
+            ref={imgRef}
+            src={images[imageIndex]}
+            key={imageIndex}
+            onLoad={updateImgWidth}
+            className='max-w-full max-h-[78vh] object-contain rounded-xl'
+          />
+          <button
+            onClick={(e) => { e.stopPropagation(); showNextImage(); }}
+            className='absolute right-2 sm:right-4 z-10 bg-white/90 hover:bg-white w-9 h-9 sm:w-11 sm:h-11 rounded-full flex items-center justify-center duration-200 shadow-lg'
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 sm:w-5 sm:h-5 text-gray-700">
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </button>
+        </div>
+        {/* Thumbnails */}
+        <div
+          className='mt-3 overflow-x-auto overflow-y-hidden scrollbar-hide'
+          style={{width: imgWidth > 0 ? `${imgWidth}px` : '100%'}}
+        >
+          <div className='flex gap-1.5 sm:gap-2 px-1 w-max mx-auto'>
+            {images.map((pic, key) => (
+              <img
+                src={pic}
+                loading='lazy'
+                key={key}
+                className={`w-[44px] h-[44px] sm:w-[64px] sm:h-[64px] flex-shrink-0 object-cover object-center cursor-pointer duration-200 hover:scale-110 rounded-md ${
+                  key == imageIndex ? "ring-2 ring-white scale-105" : "opacity-50 hover:opacity-100"
+                }`}
+                onClick={() => setImageIndex(key)}
+              />
+            ))}
           </div>
         </div>
       </div>

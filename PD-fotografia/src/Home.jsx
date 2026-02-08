@@ -42,7 +42,7 @@ function App() {
       if (!media) return null;
       const sizes = media.media_details?.sizes;
       const url =
-        sizes?.large?.source_url || sizes?.medium_large?.source_url || sizes?.full?.source_url || media.source_url;
+        sizes?.full?.source_url || sizes?.large?.source_url || sizes?.medium_large?.source_url || media.source_url;
       return {
         title: post.title.rendered.toLowerCase().replace(/[\s-]/g, ""),
         url: url,

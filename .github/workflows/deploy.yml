@@ -8,7 +8,6 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    # To mówi GitHubowi: "Wszystkie komendy wykonuj wewnątrz tego folderu"
     defaults:
       run:
         working-directory: ./PD-fotografia
@@ -23,14 +22,14 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Deploy via SFTP
+      - name: Deploy to deploy branch
         run: |
-          sudo apt-get update && sudo apt-get install -y lftp
-          lftp -e "
-            set sftp:auto-confirm yes;
-            set net:timeout 30;
-            set net:max-retries 3;
-            set net:reconnect-interval-base 5;
-            mirror -R --verbose --delete ./dist/ /public_html/;
-            quit;
-          " -u "${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }}" sftp://${{ secrets.FTP_SERVER }}:65002
+          cd ..
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout --orphan deploy-temp
+          git rm -rf .
+          cp -r PD-fotografia/dist/* .
+          git add -A
+          git commit -m "Deploy $(date +'%Y-%m-%d %H:%M:%S')"
+          git push origin deploy-temp:deploy --force

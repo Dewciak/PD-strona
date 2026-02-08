@@ -14,6 +14,7 @@ function OfferPageAbout({
     aboutText3,
   },
 }) {
+  // test
   return (
     <div className='mx-auto'>
       <div className='w-[100%] relative z-10 bg-white mx-auto'>
